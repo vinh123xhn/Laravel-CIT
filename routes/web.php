@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', 'Admin\AdminController@index');
+
 Route::get('/login', function () {
     return view('admin.login');
 });
 Route::post('/login', 'Admin\LoginController@login')->name('post.login');
 Route::get('/logout', 'Admin\LoginController@logout')->name('post.logout');
+
+
+Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' => 'admin'], function () {
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});

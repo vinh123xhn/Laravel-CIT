@@ -7,11 +7,6 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('check-admin');
-    }
-
     public function index(Request $request) {
         $user = $request->session()->get('user');
         return view('admin.dashboard', compact('user'));

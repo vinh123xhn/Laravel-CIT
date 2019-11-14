@@ -36,7 +36,7 @@ class LoginController extends Controller
 
                 $request->session()->put('token', $token);
                 $request->session()->put('user', $user);
-                return redirect('/');
+                return redirect('admin');
             }
             else
             {
@@ -59,14 +59,14 @@ class LoginController extends Controller
             $request->session()->flash('message', 'Tài khoản đã đăng xuất');
             $request->session()->forget('user');
             $request->session()->forget('token');
-            return redirect('/');
+            return redirect('admin');
         }
         else
         {
             $request->session()->flash('message', 'Tài khoản không tồn tại');
             $request->session()->forget('user');
             $request->session()->forget('token');
-            return redirect('/');
+            return redirect('admin');
         }
     }
 }
