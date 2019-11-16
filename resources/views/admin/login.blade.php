@@ -38,18 +38,10 @@
 </head>
 <body>
 <div class="login-form">
-    @if (count($errors) >0)
-        <ul>
-            @foreach($errors->all() as $error)
-                <li class="text-danger"> {{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
-
-    @if (session('status'))
-        <ul>
-            <li class="text-danger"> {{ session('status') }}</li>
-        </ul>
+    @if(isset($message))
+    <div class="alert alert-danger" role="alert">
+        {{$message}}
+    </div>
     @endif
     <form action="{{ route('post.login') }}" method="post">
             {{ csrf_field() }}

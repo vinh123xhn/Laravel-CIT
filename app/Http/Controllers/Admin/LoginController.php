@@ -40,14 +40,14 @@ class LoginController extends Controller
             }
             else
             {
-                $message = 'User is blocked';
-                return redirect('/login', compact('message'));
+                $message = 'Tài khoản đã bị khóa';
+                return view('admin.login')->with(compact('message'));
             }
         }
         else
         {
-            $message = 'Invalid username or password';
-            return redirect('/login', compact('message'));
+            $message = 'Vui lòng kiểm tra lại tài khoản và mật khẩu';
+            return view('admin.login')->with(compact('message'));
         }
     }
 
