@@ -28,7 +28,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Trang chủ
+                            Biểu đồ
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
@@ -36,12 +36,20 @@
                         <li class="nav-item">
                             <a href="./index3.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Trang chủ</p>
+                                <p>Y tế</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="./index3.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Giáo dục</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item has-treeview">
+                <li class="nav-item has-treeview @yield('medical-open')">
                     <a href="#" class="nav-link @yield('medical')">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
@@ -58,19 +66,19 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.hospital.list')}}" class="nav-link @yield('medical')">
+                            <a href="{{route('admin.type-hospital.list')}}" class="nav-link @yield('type-hospital')">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Loại bệnh viện</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.hospital.list')}}" class="nav-link @yield('doctor')">
+                            <a href="{{route('admin.doctor.list')}}" class="nav-link @yield('doctor')">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Nhân sự y tế</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('admin.hospital.list')}}" class="nav-link @yield('children')">
+                            <a href="{{route('admin.children.list')}}" class="nav-link @yield('children')">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Trẻ em suy dinh dưỡng</p>
                             </a>

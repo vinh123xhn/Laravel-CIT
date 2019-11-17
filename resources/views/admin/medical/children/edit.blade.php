@@ -6,26 +6,26 @@
 @section('children', 'active')
 @section('medical-open', 'menu-open')
 @section('content_header_name')
-    Tạo mới trẻ em
+    Sửa thông tin trẻ em
 @endsection
 @section('content_header_active')
-    Tạo mới trẻ em
+    Sửa thông tin trẻ em
 @endsection
 @section('content')
     <div class="col-md-8">
         <!-- general form elements -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Tạo mới thông tin trẻ em</h3>
+                <h3 class="card-title">Sửa thông tin trẻ em</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" id="form" method="post" action="{{route('admin.children.form.post')}}">
+            <form role="form" method="post" action="{{route('admin.children.form.update', $children->id)}}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Họ và tên</label>
-                        <input type="text" name="name" class="form-control name" placeholder="Nhập họ và tên" value="{{ old('name') }}">
+                        <input type="text" name="name" class="form-control" placeholder="Nhập họ và tên" value="{{old('name') ? old('name') : $children->name}}">
 
                         @error('name')
                         <p class="danger">{{ $message }}</p>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Ngày sinh</label>
-                        <input type="text" class="form-control birthday" name="birthday" placeholder="Nhập ngày sinh" value="{{ old('birthday') }}">
+                        <input type="text" class="form-control" name="birthday" placeholder="Nhập ngày sinh" value="{{old('birthday') ? old('birthday') : $children->birthday}}">
 
                         @error('birthday')
                         <div class="danger">{{ $message }}</div>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Địa chỉ</label>
-                        <input type="text" class="form-control address" name="address" placeholder="Nhập địa chỉ" value="{{ old('address') }}">
+                        <input type="text" class="form-control" name="address" placeholder="Nhập địa chỉ" value="{{old('address') ? old('address') : $children->address}}">
 
                         @error('address')
                         <div class="danger">{{ $message }}</div>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Cân nặng (Kg)</label>
-                        <input type="text" class="form-control weight" name="weight" placeholder="Nhập cân nặng theo đơn vị Kg" value="{{ old('weight') }}">
+                        <input type="text" class="form-control" name="weight" placeholder="Nhập cân nặng theo đơn vị Kg" value="{{old('weight') ? old('weight') : $children->weight}}">
 
                         @error('weight')
                         <div class="danger">{{ $message }}</div>
@@ -57,7 +57,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Chiều cao (cm)</label>
-                        <input type="text" class="form-control height" name="height" placeholder="Nhập chiều cao theo đơn vị cm" value="{{ old('height') }}">
+                        <input type="text" class="form-control" name="height" placeholder="Nhập chiều cao theo đơn vị cm" value="{{old('height') ? old('height') : $children->height}}">
 
                         @error('height')
                         <div class="danger">{{ $message }}</div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Nhận xét của bác sĩ</label>
-                        <input type="text" class="form-control comment" name="comment" placeholder="Nhập nhận xét của bác sĩ" value="{{ old('comment') }}">
+                        <input type="text" class="form-control" name="comment" placeholder="Nhập nhận xét của bác sĩ" value="{{old('comment') ? old('comment') : $children->comment}}">
 
                         @error('comment')
                         <div class="danger">{{ $message }}</div>
@@ -73,10 +73,15 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phân loại dinh dưỡng</label>
-                        <select class="form-control select2 type" name="type" style="width: 100%;">
-                            <option value="">Lựa chọn</option>
-                            <option value="1">bình thường</option>
-                            <option value="2">Suy dinh dưỡng</option>
+                        <select class="form-control select2" name="type" style="width: 100%;">
+                            @foreach (config('base.type_of_children') as $k => $item)
+                                <option
+                                    @if($children->id == $k)
+                                    {{"selected"}}
+                                    @endif
+                                    value="{{$k}}">{{$item}}
+                                </option>
+                            @endforeach
                         </select>
 
                         @error('type')

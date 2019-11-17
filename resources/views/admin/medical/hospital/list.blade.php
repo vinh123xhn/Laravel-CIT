@@ -4,6 +4,7 @@
 @endsection
 @section('medical', 'active')
 @section('hospital', 'active')
+@section('medical-open', 'menu-open')
 @section('title')
     hospital
 @endsection
@@ -15,7 +16,7 @@
 @endsection
 @section('content')
     <div class="card-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="hospital" class="table table-bordered table-hover">
             <thead>
             <tr>
                 <th>Tên cơ sở</th>
@@ -49,8 +50,7 @@
 
     <script>
         $(function () {
-            $("#example1").DataTable();
-            $('#example2').DataTable({
+            $('#hospital').DataTable({
                 "paging": true,
                 "lengthChange": false,
                 "searching": false,

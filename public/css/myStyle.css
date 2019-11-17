@@ -1,3 +1,9 @@
 .float-left {
     float: left;
 }
+
+.danger {
+    margin-top: 5px;
+    color: red;
+    font-size: 14px;
+}

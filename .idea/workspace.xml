@@ -2,33 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/ChildrenController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/DoctorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/HospitalController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/css/myStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/detail.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/form.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/share/calendar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/ChildrenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/ChildrenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/DoctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/DoctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/HospitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/HospitalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/TypeOfHospitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical/TypeOfHospitalController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/plugins/datatables/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/myStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/children/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/children/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/children/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/doctor/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/doctor/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/doctor/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/hospital/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/hospital/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/hospital/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/medical/type-hospital/list.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,22 +150,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/medical" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/medical/type-hospital" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/admin/medical" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/medical/type-hospital" />
       <recent name="$PROJECT_DIR$/resources/views/admin/medical/hospital" />
       <recent name="$PROJECT_DIR$/resources/views/admin/medical/doctor" />
-      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/medical/children" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/medical" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Medical" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,7 +199,8 @@
       <workItem from="1573731774921" duration="7070000" />
       <workItem from="1573780412854" duration="425000" />
       <workItem from="1573816450089" duration="2054000" />
-      <workItem from="1573876866074" duration="21882000" />
+      <workItem from="1573876866074" duration="22239000" />
+      <workItem from="1573977536652" duration="15028000" />
     </task>
     <servers />
   </component>

@@ -1,6 +1,7 @@
 @extends('layout.master')
 @section('medical', 'active')
 @section('children', 'active')
+@section('medical-open', 'menu-open')
 @section('css')
     <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
@@ -15,7 +16,7 @@
 @endsection
 @section('content')
     <div class="card-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="children" class="table table-bordered table-hover">
             <thead>
             <tr>
                 <th>Họ và tên</th>
@@ -47,8 +48,7 @@
 
     <script>
         $(function () {
-            $("#example1").DataTable();
-            $('#example2').DataTable({
+            $('#children').DataTable({
                 "paging": true,
                 "lengthChange": false,
                 "searching": false,
