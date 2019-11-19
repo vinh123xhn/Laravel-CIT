@@ -5,7 +5,6 @@
       <change afterPath="$PROJECT_DIR$/app/Jobs/ExampleJob.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Jobs/Job.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Jobs/SendMail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/MailTemplate.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/auth/mail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -200,7 +199,7 @@
       <workItem from="1574132343677" duration="681000" />
       <workItem from="1574133338932" duration="472000" />
       <workItem from="1574134081524" duration="2233000" />
-      <workItem from="1574162473687" duration="6119000" />
+      <workItem from="1574162473687" duration="7108000" />
     </task>
     <servers />
   </component>
