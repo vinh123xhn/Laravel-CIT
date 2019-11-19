@@ -12,11 +12,23 @@
 */
 
 
-Route::get('/login', function () {
-    return view('admin.login');
+
+Route::group(['prefix' => 'auth', 'namespace' => 'Admin'], function () {
+    Route::get('login', function () {
+        return view('auth.login');
+    })->name('auth.getLogin');
+    Route::post('login', 'LoginController@login')->name('auth.postLogin');
+    Route::get('logout', 'LoginController@logout')->name('auth.postLogout');
+
+    Route::get('forgot-password', function () {
+        return view('auth.forgot-password');
+    })->name('auth.getForgotPassword');
+    Route::post('forgot-password', 'ForgotPasswordController@resetPassword')->name('auth.sendMail');
+
+    Route::get('reset-password/{token}', 'ForgotPasswordController@getFormResetPassword')->name('auth.getRecoverPassword');
+    Route::post('reset-password/{token}', 'ForgotPasswordController@resetPasswordChange')->name('auth.postRecoverPassword');
 });
-Route::post('/login', 'Admin\LoginController@login')->name('post.login');
-Route::get('/logout', 'Admin\LoginController@logout')->name('post.logout');
+
 
 Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' => 'admin'], function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');

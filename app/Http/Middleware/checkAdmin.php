@@ -17,7 +17,7 @@ class checkAdmin
     public function handle($request, Closure $next)
     {
         if(!$request->session()->exists('token')) {
-            return redirect('/login');
+            return redirect('auth/login');
         }
         return $next($request);
     }

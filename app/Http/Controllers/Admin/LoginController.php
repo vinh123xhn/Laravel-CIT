@@ -7,47 +7,52 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
     public function login(Request $request)
     {
-        $this->validate($request,
-            [
-                'username' => 'required',
-                'password' => 'required'
-            ]);
-        $user = User::where(['username'=>$request->username])->first();
-        if($user && Hash::check($request->password, $user->password))
-        {
-            if($user->active == ACTIVE_TRUE)
-            {
-                $token = $user->getAuthToken();
-                $data = $user->toArray();
+        $rules = [
+            'username' => 'required',
+            'password' => 'required',
+        ];
 
-                if($token == '') {
-                    $data['auth_token'] = sha1('[' . $user->id . '-' . date('Y-m-d H:i:s') . ']');
-                    $token = $data['auth_token'];
+        $messages = [
+            'username.required' => 'Tài khoản không được để trống',
+            'password.required' => 'Mật khẩu xác nhận không được để trống',
+        ];
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if ($validator->fails()) {
+            // tra ve true neu validate bi loi
+            return redirect()->back()->withErrors($validator)->withInput($request->input());
+        } else {
+            $user = User::where(['username' => $request->username])->first();
+            if ($user && Hash::check($request->password, $user->password)) {
+                if ($user->active == 1) {
+                    $token = $user->getAuthToken();
+                    $data = $user->toArray();
+
+                    if ($token == '') {
+                        $data['auth_token'] = sha1('[' . $user->id . '-' . date('Y-m-d H:i:s') . ']');
+                        $token = $data['auth_token'];
+                    }
+
+                    User::where(['id' => $user->id])->update($data);
+
+                    $user = $user->toArray();
+
+                    $request->session()->put('token', $token);
+                    $request->session()->put('user', $user);
+                    return redirect('admin');
+                } else {
+                    $message = 'Tài khoản đã bị khóa';
+                    return view('auth.login')->with(compact('message'));
                 }
-
-                User::where(['id'=>$user->id])->update($data);
-
-                $user = $user->toArray();
-
-                $request->session()->put('token', $token);
-                $request->session()->put('user', $user);
-                return redirect('admin');
+            } else {
+                $message = 'Vui lòng kiểm tra lại tài khoản và mật khẩu';
+                return view('auth.login')->with(compact('message'));
             }
-            else
-            {
-                $message = 'Tài khoản đã bị khóa';
-                return view('admin.login')->with(compact('message'));
-            }
-        }
-        else
-        {
-            $message = 'Vui lòng kiểm tra lại tài khoản và mật khẩu';
-            return view('admin.login')->with(compact('message'));
         }
     }
 

@@ -43,30 +43,47 @@
         {{$message}}
     </div>
     @endif
-    <form action="{{ route('post.login') }}" method="post">
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+    <form action="{{ route('auth.postLogin') }}" method="post">
             {{ csrf_field() }}
         <h2 class="text-center">Sign In</h2>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
                 <input type="text" class="form-control" placeholder="Username" required="required" name="username">
+
+                @error('username')
+                <p class="danger">{{ $message }}</p>
+                @enderror
             </div>
         </div>
         <div class="form-group">
             <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                 <input type="password" class="form-control" placeholder="Password" required="required" name="password">
+
+                @error('password')
+                <p class="danger">{{ $message }}</p>
+                @enderror
             </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Log in</button>
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-            <a href="#" class="pull-right">Forgot Password?</a>
+            <a href="{{route('auth.getForgotPassword')}}" class="pull-right">Forgot Password?</a>
         </div>
     </form>
-    <p class="text-center small">Don't have an account! <a href="#">Sign up here</a>.</p>
 </div>
 </body>
 </html>

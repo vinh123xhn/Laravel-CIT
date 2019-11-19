@@ -29,7 +29,7 @@
     <ul class="navbar-nav ml-auto">
         <!-- Messages Dropdown Menu -->
         <li class="nav-item">
-            <a href="{{route('post.logout', Session::get('user'))}}">Logout</a>
+            <a href="{{route('auth.postLogout', Session::get('user'))}}">Logout</a>
             @csrf
         </li>
         <!-- Notifications Dropdown Menu -->
