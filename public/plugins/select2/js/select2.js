@@ -1933,7 +1933,7 @@ S2.define('select2/selection/allowClear',[
       return;
     }
 
-    var removeAll = this.options.get('translations').get('removeAllItems');   
+    var removeAll = this.options.get('translations').get('removeAllItems');
 
     var $remove = $(
       '<span class="select2-selection__clear" title="' + removeAll() +'">' +
@@ -5008,9 +5008,9 @@ S2.define('select2/defaults',[
         return data;
       }
 
-      // Do a recursive check for options with children
+      // Do a recursive check for options with student
       if (data.children && data.children.length > 0) {
-        // Clone the data object if there are children
+        // Clone the data object if there are student
         // This is required as we modify the object to remove any non-matches
         var match = $.extend(true, {}, data);
 
@@ -5026,12 +5026,12 @@ S2.define('select2/defaults',[
           }
         }
 
-        // If any children matched, return the new object
+        // If any student matched, return the new object
         if (match.children.length > 0) {
           return match;
         }
 
-        // If there were no matching children, check just the plain object
+        // If there were no matching student, check just the plain object
         return matcher(params, match);
       }
 

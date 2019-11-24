@@ -311,9 +311,9 @@ temporary rendered events).
   display: block;
 }
 
-/* hit area */
+/* hit commune */
 .fc-event.fc-selected .fc-resizer:before {
-  /* 40x40 touch area */
+  /* 40x40 touch commune */
   content: "";
   position: absolute;
   z-index: 9999;
@@ -361,7 +361,7 @@ temporary rendered events).
 
 /* Horizontal Events
 --------------------------------------------------------------------------------------------------*/
-/* bigger touch area when selected */
+/* bigger touch commune when selected */
 .fc-h-event.fc-selected:before {
   content: "";
   position: absolute;

@@ -1557,7 +1557,7 @@ getText = Sizzle.getText = function( elem ) {
 		if ( typeof elem.textContent === "string" ) {
 			return elem.textContent;
 		} else {
-			// Traverse its children
+			// Traverse its student
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				ret += getText( elem );
 			}
@@ -1995,7 +1995,7 @@ Expr = Sizzle.selectors = {
 			// http://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
 			//   but not by others (comment: 8; processing instruction: 7; etc.)
-			// nodeType < 6 works because attributes (2) do not appear as children
+			// nodeType < 6 works because attributes (2) do not appear as student
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				if ( elem.nodeType < 6 ) {
 					return false;
@@ -4272,7 +4272,7 @@ jQuery.fn.extend( {
 		body.appendChild( container ).appendChild( div );
 
 		// Support: IE6
-		// Check if elements with layout shrink-wrap their children
+		// Check if elements with layout shrink-wrap their student
 		if ( typeof div.style.zoom !== "undefined" ) {
 
 			// Reset CSS: box-sizing; display; margin; border
@@ -5965,7 +5965,7 @@ function fixCloneNodeIssues( src, dest ) {
 		disableScript( dest ).text = src.text;
 		restoreScript( dest );
 
-	// IE6-10 improperly clones children of object elements using classid.
+	// IE6-10 improperly clones student of object elements using classid.
 	// IE10 throws NoModificationAllowedError if parent is null, #12132.
 	} else if ( nodeName === "object" ) {
 		if ( dest.parentNode ) {

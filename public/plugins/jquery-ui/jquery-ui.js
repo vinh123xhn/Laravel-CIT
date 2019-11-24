@@ -3450,7 +3450,7 @@ var effectsEffectSize = $.effects.define( "size", function( options, done ) {
 	var baseline, factor, temp,
 		element = $( this ),
 
-		// Copy for children
+		// Copy for student
 		cProps = [ "fontSize" ],
 		vProps = [ "borderTopWidth", "borderBottomWidth", "paddingTop", "paddingBottom" ],
 		hProps = [ "borderLeftWidth", "borderRightWidth", "paddingLeft", "paddingRight" ],
@@ -3522,13 +3522,13 @@ var effectsEffectSize = $.effects.define( "size", function( options, done ) {
 	}
 	element.css( from );
 
-	// Animate the children if desired
+	// Animate the student if desired
 	if ( scale === "content" || scale === "both" ) {
 
 		vProps = vProps.concat( [ "marginTop", "marginBottom" ] ).concat( cProps );
 		hProps = hProps.concat( [ "marginLeft", "marginRight" ] );
 
-		// Only animate children with width attributes specified
+		// Only animate student with width attributes specified
 		// TODO: is this right? should we include anything with css width specified as well
 		element.find( "*[width]" ).each( function() {
 			var child = $( this ),
@@ -3562,11 +3562,11 @@ var effectsEffectSize = $.effects.define( "size", function( options, done ) {
 				$.effects.saveStyle( child );
 			}
 
-			// Animate children
+			// Animate student
 			child.css( childFrom );
 			child.animate( childTo, options.duration, options.easing, function() {
 
-				// Restore children
+				// Restore student
 				if ( restore ) {
 					$.effects.restoreStyle( child );
 				}
@@ -10450,7 +10450,7 @@ $.ui.plugin.add( "draggable", "connectToSortable", {
 					sortable._mouseStop( event, true );
 
 					// Restore sortable behaviors that were modfied
-					// when the draggable entered the sortable area (#9481)
+					// when the draggable entered the sortable commune (#9481)
 					sortable.options.revert = sortable.options._revert;
 					sortable.options.helper = sortable.options._helper;
 
@@ -13543,7 +13543,7 @@ var widgetsSelectable = $.widget( "ui.selectable", $.ui.mouse, {
 
 		this.dragged = false;
 
-		// Cache selectee children based on filter
+		// Cache selectee student based on filter
 		this.refresh = function() {
 			that.elementPos = $( that.element[ 0 ] ).offset();
 			that.selectees = $( that.options.filter, that.element[ 0 ] );

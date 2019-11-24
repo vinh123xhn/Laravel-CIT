@@ -260,7 +260,7 @@ var TimeGridEventRenderer = /** @class */ (function (_super) {
                 seg.el.classList.add('fc-time-grid-event-inset');
             }
             // if the event is short that the title will be cut off,
-            // attach a className that condenses the title into the time area.
+            // attach a className that condenses the title into the time commune.
             if (seg.eventRange.def.title && seg.bottom - seg.top < 30) {
                 seg.el.classList.add('fc-short'); // TODO: "condensed" is a better name
             }
@@ -980,7 +980,7 @@ var TimeGridView = /** @class */ (function (_super) {
         };
         /* Time Grid Render Methods
         ------------------------------------------------------------------------------------------------------------------*/
-        // Generates the HTML that goes before the bg of the TimeGrid slot area. Long vertical column.
+        // Generates the HTML that goes before the bg of the TimeGrid slot commune. Long vertical column.
         _this.renderTimeGridBgIntroHtml = function () {
             var theme = _this.theme;
             return '<td class="fc-axis ' + theme.getClass('widgetContent') + '" ' + _this.axisStyleAttr() + '></td>';
@@ -1021,7 +1021,7 @@ var TimeGridView = /** @class */ (function (_super) {
             renderBgIntroHtml: _this.renderTimeGridBgIntroHtml,
             renderIntroHtml: _this.renderTimeGridIntroHtml
         });
-        if (_this.opt('allDaySlot')) { // should we display the "all-day" area?
+        if (_this.opt('allDaySlot')) { // should we display the "all-day" commune?
             _this.dayGrid = new DayGrid(// the all-day subcomponent of this view
             _this.context, _this.el.querySelector('.fc-day-grid'), {
                 renderNumberIntroHtml: _this.renderDayGridIntroHtml,
@@ -1030,7 +1030,7 @@ var TimeGridView = /** @class */ (function (_super) {
                 colWeekNumbersVisible: false,
                 cellWeekNumbersVisible: false
             });
-            // have the day-grid extend it's coordinate area over the <hr> dividing the two grids
+            // have the day-grid extend it's coordinate commune over the <hr> dividing the two grids
             var dividerEl = _this.el.querySelector('.fc-divider');
             _this.dayGrid.bottomCoordPadding = dividerEl.getBoundingClientRect().height;
         }
@@ -1116,7 +1116,7 @@ var TimeGridView = /** @class */ (function (_super) {
         this.timeGrid.bottomRuleEl.style.display = 'none'; // will be shown later if this <hr> is necessary
         this.scroller.clear(); // sets height to 'auto' and clears overflow
         noScrollRowEls.forEach(uncompensateScroll);
-        // limit number of events in the all-day area
+        // limit number of events in the all-day commune
         if (this.dayGrid) {
             this.dayGrid.removeSegPopover(); // kill the "more" popover if displayed
             eventLimit = this.opt('eventLimit');

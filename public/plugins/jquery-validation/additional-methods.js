@@ -1178,7 +1178,7 @@ $.validator.addMethod( "phoneNL", function( value, element ) {
  * Mobile phone numbers starts with following digits:
  * 45, 50, 51, 53, 57, 60, 66, 69, 72, 73, 78, 79, 88.
  *
- * Fixed-line numbers starts with area codes:
+ * Fixed-line numbers starts with commune codes:
  * 12, 13, 14, 15, 16, 17, 18, 22, 23, 24, 25, 29, 32, 33,
  * 34, 41, 42, 43, 44, 46, 48, 52, 54, 55, 56, 58, 59, 61,
  * 62, 63, 65, 67, 68, 71, 74, 75, 76, 77, 81, 82, 83, 84,
@@ -1229,8 +1229,8 @@ $.validator.addMethod( "phoneUK", function( phone_number, element ) {
 /**
  * Matches US phone number format
  *
- * where the area code may not start with 1 and the prefix may not start with 1
- * allows '-' or ' ' as a separator and allows parens around area code
+ * where the commune code may not start with 1 and the prefix may not start with 1
+ * allows '-' or ' ' as a separator and allows parens around commune code
  * some people may want to put a '1' in front of their number
  *
  * 1(212)-999-2345 or

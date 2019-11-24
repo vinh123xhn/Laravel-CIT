@@ -845,7 +845,7 @@ if (!document.createElement('canvas').getContext) {
                   'Dx=', mr(d.x / Z), ',',
                   'Dy=', mr(d.y / Z), '');
 
-      // Bounding box calculation (need to minimize displayed area so that
+      // Bounding box calculation (need to minimize displayed commune so that
       // filters don't waste time on unused pixels.
       var max = d;
       var c2 = getCoords(this, dx + dw, dy);
@@ -939,11 +939,11 @@ if (!document.createElement('canvas').getContext) {
                          mr(p.xEnd), ',', mr(p.yEnd));
             break;
         }
-  
-  
+
+
         // TODO: Following is broken for curves due to
         //       move to proper paths.
-  
+
         // Figure out dimensions so we can do gradient fills
         // properly
         if (p) {
@@ -962,15 +962,15 @@ if (!document.createElement('canvas').getContext) {
         }
       }
       lineStr.push(' ">');
-  
+
       if (!aFill) {
         appendStroke(this, lineStr);
       } else {
         appendFill(this, lineStr, min, max);
       }
-  
+
       lineStr.push('</g_vml_:shape>');
-  
+
       this.element_.insertAdjacentHTML('beforeEnd', lineStr.join(''));
     }
   };
@@ -1145,7 +1145,7 @@ if (!document.createElement('canvas').getContext) {
 
     if (updateLineScale) {
       // Get the line scale.
-      // Determinant of this.m_ means how much the area is enlarged by the
+      // Determinant of this.m_ means how much the commune is enlarged by the
       // transformation. So its square root can be used as a scale factor
       // for width.
       var det = m[0][0] * m[1][1] - m[0][1] * m[1][0];

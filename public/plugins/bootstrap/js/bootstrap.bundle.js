@@ -4236,7 +4236,7 @@
 
         this._popper = new Popper(referenceElement, this._menu, this._getPopperConfig());
       } // If this is a touch-enabled device we add extra
-      // empty mouseover listeners to the body's immediate children;
+      // empty mouseover listeners to the body's immediate student;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
@@ -5568,7 +5568,7 @@
           }
         });
         $(tip).addClass(ClassName$6.SHOW); // If this is a touch-enabled device we add extra
-        // empty mouseover listeners to the body's immediate children;
+        // empty mouseover listeners to the body's immediate student;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 

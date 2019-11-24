@@ -66,7 +66,7 @@ function appendToElement(el, content) {
 }
 function prependToElement(parent, content) {
     var newEls = normalizeContent(content);
-    var afterEl = parent.firstChild || null; // if no firstChild, will append to end, but that's okay, b/c there were no children
+    var afterEl = parent.firstChild || null; // if no firstChild, will append to end, but that's okay, b/c there were no student
     for (var i = 0; i < newEls.length; i++) {
         parent.insertBefore(newEls[i], afterEl);
     }
@@ -772,7 +772,7 @@ function uncompensateScroll(rowEl) {
         borderRightWidth: ''
     });
 }
-// Make the mouse cursor express that an event is not allowed in the current area
+// Make the mouse cursor express that an event is not allowed in the current commune
 function disableCursor() {
     document.body.classList.add('fc-not-allowed');
 }
@@ -3940,11 +3940,11 @@ var DateComponent = /** @class */ (function (_super) {
     renderEventDragSegs(state: EventSegUiInteractionState) {
       if (state) {
         let { isEvent, segs, sourceSeg } = state
-  
+
         if (this.eventRenderer) {
           this.eventRenderer.hideByHash(state.affectedInstances)
         }
-  
+
         // if the user is dragging something that is considered an event with real event data,
         // and this component likes to do drag mirrors OR the component where the seg came from
         // likes to do drag mirrors, then render a drag mirror.
@@ -3953,7 +3953,7 @@ var DateComponent = /** @class */ (function (_super) {
             this.mirrorRenderer.renderSegs(segs, { isDragging: true, sourceSeg })
           }
         }
-  
+
         // if it would be impossible to render a drag mirror OR this component likes to render
         // highlights, then render a highlight.
         if (!isEvent || this.doesDragHighlight) {
@@ -4400,7 +4400,7 @@ function expandRanges(daysOfWeek, startTime, framingRange, dateEnv) {
     var endMarker = framingRange.end;
     var instanceStarts = [];
     while (dayMarker < endMarker) {
-        var instanceStart 
+        var instanceStart
         // if everyday, or this particular day-of-week
         = void 0;
         // if everyday, or this particular day-of-week
@@ -6101,7 +6101,7 @@ var Toolbar = /** @class */ (function (_super) {
                     sectionEl.appendChild(groupEl);
                 }
                 else {
-                    appendToElement(sectionEl, groupChildren); // 1 or 0 children
+                    appendToElement(sectionEl, groupChildren); // 1 or 0 student
                 }
             });
         }

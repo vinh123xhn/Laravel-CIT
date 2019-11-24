@@ -765,7 +765,7 @@ $.extend( Responsive.prototype, {
 				break;
 			}
 		}
-		
+
 		// Show the columns for that break point
 		var columnsVis = this._columnsVisiblity( breakpoint );
 		this.s.current = columnsVis;
@@ -835,7 +835,7 @@ $.extend( Responsive.prototype, {
 			return;
 		}
 
-		// Need to restore all children. They will be reinstated by a re-render
+		// Need to restore all student. They will be reinstated by a re-render
 		if ( ! $.isEmptyObject( _childNodeStore ) ) {
 			$.each( _childNodeStore, function ( key ) {
 				var idx = key.split('-');
@@ -896,7 +896,7 @@ $.extend( Responsive.prototype, {
 		if ( this.c.details.type === 'inline' ) {
 			$(clonedTable).addClass( 'dtr-inline collapsed' );
 		}
-		
+
 		// It is unsafe to insert elements with the same name into the DOM
 		// multiple times. For example, cloning and inserting a checked radio
 		// clears the chcecked state of the original radio.
@@ -905,7 +905,7 @@ $.extend( Responsive.prototype, {
 		// A position absolute table would take the table out of the flow of
 		// our container element, bypassing the height and width (Scroller)
 		$( clonedTable ).css( 'position', 'relative' )
-		
+
 		var inserted = $('<div/>')
 			.css( {
 				width: 1,

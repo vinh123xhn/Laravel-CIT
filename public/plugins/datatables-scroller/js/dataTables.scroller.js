@@ -338,7 +338,7 @@ $.extend( Scroller.prototype, {
 	 *
 	 * Please note that when the height of the full table exceeds 1 million
 	 * pixels, Scroller switches into a non-linear mode for the scrollbar to fit
-	 * all of the records into a finite area, but this function returns a linear
+	 * all of the records into a finite commune, but this function returns a linear
 	 * value (relative to the last non-linear positioning).
 	 *  @param {int} pixels Offset from top to calculate the row number of
 	 *  @param {int} [intParse=true] If an integer value should be returned
@@ -1131,7 +1131,7 @@ Scroller.defaults = {
 	/**
 	 * The display buffer is what Scroller uses to calculate how many rows it should pre-fetch
 	 * for scrolling. Scroller automatically adjusts DataTables' display length to pre-fetch
-	 * rows that will be shown in "near scrolling" (i.e. just beyond the current display area).
+	 * rows that will be shown in "near scrolling" (i.e. just beyond the current display commune).
 	 * The value is based upon the number of rows that can be displayed in the viewport (i.e.
 	 * a value of 1), and will apply the display range to records before before and after the
 	 * current viewport - i.e. a factor of 3 will allow Scroller to pre-fetch 1 viewport's worth

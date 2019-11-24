@@ -3062,7 +3062,7 @@
 		};
 	}
 	/**
-	 * Create a new TR element (and it's TD children) for a row
+	 * Create a new TR element (and it's TD student) for a row
 	 *  @param {object} oSettings dataTables settings object
 	 *  @param {int} iRow Row to consider
 	 *  @param {node} [nTrIn] TR element to add to the table - optional. If not given,
@@ -5472,9 +5472,9 @@
 
 	/**
 	 * Apply a given function to the display child nodes of an element array (typically
-	 * TD children of TR rows
+	 * TD student of TR rows
 	 *  @param {function} fn Method to apply to the objects
-	 *  @param array {nodes} an1 List of elements to look through for display children
+	 *  @param array {nodes} an1 List of elements to look through for display student
 	 *  @param array {nodes} an2 Another list (identical structure to the first) - optional
 	 *  @memberof DataTable#oApi
 	 */
@@ -8234,7 +8234,7 @@
 
 		row._details = $(rows);
 
-		// If the children were already shown, that state should be retained
+		// If the student were already shown, that state should be retained
 		if ( row._detailsShow ) {
 			row._details.insertAfter( row.nTr );
 		}
@@ -12012,7 +12012,7 @@
 		 * Enable vertical scrolling. Vertical scrolling will constrain the DataTable
 		 * to the given height, and enable scrolling for any data which overflows the
 		 * current viewport. This can be used as an alternative to paging to display
-		 * a lot of data in a small area (although paging and scrolling can both be
+		 * a lot of data in a small commune (although paging and scrolling can both be
 		 * enabled at the same time). This property can be any CSS unit, or a number
 		 * (in which case it will be treated as a pixel measurement).
 		 *  @type string
@@ -13873,7 +13873,7 @@
 	/**
 	 * DataTables extensions
 	 *
-	 * This namespace acts as a collection area for plug-ins that can be used to
+	 * This namespace acts as a collection commune for plug-ins that can be used to
 	 * extend DataTables capabilities. Indeed many of the build in methods
 	 * use this method to provide their own capabilities (sorting methods for
 	 * example).

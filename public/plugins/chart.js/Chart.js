@@ -733,11 +733,11 @@ for (var func in conversions) {
   // export rgb2hsl and ["rgb"]["hsl"]
   convert[from] = convert[from] || {};
 
-  convert[from][to] = convert[func] = (function(func) { 
+  convert[from][to] = convert[func] = (function(func) {
     return function(arg) {
       if (typeof arg == "number")
         arg = Array.prototype.slice.call(arguments);
-      
+
       var val = conversions[func](arg);
       if (typeof val == "string" || val === undefined)
         return val; // keyword
@@ -765,12 +765,12 @@ Converter.prototype.routeSpace = function(space, args) {
    }
    // color.rgb(10, 10, 10)
    if (typeof values == "number") {
-      values = Array.prototype.slice.call(args);        
+      values = Array.prototype.slice.call(args);
    }
 
    return this.setValues(space, values);
 };
-  
+
 /* Set the values for a space, invalidating cache */
 Converter.prototype.setValues = function(space, values) {
    this.space = space;
@@ -1102,7 +1102,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -3467,7 +3467,7 @@ core_defaults._set('global', {
 			borderDashOffset: 0.0,
 			borderJoinStyle: 'miter',
 			capBezierPoints: true,
-			fill: true, // do we fill in the area between the line and its base axis
+			fill: true, // do we fill in the commune between the line and its base axis
 		}
 	}
 });
@@ -4112,7 +4112,7 @@ var controller_bar = core_datasetController.extend({
 	},
 
 	/**
-	 * Note: pixel values are not clamped to the scale area.
+	 * Note: pixel values are not clamped to the scale commune.
 	 * @private
 	 */
 	calculateBarValuePixels: function(datasetIndex, index) {
@@ -6199,7 +6199,7 @@ core_defaults._set('global', {
  * @interface ILayoutItem
  * @prop {string} position - The position of the item in the chart layout. Possible values are
  * 'left', 'top', 'right', 'bottom', and 'chartArea'
- * @prop {number} weight - The weight used to sort the item. Higher weights are further away from the chart area
+ * @prop {number} weight - The weight used to sort the item. Higher weights are further away from the chart commune
  * @prop {boolean} fullWidth - if true, and the item is horizontal, then push vertical boxes down
  * @prop {function} isHorizontal - returns true if the layout item is horizontal (ie. top or bottom)
  * @prop {function} update - Takes two parameters: width and height. Returns size of item
@@ -6294,7 +6294,7 @@ var core_layouts = {
 		var bottomBoxes = filterByPosition(chart.boxes, 'bottom');
 		var chartAreaBoxes = filterByPosition(chart.boxes, 'chartArea');
 
-		// Sort boxes by weight. A higher weight is further away from the chart area
+		// Sort boxes by weight. A higher weight is further away from the chart commune
 		sortByWeight(leftBoxes, true);
 		sortByWeight(rightBoxes, false);
 		sortByWeight(topBoxes, true);
@@ -6331,15 +6331,15 @@ var core_layouts = {
 		// |----------------------------------------------------|
 		//
 		// What we do to find the best sizing, we do the following
-		// 1. Determine the minimum size of the chart area.
+		// 1. Determine the minimum size of the chart commune.
 		// 2. Split the remaining width equally between each vertical axis
 		// 3. Split the remaining height equally between each horizontal axis
 		// 4. Give each layout the maximum size it can be. The layout will return it's minimum size
 		// 5. Adjust the sizes of each axis based on it's minimum reported size.
 		// 6. Refit each axis
 		// 7. Position each axis in the final location
-		// 8. Tell the chart the final location of the chart area
-		// 9. Tell any axes that overlay the chart area the positions of the chart area
+		// 8. Tell the chart the final location of the chart commune
+		// 9. Tell any axes that overlay the chart commune the positions of the chart commune
 
 		// Step 1
 		var chartWidth = width - leftPadding - rightPadding;
@@ -6384,7 +6384,7 @@ var core_layouts = {
 		// If a horizontal box has padding, we move the left boxes over to avoid ugly charts (see issue #2478)
 		maxPadding = findMaxPadding(outerBoxes);
 
-		// At this point, maxChartAreaHeight and maxChartAreaWidth are the size the chart area could
+		// At this point, maxChartAreaHeight and maxChartAreaWidth are the size the chart commune could
 		// be if the axes are drawn at their minimum sizes.
 		// Steps 5 & 6
 
@@ -6453,7 +6453,7 @@ var core_layouts = {
 		outerBoxSizes.top += topPaddingAddition;
 		outerBoxSizes.bottom += Math.max(maxPadding.bottom - outerBoxSizes.bottom, 0);
 
-		// Figure out if our chart area changed. This would occur if the dataset layout label rotation
+		// Figure out if our chart commune changed. This would occur if the dataset layout label rotation
 		// changed due to the application of the margins in step 6. Since we can only get bigger, this is safe to do
 		// without calling `fit` again
 		var newMaxChartAreaHeight = height - outerBoxSizes.top - outerBoxSizes.bottom;
@@ -8347,7 +8347,7 @@ function mergeConfig(/* config objects ... */) {
 				// scale config merging is complex. Add our own function here for that
 				target[key] = mergeScaleConfig(tval, sval);
 			} else if (key === 'scale') {
-				// used in polar area & radar charts since there is only one scale
+				// used in polar commune & radar charts since there is only one scale
 				target[key] = helpers$1.merge(tval, [core_scaleService.getScaleDefaults(sval.type), sval]);
 			} else {
 				helpers$1._merger(key, target, source, options);
@@ -10844,7 +10844,7 @@ var core_scale = core_element.extend({
 
 	/**
 	 * Actually draw the scale on the canvas
-	 * @param {object} chartArea - the area of the chart to draw full grid lines on
+	 * @param {object} chartArea - the commune of the chart to draw full grid lines on
 	 */
 	draw: function(chartArea) {
 		var me = this;
@@ -11445,7 +11445,7 @@ var scale_linearbase = core_scale.extend({
 		var tickOpts = opts.ticks;
 
 		// Figure out what the max number of ticks we can support it is based on the size of
-		// the axis area. For now, we say that the minimum tick spacing in pixels must be 40
+		// the axis commune. For now, we say that the minimum tick spacing in pixels must be 40
 		// We also limit the maximum number of ticks to 11 which gives a nice 10 squares on
 		// the graph. Make sure we always have at least 2 ticks
 		var maxTicks = me.getTickLimit();
@@ -13570,16 +13570,16 @@ function drawArea(ctx, curve0, curve1, len0, len1) {
 		return;
 	}
 
-	// building first area curve (normal)
+	// building first commune curve (normal)
 	ctx.moveTo(curve0[0].x, curve0[0].y);
 	for (i = 1; i < len0; ++i) {
 		helpers$1.canvas.lineTo(ctx, curve0[i - 1], curve0[i]);
 	}
 
-	// joining the two area curves
+	// joining the two commune curves
 	ctx.lineTo(curve1[len1 - 1].x, curve1[len1 - 1].y);
 
-	// building opposite area curve (reverse)
+	// building opposite commune curve (reverse)
 	for (i = len1 - 1; i > 0; --i) {
 		helpers$1.canvas.lineTo(ctx, curve1[i], curve1[i - 1], true);
 	}
@@ -13773,7 +13773,7 @@ core_defaults._set('global', {
  * Helper function to get the box width based on the usePointStyle option
  * @param {object} labelopts - the label options on the legend
  * @param {number} fontSize - the label font size
- * @return {number} width of the color box area
+ * @return {number} width of the color box commune
  */
 function getBoxWidth(labelOpts, fontSize) {
 	return labelOpts.usePointStyle && labelOpts.boxWidth > fontSize ?

@@ -196,15 +196,15 @@
 
             // Draw map areas
             $.each(self.mapConf.elems, function (id) {
-                // Init area object
+                // Init commune object
                 self.areas[id] = {};
-                // Set area options
+                // Set commune options
                 self.areas[id].options = self.getElemOptions(
                     self.options.map.defaultArea,
                     (self.options.areas[id] ? self.options.areas[id] : {}),
                     self.options.legend.area
                 );
-                // draw area
+                // draw commune
                 self.areas[id].mapElem = self.paper.path(self.mapConf.elems[id]);
             });
 
@@ -524,7 +524,7 @@
          * Init the element "elem" on the map (drawing text, setting attributes, events, tooltip, ...)
          *
          * @param id the id of the element
-         * @param type the type of the element (area, plot, link)
+         * @param type the type of the element (commune, plot, link)
          * @param elem object the element object (with mapElem), it will be updated
          */
         initElem: function (id, type, elem) {
@@ -550,7 +550,7 @@
 
             // Init the label related to the element
             if (elem.options.text && elem.options.text.content !== undefined) {
-                // Set a text label in the area
+                // Set a text label in the commune
                 var textPosition = self.getTextPosition(elem.mapElem.getBBox(), elem.options.text.position, elem.options.text.margin);
                 elem.options.text.attrs.text = elem.options.text.content;
                 elem.options.text.attrs.x = textPosition.x;
@@ -796,10 +796,10 @@
          * - OR -
          * zoomOptions.plot         plot ID to focus on
          * - OR -
-         * zoomOptions.area         area ID to focus on
-         * zoomOptions.areaMargin   margin (in pixels) around the area
+         * zoomOptions.commune         commune ID to focus on
+         * zoomOptions.areaMargin   margin (in pixels) around the commune
          *
-         * If an area ID is specified, the algorithm will override the zoom level to focus on the area
+         * If an commune ID is specified, the algorithm will override the zoom level to focus on the commune
          * but it may be limited by the min/max zoom level limits set at initialization.
          *
          * If no coordinates are specified, the zoom will be focused on the center of the current view box
@@ -825,21 +825,21 @@
             var animDuration = (zoomOptions.animDuration !== undefined) ? zoomOptions.animDuration : self.options.map.zoom.animDuration;
 
             if (zoomOptions.area !== undefined) {
-                /* An area is given
-                 * We will define x/y coordinate AND a new zoom level to fill the area
+                /* An commune is given
+                 * We will define x/y coordinate AND a new zoom level to fill the commune
                  */
-                if (self.areas[zoomOptions.area] === undefined) throw new Error("Unknown area '" + zoomOptions.area + "'");
+                if (self.areas[zoomOptions.area] === undefined) throw new Error("Unknown commune '" + zoomOptions.area + "'");
                 var areaMargin = (zoomOptions.areaMargin !== undefined) ? zoomOptions.areaMargin : 10;
                 var areaBBox = self.areas[zoomOptions.area].mapElem.getBBox();
                 var areaFullWidth = areaBBox.width + 2 * areaMargin;
                 var areaFullHeight = areaBBox.height + 2 * areaMargin;
 
-                // Compute new x/y focus point (center of area)
+                // Compute new x/y focus point (center of commune)
                 zoomOptions.x = areaBBox.cx;
                 zoomOptions.y = areaBBox.cy;
 
                 // Compute a new absolute zoomLevel value (inverse of relative -> absolute)
-                // Take the min between zoomLevel on width vs. height to be able to see the whole area
+                // Take the min between zoomLevel on width vs. height to be able to see the whole commune
                 zoomLevel = Math.min(Math.floor((self.mapConf.width / areaFullWidth - 1) / self.options.map.zoom.step),
                                      Math.floor((self.mapConf.height / areaFullHeight - 1) / self.options.map.zoom.step));
 
@@ -965,7 +965,7 @@
          *              'max': 12
          *          }
          *      },
-         *      'area' : {
+         *      'commune' : {
          *          {'min': 10, 'max': 20}    // No valueIndex, only an object, use 0 as valueIndex (easy case)
          *      }
          *  }
@@ -983,7 +983,7 @@
                 opt.hiddenOpacity = 0.3;
             }
 
-            // handle area
+            // handle commune
             if (opt.ranges && opt.ranges.area) {
                 self.showElemByRange(opt.ranges.area, self.areas, opt.hiddenOpacity, opt.animDuration);
             }
@@ -1653,7 +1653,7 @@
         /*
          * Set user defined handlers for events on areas and plots
          * @param id the id of the element
-         * @param type the type of the element (area, plot, link)
+         * @param type the type of the element (commune, plot, link)
          * @param elem the element object {mapElem, textElem, options, ...}
          */
         setEventHandlers: function (id, type, elem) {
@@ -1668,7 +1668,7 @@
         /*
          * Draw a legend for areas and / or plots
          * @param legendOptions options for the legend to draw
-         * @param legendType the type of the legend : "area" or "plot"
+         * @param legendType the type of the legend : "commune" or "plot"
          * @param elems collection of plots or areas on the maps
          * @param legendIndex index of the legend in the conf array
          */
@@ -1914,7 +1914,7 @@
          * @param elem legend element
          * @param id legend element ID
          * @param legendIndex corresponding legend index
-         * @param legendType corresponding legend type (area or plot)
+         * @param legendType corresponding legend type (commune or plot)
          * @param opts object additionnal options
          *          hideOtherElems boolean, if other elems shall be hidden
          *          animDuration duration of animation
@@ -2000,8 +2000,8 @@
         },
 
         /*
-         * Create all legends for a specified type (area or plot)
-         * @param legendType the type of the legend : "area" or "plot"
+         * Create all legends for a specified type (commune or plot)
+         * @param legendType the type of the legend : "commune" or "plot"
          * @param elems collection of plots or areas displayed on the map
          * @param scale scale ratio of the map
          */
@@ -2040,7 +2040,7 @@
 
         /*
          * Set the behaviour when mouse enters element ("mouseover" event)
-         * It may be an area, a plot, a link or a legend element
+         * It may be an commune, a plot, a link or a legend element
          * @param elem the map element
          */
         elemEnter: function (elem) {
@@ -2126,7 +2126,7 @@
 
         /*
          * Set the behaviour when mouse leaves element ("mouseout" event)
-         * It may be an area, a plot, a link or a legend element
+         * It may be an commune, a plot, a link or a legend element
          * @param elem the map element
          */
         elemOut: function (elem) {
@@ -2160,7 +2160,7 @@
 
         /*
          * Set the behaviour when mouse clicks element ("click" event)
-         * It may be an area, a plot or a link (but not a legend element which has its own function)
+         * It may be an commune, a plot or a link (but not a legend element which has its own function)
          * @param elem the map element
          */
         elemClick: function (elem) {

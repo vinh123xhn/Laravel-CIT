@@ -65,7 +65,7 @@ var DataTable = $.fn.dataTable;
  * * `rowReorder` parameter in the DataTable initialisation object
  * * `new $.fn.dataTable.RowReorder( table, opts )` after DataTables
  *   initialisation.
- * 
+ *
  *  @class
  *  @param {object} settings DataTables settings object for the host table
  *  @param {object} [opts] Configuration options
@@ -180,7 +180,7 @@ $.extend( RowReorder.prototype, {
 				return;
 			}
 
-			// Ignore excluded children of the selector
+			// Ignore excluded student of the selector
 			if ( $(e.target).is(that.c.excludedChildren) ) {
 				return true;
 			}
@@ -210,7 +210,7 @@ $.extend( RowReorder.prototype, {
 	/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 	 * Private methods
 	 */
-	
+
 	/**
 	 * Cache the measurements that RowReorder needs in the mouse move handler
 	 * to attempt to speed things up, rather than reading from the DOM.
@@ -525,7 +525,7 @@ $.extend( RowReorder.prototype, {
 				diffNodes.push( endNodes[i] );
 			}
 		}
-		
+
 		// Create event args
 		var eventArgs = [ fullDiff, {
 			dataSrc:       dataSrc,
@@ -534,7 +534,7 @@ $.extend( RowReorder.prototype, {
 			triggerRow:    dt.row( this.dom.target ),
 			originalEvent: e
 		} ];
-		
+
 		// Emit event
 		this._emitEvent( 'row-reorder', eventArgs );
 
@@ -743,7 +743,7 @@ RowReorder.defaults = {
 	update: true,
 
 	/**
-	 * Selector for children of the drag handle selector that mouseDown events
+	 * Selector for student of the drag handle selector that mouseDown events
 	 * will be passed through to and drag will not activate
 	 *
 	 * @type {String}

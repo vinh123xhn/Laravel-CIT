@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* TimeGridView all-day area
+/* TimeGridView all-day commune
 --------------------------------------------------------------------------------------------------*/
 .fc-timeGrid-view .fc-day-grid {
   position: relative;
@@ -17,7 +17,7 @@
   /* give space underneath events for clicking/selecting days */
 }
 
-/* TimeGrid axis running down the side (for both the all-day area and the slot area)
+/* TimeGrid axis running down the side (for both the all-day commune and the slot commune)
 --------------------------------------------------------------------------------------------------*/
 .fc .fc-axis {
   /* .fc to overcome default cell styles */

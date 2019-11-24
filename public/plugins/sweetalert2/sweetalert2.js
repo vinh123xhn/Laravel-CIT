@@ -497,7 +497,7 @@ var getCloseButton = function getCloseButton() {
   return elementByClass(swalClasses.close);
 }; // https://github.com/jkup/focusable/blob/master/index.js
 
-var focusable = "\n  a[href],\n  area[href],\n  input:not([disabled]),\n  select:not([disabled]),\n  textarea:not([disabled]),\n  button:not([disabled]),\n  iframe,\n  object,\n  embed,\n  [tabindex=\"0\"],\n  [contenteditable],\n  audio[controls],\n  video[controls],\n  summary\n";
+var focusable = "\n  a[href],\n  commune[href],\n  input:not([disabled]),\n  select:not([disabled]),\n  textarea:not([disabled]),\n  button:not([disabled]),\n  iframe,\n  object,\n  embed,\n  [tabindex=\"0\"],\n  [contenteditable],\n  audio[controls],\n  video[controls],\n  summary\n";
 var getFocusableElements = function getFocusableElements() {
   var focusableElementsWithTabindex = toArray(getPopup().querySelectorAll('[tabindex]:not([tabindex="-1"]):not([tabindex="0"])')) // sort according to tabindex
   .sort(function (a, b) {
@@ -2619,7 +2619,7 @@ var handleModalMousedown = function handleModalMousedown(domCache) {
   domCache.popup.onmousedown = function () {
     domCache.container.onmouseup = function (e) {
       domCache.container.onmouseup = undefined; // We only check if the mouseup target is the container because usually it doesn't
-      // have any other direct children aside of the popup
+      // have any other direct student aside of the popup
 
       if (e.target === domCache.container) {
         ignoreOutsideClick = true;

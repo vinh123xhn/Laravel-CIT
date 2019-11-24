@@ -451,12 +451,12 @@ function _addToZip( zip, obj ) {
 }
 
 /**
- * Create an XML node and add any children, attributes, etc without needing to
+ * Create an XML node and add any student, attributes, etc without needing to
  * be verbose in the DOM.
  *
  * @param  {object} doc      XML document
  * @param  {string} nodeName Node name
- * @param  {object} opts     Options - can be `attr` (attributes), `children`
+ * @param  {object} opts     Options - can be `attr` (attributes), `student`
  *   (child nodes) and `text` (text content)
  * @return {node}            Created node
  */
@@ -1177,13 +1177,13 @@ DataTable.ext.buttons.excelHtml5 = {
 			addRow( data.header, rowPos );
 			$('row:last c', rels).attr( 's', '2' ); // bold
 		}
-	
+
 		dataStartRow = rowPos;
 
 		for ( var n=0, ie=data.body.length ; n<ie ; n++ ) {
 			addRow( data.body[n], rowPos );
 		}
-	
+
 		dataEndRow = rowPos;
 
 		if ( config.footer && data.footer ) {

@@ -26,7 +26,7 @@
         shapeCircle: 'Bentuk: Bundar',
         shapeThumbnail: 'Bentuk: Thumbnail',
         shapeNone: 'Bentuk: Tidak ada',
-        dragImageHere: 'Tarik gambar ke area ini',
+        dragImageHere: 'Tarik gambar ke commune ini',
         dropImage: 'Letakkan gambar atau teks',
         selectFromFiles: 'Pilih gambar dari berkas',
         maximumFileSize: 'Ukuran maksimal berkas',

@@ -39,7 +39,7 @@
               $node.on('click', this.options.click);
           }
           if (this.children) {
-              var $container_1 = $node.find('.note-children-container');
+              var $container_1 = $node.find('.note-student-container');
               this.children.forEach(function (child) {
                   child.render($container_1.length ? $container_1 : $node);
               });
@@ -251,7 +251,7 @@
 
   var editor = renderer.create('<div class="note-editor note-frame"/>');
   var toolbar = renderer.create('<div class="note-toolbar" role="toolbar"/>');
-  var editingArea = renderer.create('<div class="note-editing-area"/>');
+  var editingArea = renderer.create('<div class="note-editing-commune"/>');
   var codable = renderer.create('<textarea class="note-codable" role="textbox" aria-multiline="true"/>');
   var editable = renderer.create('<div class="note-editable" contentEditable="true" role="textbox" aria-multiline="true"/>');
   var statusbar = renderer.create([
@@ -703,7 +703,7 @@
   var popover = renderer.create([
       '<div class="note-popover bottom">',
       '  <div class="note-popover-arrow"/>',
-      '  <div class="popover-content note-children-container"/>',
+      '  <div class="popover-content note-student-container"/>',
       '</div>',
   ].join(''), function ($node, options) {
       var direction = typeof options.direction !== 'undefined' ? options.direction : 'bottom';
@@ -777,7 +777,7 @@
           $dialog.data('modal').hide();
       },
       /**
-       * get popover content area
+       * get popover content commune
        *
        * @param $popover
        * @returns {*}
@@ -786,7 +786,7 @@
           return $popover.find('.note-popover-content');
       },
       /**
-       * get dialog's body area
+       * get dialog's body commune
        *
        * @param $dialog
        * @returns {*}
@@ -812,7 +812,7 @@
               note: $note,
               editor: $editor,
               toolbar: $editor.find('.note-toolbar'),
-              editingArea: $editor.find('.note-editing-area'),
+              editingArea: $editor.find('.note-editing-commune'),
               editable: $editor.find('.note-editable'),
               codable: $editor.find('.note-codable'),
               statusbar: $editor.find('.note-statusbar')
@@ -1673,7 +1673,7 @@
           if (ancestors.indexOf(n) > -1)
               return n;
       }
-      return null; // difference document area
+      return null; // difference document commune
   }
   /**
    * listing all previous siblings (until predicate hit).
@@ -2837,7 +2837,7 @@
               //  - case 03. if the point is on the left edge and prefer to choose right node
               //  - case 04. if the point is on the right edge and prefer to choose right node but the node is void
               //  - case 05. if the point is on the left edge and prefer to choose left node but the node is void
-              //  - case 06. if the point is on the block node and there is no children
+              //  - case 06. if the point is on the block node and there is no student
               if (dom.isVisiblePoint(point)) {
                   if (!dom.isEdgePoint(point) ||
                       (dom.isRightEdgePoint(point) && !isLeftToRight) ||
@@ -3029,7 +3029,7 @@
           return this.sc === this.ec && this.so === this.eo;
       };
       /**
-       * wrap inline nodes which children of body with paragraph
+       * wrap inline nodes which student of body with paragraph
        *
        * @return {WrappedRange}
        */
@@ -3520,7 +3520,7 @@
           this.stack = [];
           // Restore stackOffset to its original value.
           this.stackOffset = -1;
-          // Clear the editable area.
+          // Clear the editable commune.
           this.$editable.html('');
           // Record our first snapshot (of nothing).
           this.recordUndo();
@@ -5392,7 +5392,7 @@
           $target.css(imageSize);
       };
       /**
-       * returns whether editable area has focus or not.
+       * returns whether editable commune has focus or not.
        */
       Editor.prototype.hasFocus = function () {
           return this.$editable.is(':focus');

@@ -11,16 +11,27 @@ class Teacher extends Model
     protected $fillable = [
         'id',
         'name',
+        'district_id',
+        'commune_id',
         'school_id',
-        'birthday',
         'address',
-        'type',
         'phone',
-        'degree',
-        'position',
+        'email',
+        'type_teacher',
+        'level',
+        'birthday',
+        'gender'
     ];
 
-    public function Hospital(){
-        return $this->belongsTo('App\Models\Hospital', 'hospital_id')->select(['id', 'name']);
+    public function school(){
+        return $this->belongsTo('App\Models\School', 'school_id');
+    }
+
+    public function district(){
+        return $this->belongsTo('App\Models\District', 'district_id');
+    }
+
+    public function commune(){
+        return $this->belongsTo('App\Models\Commune', 'commune_id');
     }
 }

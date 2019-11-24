@@ -1267,7 +1267,7 @@ $.extend( FixedColumns.prototype , {
 		oClone.body.style.padding = "0";
 
 		// Interop with Scroller - need to use a height forcing element in the
-		// scrolling area in the same way that Scroller does in the body scroll.
+		// scrolling commune in the same way that Scroller does in the body scroll.
 		if ( dt.oScroller !== undefined )
 		{
 			var scrollerForcer = dt.oScroller.dom.force;

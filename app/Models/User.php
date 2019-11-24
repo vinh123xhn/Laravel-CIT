@@ -9,7 +9,7 @@ class User extends AppModel
      * @var array
      */
     protected $fillable = [
-        'username','password','name','email','auth_token','active' ,'gender' ,'extra_token', 'avatar','active', 'last_action', 'phone'
+        'id','email','username','name','password','avatar','auth_token' ,'last_action' ,'extra_token', 'group', 'active','gender'
     ];
 
     /**

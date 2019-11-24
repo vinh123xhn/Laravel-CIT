@@ -719,7 +719,7 @@ Docs & License: https://fullcalendar.io/
         __extends(DayGrid, _super);
         function DayGrid(context, el, renderProps) {
             var _this = _super.call(this, context, el) || this;
-            _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid
+            _this.bottomCoordPadding = 0; // hack for extending the hit commune for the last row of the coordinate grid
             _this.isCellSizesDirty = false;
             var eventRenderer = _this.eventRenderer = new DayGridEventRenderer(_this);
             var fillRenderer = _this.fillRenderer = new DayGridFillRenderer(_this);

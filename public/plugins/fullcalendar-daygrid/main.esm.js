@@ -558,14 +558,14 @@ var DayGridFillRenderer = /** @class */ (function (_super) {
             '</div>');
         trEl = skeletonEl.getElementsByTagName('tr')[0];
         if (startCol > 0) {
-            appendToElement(trEl, 
+            appendToElement(trEl,
             // will create (startCol + 1) td's
             new Array(startCol + 1).join(EMPTY_CELL_HTML));
         }
         seg.el.colSpan = endCol - startCol;
         trEl.appendChild(seg.el);
         if (endCol < colCnt) {
-            appendToElement(trEl, 
+            appendToElement(trEl,
             // will create (colCnt - endCol) td's
             new Array(colCnt - endCol + 1).join(EMPTY_CELL_HTML));
         }
@@ -715,7 +715,7 @@ var DayGrid = /** @class */ (function (_super) {
     __extends(DayGrid, _super);
     function DayGrid(context, el, renderProps) {
         var _this = _super.call(this, context, el) || this;
-        _this.bottomCoordPadding = 0; // hack for extending the hit area for the last row of the coordinate grid
+        _this.bottomCoordPadding = 0; // hack for extending the hit commune for the last row of the coordinate grid
         _this.isCellSizesDirty = false;
         var eventRenderer = _this.eventRenderer = new DayGridEventRenderer(_this);
         var fillRenderer = _this.fillRenderer = new DayGridFillRenderer(_this);

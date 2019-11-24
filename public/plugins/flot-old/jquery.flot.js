@@ -156,7 +156,7 @@ Licensed under the MIT license.
 		context.scale(pixelRatio, pixelRatio);
 	};
 
-	// Clears the entire canvas area, not including any overlaid HTML text
+	// Clears the entire canvas commune, not including any overlaid HTML text
 
 	Canvas.prototype.clear = function() {
 		this.context.clearRect(0, 0, this.width, this.height);
@@ -1334,7 +1334,7 @@ Licensed under the MIT license.
         }
 
         function setTransformationHelpers(axis) {
-            // set helper functions on the axis, assumes plot area
+            // set helper functions on the axis, assumes plot commune
             // has been computed already
 
             function identity(x) { return x; }
@@ -1982,7 +1982,7 @@ Licensed under the MIT license.
                         ctx.stroke();
                     }
                     else {
-                        // fill area
+                        // fill commune
                         ctx.fillStyle = m.color || options.grid.markingsColor;
                         ctx.fillRect(xrange.from, yrange.to,
                                      xrange.to - xrange.from,
@@ -2361,7 +2361,7 @@ Licensed under the MIT license.
                     }
 
                     if (!areaOpen) {
-                        // open area
+                        // open commune
                         ctx.beginPath();
                         ctx.moveTo(axisx.p2c(x1), axisy.p2c(bottom));
                         areaOpen = true;
