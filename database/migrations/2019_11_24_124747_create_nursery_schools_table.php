@@ -37,9 +37,6 @@ class CreateNurserySchoolsTable extends Migration
             $table->integer('total_classroom_nursery')->comment('tổng số phòng học nhà trẻ')->nullable();
             $table->integer('total_classroom_kindergarten')->comment('tổng số phòng học mẫu giáo')->nullable();
             $table->integer('total_function_room')->comment('tổng số phòng chức năng')->nullable();
-            $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->nullable();
-            $table->integer('total_device_full')->comment('tổng số trang thiết bị tối thiểu đầy đủ')->nullable();
-            $table->integer('total_device_not_full')->comment('tổng số trang thiết bị tối thiểu không đầy đủ')->nullable();
             $table->timestamps();
         });
     }
