@@ -24,7 +24,6 @@ class CreateJuniorHighSchoolsTable extends Migration
             $table->string('website', 100)->comment('website')->nullable();
             $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
             $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('type_of_school')->comment('loại trường học')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->nullable();
             $table->integer('total_of_6')->comment('tổng số lớp 6')->nullable();
             $table->integer('total_of_7')->comment('tổng số lớp 7')->nullable();

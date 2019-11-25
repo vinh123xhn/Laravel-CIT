@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Create23SchoolTable extends Migration
+class CreatePrimaryJuniorHighSchoolsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Create23SchoolTable extends Migration
      */
     public function up()
     {
-        Schema::create('2_3_school', function (Blueprint $table) {
+        Schema::create('primary_junior_high_schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
@@ -24,15 +24,16 @@ class Create23SchoolTable extends Migration
             $table->string('website', 100)->comment('website')->nullable();
             $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
             $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('type_of_school')->comment('loại trường học')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->nullable();
+            $table->integer('total_of_1')->comment('tổng số lớp 1')->nullable();
+            $table->integer('total_of_2')->comment('tổng số lớp 2')->nullable();
+            $table->integer('total_of_3')->comment('tổng số lớp 3')->nullable();
+            $table->integer('total_of_4')->comment('tổng số lớp 4')->nullable();
+            $table->integer('total_of_5')->comment('tổng số lớp 5')->nullable();
             $table->integer('total_of_6')->comment('tổng số lớp 6')->nullable();
             $table->integer('total_of_7')->comment('tổng số lớp 7')->nullable();
             $table->integer('total_of_8')->comment('tổng số lớp 8')->nullable();
             $table->integer('total_of_9')->comment('tổng số lớp 9')->nullable();
-            $table->integer('total_of_10')->comment('tổng số lớp 10')->nullable();
-            $table->integer('total_of_11')->comment('tổng số lớp 11')->nullable();
-            $table->integer('total_of_12')->comment('tổng số lớp 12')->nullable();
             $table->integer('total_classroom')->comment('tổng số phòng học')->nullable();
             $table->integer('total_function_room')->comment('tổng số phòng chức năng')->nullable();
             $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->nullable();
@@ -49,6 +50,6 @@ class Create23SchoolTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('2_3_school');
+        Schema::dropIfExists('1_2_school');
     }
 }

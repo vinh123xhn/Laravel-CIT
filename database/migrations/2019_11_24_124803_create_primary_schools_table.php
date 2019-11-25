@@ -24,7 +24,6 @@ class CreatePrimarySchoolsTable extends Migration
             $table->string('website', 100)->comment('website')->nullable();
             $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
             $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('type_of_school')->comment('loại trường học')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->nullable();
             $table->integer('total_of_1')->comment('tổng số lớp 1')->nullable();
             $table->integer('total_of_2')->comment('tổng số lớp 2')->nullable();

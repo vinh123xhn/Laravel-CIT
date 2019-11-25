@@ -37,7 +37,7 @@ Route::get('/ajax-get-commune', function () {
     return Response::json($commune);
 });
 
-Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' => 'admin'], function () {
+Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' => '/'], function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
     Route::group(['namespace' => 'User', 'prefix' => 'user'], function () {
@@ -71,14 +71,76 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' 
     });
 
     Route::group(['namespace' => 'Education', 'prefix' => 'education'], function () {
-        Route::group(['prefix' => 'school'], function () {
-            Route::get('/', 'SchoolController@index')->name('admin.school.list');
-            Route::get('/detail/{id}', 'SchoolController@index')->name('admin.school.detail');
-            Route::get('/form', 'SchoolController@getForm')->name('admin.school.form.get');
-            Route::post('/form', 'SchoolController@saveForm')->name('admin.school.form.post');
-            Route::get('/edit/{id}', 'SchoolController@editForm')->name('admin.school.form.edit');
-            Route::post('/update/{id}', 'SchoolController@updateForm')->name('admin.school.form.update');
-            Route::get('/delete/{id}', 'SchoolController@delete')->name('admin.school.delete');
+        Route::group(['prefix' => 'school', 'namespace' => 'School'], function () {
+            Route::group(['prefix' => 'nursery'], function () {
+                Route::get('/', 'NurserySchoolController@index')->name('admin.school.nursery.list');
+                Route::get('/detail/{id}', 'NurserySchoolController@index')->name('admin.school.nursery.detail');
+                Route::get('/form', 'NurserySchoolController@getForm')->name('admin.school.nursery.form.get');
+                Route::post('/form', 'NurserySchoolController@saveForm')->name('admin.school.nursery.form.post');
+                Route::get('/edit/{id}', 'NurserySchoolController@editForm')->name('admin.school.nursery.form.edit');
+                Route::post('/update/{id}', 'NurserySchoolController@updateForm')->name('admin.school.nursery.form.update');
+                Route::get('/delete/{id}', 'NurserySchoolController@delete')->name('admin.school.nursery.delete');
+            });
+
+            Route::group(['prefix' => 'primary'], function () {
+                Route::get('/', 'PrimarySchoolController@index')->name('admin.school.primary.list');
+                Route::get('/detail/{id}', 'PrimarySchoolController@index')->name('admin.school.primary.detail');
+                Route::get('/form', 'PrimarySchoolController@getForm')->name('admin.school.primary.form.get');
+                Route::post('/form', 'PrimarySchoolController@saveForm')->name('admin.school.primary.form.post');
+                Route::get('/edit/{id}', 'PrimarySchoolController@editForm')->name('admin.school.primary.form.edit');
+                Route::post('/update/{id}', 'PrimarySchoolController@updateForm')->name('admin.school.primary.form.update');
+                Route::get('/delete/{id}', 'PrimarySchoolController@delete')->name('admin.school.primary.delete');
+            });
+
+            Route::group(['prefix' => 'junior-high'], function () {
+                Route::get('/', 'JuniorHighSchoolController@index')->name('admin.school.junior_high.list');
+                Route::get('/detail/{id}', 'JuniorHighSchoolController@index')->name('admin.school.junior_high.detail');
+                Route::get('/form', 'JuniorHighSchoolController@getForm')->name('admin.school.junior_high.form.get');
+                Route::post('/form', 'JuniorHighSchoolController@saveForm')->name('admin.school.junior_high.form.post');
+                Route::get('/edit/{id}', 'JuniorHighSchoolController@editForm')->name('admin.school.junior_high.form.edit');
+                Route::post('/update/{id}', 'JuniorHighSchoolController@updateForm')->name('admin.school.junior_high.form.update');
+                Route::get('/delete/{id}', 'JuniorHighSchoolController@delete')->name('admin.school.junior_high.delete');
+            });
+
+            Route::group(['prefix' => 'high'], function () {
+                Route::get('/', 'HighSchoolController@index')->name('admin.school.high.list');
+                Route::get('/detail/{id}', 'HighSchoolController@index')->name('admin.school.high.detail');
+                Route::get('/form', 'HighSchoolController@getForm')->name('admin.school.high.form.get');
+                Route::post('/form', 'HighSchoolController@saveForm')->name('admin.school.high.form.post');
+                Route::get('/edit/{id}', 'HighSchoolController@editForm')->name('admin.school.high.form.edit');
+                Route::post('/update/{id}', 'HighSchoolController@updateForm')->name('admin.school.high.form.update');
+                Route::get('/delete/{id}', 'HighSchoolController@delete')->name('admin.school.high.delete');
+            });
+
+            Route::group(['prefix' => 'primary-junior-high'], function () {
+                Route::get('/', 'PrimaryJuniorHighSchoolController@index')->name('admin.school.primary_junior_high.list');
+                Route::get('/detail/{id}', 'PrimaryJuniorHighSchoolController@index')->name('admin.school.primary_junior_high.detail');
+                Route::get('/form', 'PrimaryJuniorHighSchoolController@getForm')->name('admin.school.primary_junior_high.form.get');
+                Route::post('/form', 'PrimaryJuniorHighSchoolController@saveForm')->name('admin.school.primary_junior_high.form.post');
+                Route::get('/edit/{id}', 'PrimaryJuniorHighSchoolController@editForm')->name('admin.school.primary_junior_high.form.edit');
+                Route::post('/update/{id}', 'PrimaryJuniorHighSchoolController@updateForm')->name('admin.school.primary_junior_high.form.update');
+                Route::get('/delete/{id}', 'PrimaryJuniorHighSchoolController@delete')->name('admin.school.primary_junior_high.delete');
+            });
+
+            Route::group(['prefix' => 'junior-and-high'], function () {
+                Route::get('/', 'JuniorAndHighSchoolController@index')->name('admin.school.junior_and_high.list');
+                Route::get('/detail/{id}', 'JuniorAndHighSchoolController@index')->name('admin.school.junior_and_high.detail');
+                Route::get('/form', 'JuniorAndHighSchoolController@getForm')->name('admin.school.junior_and_high.form.get');
+                Route::post('/form', 'JuniorAndHighSchoolController@saveForm')->name('admin.school.junior_and_high.form.post');
+                Route::get('/edit/{id}', 'JuniorAndHighSchoolController@editForm')->name('admin.school.junior_and_high.form.edit');
+                Route::post('/update/{id}', 'JuniorAndHighSchoolController@updateForm')->name('admin.school.junior_and_high.form.update');
+                Route::get('/delete/{id}', 'JuniorAndHighSchoolController@delete')->name('admin.school.junior_and_high.delete');
+            });
+
+            Route::group(['prefix' => 'cen'], function () {
+                Route::get('/', 'CenSchoolController@index')->name('admin.school.cen.list');
+                Route::get('/detail/{id}', 'CenSchoolController@index')->name('admin.school.cen.detail');
+                Route::get('/form', 'CenSchoolController@getForm')->name('admin.school.cen.form.get');
+                Route::post('/form', 'CenSchoolController@saveForm')->name('admin.school.cen.form.post');
+                Route::get('/edit/{id}', 'CenSchoolController@editForm')->name('admin.school.cen.form.edit');
+                Route::post('/update/{id}', 'CenSchoolController@updateForm')->name('admin.school.cen.form.update');
+                Route::get('/delete/{id}', 'CenSchoolController@delete')->name('admin.school.cen.delete');
+            });
         });
 
         Route::group(['prefix' => 'teacher'], function () {

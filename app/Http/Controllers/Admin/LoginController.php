@@ -44,7 +44,7 @@ class LoginController extends Controller
 
                     $request->session()->put('token', $token);
                     $request->session()->put('user', $user);
-                    return redirect('admin');
+                    return redirect('/');
                 } else {
                     $message = 'Tài khoản đã bị khóa';
                     return view('auth.login')->with(compact('message'));
@@ -64,14 +64,14 @@ class LoginController extends Controller
             $request->session()->flash('message', 'Tài khoản đã đăng xuất');
             $request->session()->forget('user');
             $request->session()->forget('token');
-            return redirect('admin');
+            return redirect('/');
         }
         else
         {
             $request->session()->flash('message', 'Tài khoản không tồn tại');
             $request->session()->forget('user');
             $request->session()->forget('token');
-            return redirect('admin');
+            return redirect('/');
         }
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContinuingEducationCenterTable extends Migration
+class CreateContinuingEducationCentersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateContinuingEducationCenterTable extends Migration
      */
     public function up()
     {
-        Schema::create('continuing_education_center', function (Blueprint $table) {
+        Schema::create('continuing_education_centers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
@@ -24,7 +24,6 @@ class CreateContinuingEducationCenterTable extends Migration
             $table->string('website', 100)->comment('website')->nullable();
             $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
             $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('type_of_school')->comment('loại trường học')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->nullable();
             $table->integer('total_of_xmc')->comment('tổng số lớp xóa mù chữ')->nullable();
             $table->integer('total_of_gdttskbc')->comment('tổng số lớp giáo dục tiếp tục sau khi biết chữ')->nullable();

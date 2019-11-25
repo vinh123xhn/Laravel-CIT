@@ -2,30 +2,29 @@
 @section('css')
     <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
-@section('education', 'active')
 @section('school', 'active')
-@section('education', 'menu-open')
+@section('1_2_school', 'active')
+@section('school-open', 'menu-open')
 @section('title')
-    school
+    1_2 school
 @endsection
 @section('content_header_name')
-    Danh sách cơ sở giáo dục
+    Danh sách trường cấp 1 và 2
 @endsection
 @section('content_header_active')
-    Danh sách cơ sở giáo dục
+    Danh sách trường cấp 1 và 2
 @endsection
 @section('content')
     <div class="col-md-12">
-        <a class="btn btn-primary float-right" href="{{route('admin.school.form.get')}}">
-            Tạo mới cơ sở giáo dục
+        <a class="btn btn-primary float-right" href="{{route('admin.school.primary_junior_high.form.get')}}">
+            Tạo mới trường cấp 1 và 2
         </a>
     </div>
-    <div class="card-body">
-        <table id="hospital" class="table table-bordered table-hover">
+    <div class="card-body" style="width: 100%; overflow: scroll">
+        <table id="school" class="table table-bordered table-hover" style="width: 2500px">
             <thead>
             <tr>
                 <th>Tên cơ sở</th>
-                <th>Loại cơ sở</th>
                 <th>Quận/huyện</th>
                 <th>Phường/xã</th>
                 <th>Địa chỉ</th>
@@ -34,14 +33,36 @@
                 <th>Diện tích</th>
                 <th>Website</th>
                 <th>Tên hiệu trưởng</th>
+                <th>Tổng số lớp</th>
+                <th>Tổng số lớp 1</th>
+                <th>Tổng số lớp 2</th>
+                <th>Tổng số lớp 3</th>
+                <th>Tổng số lớp 4</th>
+                <th>Tổng số lớp 5</th>
+                <th>Tổng số lớp 6</th>
+                <th>Tổng số lớp 7</th>
+                <th>Tổng số lớp 8</th>
+                <th>Tổng số lớp 9</th>
                 <th>Tổng số học sinh</th>
-                <th>Tổng số giáo viên</th>
+                <th>Tổng số học sinh lớp 1</th>
+                <th>Tổng số học sinh lớp 2</th>
+                <th>Tổng số học sinh lớp 3</th>
+                <th>Tổng số học sinh lớp 4</th>
+                <th>Tổng số học sinh lớp 5</th>
+                <th>Tổng số học sinh lớp 6</th>
+                <th>Tổng số học sinh lớp 7</th>
+                <th>Tổng số học sinh lớp 8</th>
+                <th>Tổng số học sinh lớp 9</th>
+                <th>Tổng số giáo viên, cán bộ, nhân viên</th>
+                <th>Tổng số giáo viên tiểu học</th>
+                <th>Tổng số giáo viên thcs</th>
                 <th>Tổng số cán bộ quản lý</th>
                 <th>Tổng số nhân viên</th>
                 <th>Tổng số phòng học</th>
-                <th>Tổng số nhân viên</th>
-                <th>Tổng số nhân viên</th>
-                <th>Tổng số nhân viên</th>
+                <th>Tổng số phòng bộ môn</th>
+                <th>Tổng số phòng chức năng</th>
+                <th>Tổng số thiết bị tối tiểu đầy đủ</th>
+                <th>Tổng số thiết bị tối tiểu chưa đầy đủ</th>
                 <th>Hành động</th>
             </tr>
             </thead>

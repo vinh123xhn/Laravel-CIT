@@ -24,7 +24,6 @@ class CreateNurserySchoolsTable extends Migration
             $table->string('website', 100)->comment('website')->nullable();
             $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
             $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('type_of_school')->comment('loại trường học')->nullable();
             $table->integer('total_of_nursery_class')->comment('tổng số lớp nhóm trẻ')->nullable();
             $table->integer('total_of_nursery_3_12')->comment('tổng số lớp nhóm 3 - 12 tháng')->nullable();
             $table->integer('total_of_nursery_12_24')->comment('tổng số lớp nhóm 12 - 24 tháng')->nullable();

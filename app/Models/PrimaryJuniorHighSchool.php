@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PrimarySchool extends Model
+class PrimaryJuniorHighSchool extends Model
 {
-    protected $table = 'primary_schools';
+    protected $table = 'primary_junior_high_schools';
 
     protected $fillable = [
         'id',
@@ -25,8 +25,13 @@ class PrimarySchool extends Model
         'total_of_3',
         'total_of_4',
         'total_of_5',
+        'total_of_6',
+        'total_of_7',
+        'total_of_8',
+        'total_of_9',
         'total_classroom',
         'total_function_room',
+        'total_subject_room',
         'total_device_full',
         'total_device_not_full',
     ];
