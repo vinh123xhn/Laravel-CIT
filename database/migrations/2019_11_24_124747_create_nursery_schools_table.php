@@ -15,28 +15,21 @@ class CreateNurserySchoolsTable extends Migration
     {
         Schema::create('nursery_schools', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->integer('district_id')->comment('id quận/huyện')->nullable();
-            $table->integer('commune_id')->comment('id phường/xã')->nullable();
-            $table->string('address', 255)->comment('địa chỉ');
-            $table->string('phone', 20)->comment('số điện thoại trường')->nullable();
-            $table->string('email', 100)->comment('email')->nullable();
-            $table->string('website', 100)->comment('website')->nullable();
-            $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
-            $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('total_of_nursery_class')->comment('tổng số lớp nhóm trẻ')->nullable();
-            $table->integer('total_of_nursery_3_12')->comment('tổng số lớp nhóm 3 - 12 tháng')->nullable();
-            $table->integer('total_of_nursery_12_24')->comment('tổng số lớp nhóm 12 - 24 tháng')->nullable();
-            $table->integer('total_of_nursery_25_36')->comment('tổng số lớp nhóm 25 - 36 tháng')->nullable();
-            $table->integer('total_of_nursery_collect')->comment('tổng số lớp nhóm ghép')->nullable();
-            $table->integer('total_of_kindergarten_class')->comment('tổng số lớp mẫu giáo')->nullable();
-            $table->integer('total_of_kindergarten_3_4')->comment('tổng số lớp 3-4 tuổi')->nullable();
-            $table->integer('total_of_kindergarten_4_5')->comment('tổng số lớp 4-5 tuổi')->nullable();
-            $table->integer('total_of_kindergarten_5_6')->comment('tổng số lớp 5-6 tuổi')->nullable();
-            $table->integer('total_of_kindergarten_collect')->comment('tổng số lớp ghép')->nullable();
-            $table->integer('total_classroom_nursery')->comment('tổng số phòng học nhà trẻ')->nullable();
-            $table->integer('total_classroom_kindergarten')->comment('tổng số phòng học mẫu giáo')->nullable();
-            $table->integer('total_function_room')->comment('tổng số phòng chức năng')->nullable();
+            $table->integer('school_id')->comment('id trường học')->nullable();
+            $table->integer('type_school')->comment('Phân loại')->nullable();
+            $table->integer('total_of_nursery_class')->comment('tổng số lớp nhóm trẻ')->default(0)->nullable();
+            $table->integer('total_of_nursery_3_12')->comment('tổng số lớp nhóm 3 - 12 tháng')->default(0)->nullable();
+            $table->integer('total_of_nursery_13_24')->comment('tổng số lớp nhóm 13 - 24 tháng')->default(0)->nullable();
+            $table->integer('total_of_nursery_25_36')->comment('tổng số lớp nhóm 25 - 36 tháng')->default(0)->nullable();
+            $table->integer('total_of_nursery_collect')->comment('tổng số lớp nhóm ghép')->default(0)->nullable();
+            $table->integer('total_of_kindergarten_class')->comment('tổng số lớp mẫu giáo')->default(0)->nullable();
+            $table->integer('total_of_kindergarten_3_4')->comment('tổng số lớp 3-4 tuổi')->default(0)->nullable();
+            $table->integer('total_of_kindergarten_4_5')->comment('tổng số lớp 4-5 tuổi')->default(0)->nullable();
+            $table->integer('total_of_kindergarten_5_6')->comment('tổng số lớp 5-6 tuổi')->default(0)->nullable();
+            $table->integer('total_of_kindergarten_collect')->comment('tổng số lớp ghép')->default(0)->nullable();
+            $table->integer('total_classroom_nursery')->comment('tổng số phòng học nhà trẻ')->default(0)->nullable();
+            $table->integer('total_classroom_kindergarten')->comment('tổng số phòng học mẫu giáo')->default(0)->nullable();
+            $table->integer('total_function_room')->comment('tổng số phòng chức năng')->default(0)->nullable();
             $table->timestamps();
         });
     }

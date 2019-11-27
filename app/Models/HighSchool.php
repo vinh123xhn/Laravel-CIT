@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class HighSchool extends Model
 {
@@ -10,15 +11,8 @@ class HighSchool extends Model
 
     protected $fillable = [
         'id',
-        'name',
-        'district_id',
-        'commune_id',
-        'address',
-        'phone',
-        'email',
-        'website',
-        'acreage',
-        'name_of_principal',
+        'school_id',
+        'type_school',
         'total_of_class',
         'total_of_10',
         'total_of_11',
@@ -30,11 +24,22 @@ class HighSchool extends Model
         'total_device_not_full',
     ];
 
-    public function district(){
-        return $this->belongsTo('App\Models\District', 'district_id');
-    }
 
-    public function commune(){
-        return $this->belongsTo('App\Models\Commune', 'commune_id');
-    }
+//    public static function boot()
+//    {
+//        parent::boot();
+//
+//        self::created(function($model){
+//            DB::table('schools')->insert([
+//                [
+//                    'school_id' => $model->id,
+//                    'type_school' => 4
+//                ]
+//            ]);
+//        });
+//
+//        self::deleted(function($model){
+//            DB::table('schools')->where('school_id', '=', $model->id)->delete();
+//        });
+//    }
 }

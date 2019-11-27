@@ -22,10 +22,11 @@ class Student extends Model
        'level',
        'gender',
        'birthday',
+        'type_school'
     ];
 
     public function school(){
-        return $this->belongsTo('App\Models\School', 'school_id')->select(['id', 'name']);
+        return $this->belongsTo('App\Models\School', 'school_id');
     }
 
     public function district(){

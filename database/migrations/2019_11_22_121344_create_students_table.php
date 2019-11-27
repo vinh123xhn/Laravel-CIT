@@ -24,6 +24,7 @@ class CreateStudentsTable extends Migration
             $table->string('name_of_dad', 255)->comment('tên bố');
             $table->string('name_of_mom', 255)->comment('tên mẹ');
             $table->string('phone', 20)->comment('số điện thoại trường')->nullable();
+            $table->integer('type_school')->comment('phân cấp trường học')->nullable();
             $table->integer('type_of_student')->comment('phân loại học sinh')->nullable();
             $table->integer('level')->comment('Lớp')->nullable();
             $table->timestamps();

@@ -4,7 +4,14 @@ namespace App\Http\Controllers\Admin\Education;
 
 use App\Models\Children;
 use App\Models\Commune;
+use App\Models\ContinuingEducationCenter;
 use App\Models\District;
+use App\Models\HighSchool;
+use App\Models\JuniorAndHighSchool;
+use App\Models\JuniorHighSchool;
+use App\Models\NurserySchool;
+use App\Models\PrimaryJuniorHighSchool;
+use App\Models\PrimarySchool;
 use App\Models\School;
 use App\Models\Student;
 use Illuminate\Http\Request;
@@ -19,7 +26,7 @@ class StudentController extends Controller
     }
 
     public function index() {
-        $students = Student::with('school', 'district', 'commune')->get();
+        $students = Student::with('district', 'commune', 'school')->get();
         return view('admin.education.student.list')->with(compact('students'));
     }
 
@@ -39,6 +46,7 @@ class StudentController extends Controller
             'address' => 'required|max:100',
             'name_of_dad' => 'required|max:50',
             'name_of_mom' => 'required|max:50',
+            'type_school' => 'required',
             'type_of_student' => 'required',
             'level' => 'required',
         ];
@@ -55,6 +63,7 @@ class StudentController extends Controller
             'birthday.max' => 'Ngày sinh không được nhập quá 20 ký tự',
             'type_of_student.required' => 'Phân loại học sinh không được trống',
             'level.required' => 'Lớp không được để trống',
+            'type_school.required' => 'Cấp trường học không được để trống',
             'name_of_dad.required' => 'tên ch không được để trống',
             'name_of_dad.max' => 'tên cha không được nhập quá 50 ký tự',
             'name_of_mom.required' => 'tên mẹ không được để trống',
@@ -71,10 +80,10 @@ class StudentController extends Controller
     }
 
     public function editForm($id) {
-        $schools = School::pluck('name', 'id');
         $districts = District::pluck('name', 'id');
         $student = Student::FindOrFail($id);
         $communes = Commune::where('district_id', '=', $student->district_id)->pluck('name', 'id');
+        $schools = School::where('type_school', '=', $student->type_school)->pluck('name', 'id');
         return view('admin.education.student.edit')->with(compact('student', 'schools', 'districts', 'communes'));
     }
 

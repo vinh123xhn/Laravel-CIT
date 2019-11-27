@@ -6,10 +6,11 @@ use App\Models\ContinuingEducationCenter;
 use App\Models\Commune;
 use App\Http\Controllers\Controller;
 use App\Models\District;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class CenSchoolController extends Controller
+class CecSchoolController extends Controller
 {
     public function __construct()
     {
@@ -17,14 +18,14 @@ class CenSchoolController extends Controller
     }
 
     public function index() {
-        $schools = ContinuingEducationCenter::get();
+        $schools = School::where('type_school', '=', 7)->with('commune','district', 'cec')->get();
 
-        return view('admin.education.school.cen.list')->with(compact('schools'));
+        return view('admin.education.school.cec.list')->with(compact('schools'));
     }
 
     public function getForm() {
         $districts = District::pluck('name', 'id');
-        return view('admin.education.school.cen.form')->with(compact('districts'));
+        return view('admin.education.school.cec.form')->with(compact('districts'));
     }
 
     public function saveForm(Request $request) {
@@ -32,7 +33,6 @@ class CenSchoolController extends Controller
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
-            'type_of_school' => 'required',
             'address' => 'required',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
@@ -42,7 +42,6 @@ class CenSchoolController extends Controller
         $messages = [
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
-            'type_of_school.required' => 'phân loại trường không được để trống',
             'phone.numeric' => 'Số điện thoại phải nhập số',
             'phone.max' => 'Số điện thoại nhập tối đa 20 ký tự',
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
@@ -59,16 +58,35 @@ class CenSchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            ContinuingEducationCenter::create($request->all());
-            return redirect()->route('admin.school.cen.list');
+            $request['type_school'] = 7;
+            $school = School::create($request->all());
+            ContinuingEducationCenter::create([
+                'school_id' => $school->id,
+                'type_school' => 7,
+                'total_of_class' => $request->total_of_class,
+                'total_of_xmc' => $request->total_of_xmc,
+                'total_of_gdttskbc' => $request->total_of_gdttskbc,
+                'total_of_6' => $request->total_of_6,
+                'total_of_7' => $request->total_of_7,
+                'total_of_8' => $request->total_of_8,
+                'total_of_9' => $request->total_of_9,
+                'total_of_10' => $request->total_of_10,
+                'total_of_11' => $request->total_of_11,
+                'total_of_12' => $request->total_of_12,
+                'total_classroom' => $request->total_classroom,
+                'total_function_room' => $request->total_function_room,
+                'total_subject_room' => $request->total_subject_room,
+            ]);
+            return redirect()->route('admin.school.cec.list');
         }
     }
 
     public function editForm($id) {
         $districts = District::pluck('name', 'id');
-        $school = ContinuingEducationCenter::FindOrFail($id);
+        $school = School::FindOrFail($id);
         $communes = Commune::where('district_id', '=', $school->district_id)->pluck('name', 'id');
-        return view('admin.education.school.cen.edit', compact('school', 'districts', 'communes'));
+        $data = ContinuingEducationCenter::where('school_id', '=', $id)->first();
+        return view('admin.education.school.cec.edit', compact('school', 'districts', 'communes', 'data'));
     }
 
     public function updateForm(Request $request, $id) {
@@ -76,7 +94,6 @@ class CenSchoolController extends Controller
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
-            'type_of_school' => 'required',
             'address' => 'required',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
@@ -86,7 +103,6 @@ class CenSchoolController extends Controller
         $messages = [
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
-            'type_of_school.required' => 'phân loại trường không được để trống',
             'phone.numeric' => 'Số điện thoại phải nhập số',
             'phone.max' => 'Số điện thoại nhập tối đa 20 ký tự',
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
@@ -103,10 +119,33 @@ class CenSchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            $updateRequest = $request->all();
-            unset($updateRequest['_token']);
-            ContinuingEducationCenter::where('id', '=', $id)->update($updateRequest);
-            return redirect()->route('admin.school.cen.list');
+            School::where('id', '=', $id)->update([
+                'name' => $request->name,
+                'district_id' => $request->district_id,
+                'commune_id' => $request->commune_id,
+                'address' => $request->address,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'website' => $request->website,
+                'acreage' => $request->acreage,
+                'name_of_principal' => $request->name_of_principal,
+            ]);
+            ContinuingEducationCenter::where('school_id', '=', $id)->update([
+                'total_of_class' => $request->total_of_class,
+                'total_of_xmc' => $request->total_of_xmc,
+                'total_of_gdttskbc' => $request->total_of_gdttskbc,
+                'total_of_6' => $request->total_of_6,
+                'total_of_7' => $request->total_of_7,
+                'total_of_8' => $request->total_of_8,
+                'total_of_9' => $request->total_of_9,
+                'total_of_10' => $request->total_of_10,
+                'total_of_11' => $request->total_of_11,
+                'total_of_12' => $request->total_of_12,
+                'total_classroom' => $request->total_classroom,
+                'total_function_room' => $request->total_function_room,
+                'total_subject_room' => $request->total_subject_room,
+            ]);
+            return redirect()->route('admin.school.cec.list');
         }
     }
 
@@ -115,7 +154,7 @@ class CenSchoolController extends Controller
     }
 
     public function delete($id) {
-        ContinuingEducationCenter::FindOrFail($id)->delete();
+        School::FindOrFail($id)->delete();
         return redirect()->back();
     }
 }

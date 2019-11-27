@@ -21,26 +21,17 @@ return [
         4 => 'THPT',
         5 => 'Tiểu học/ THCS',
         6 => 'THCS/ THPT',
+        7 => 'Giáo dục thường xuyên',
     ],
 
     'type_of_teacher' => [
         1 => 'Giáo viên',
-        2 => 'Cán bộ quản lý',
-        3 => 'Nhân viên',
-    ],
-
-    'type_of_nursery_teacher' => [
-        1 => 'Giáo viên nhà trẻ',
-        2 => 'Giáo viên mẫu giáo',
-        3 => 'Cán bộ quản lý',
-        4 => 'Nhân viên',
-    ],
-
-    'type_of_primary_junior_high_school' => [
-        1 => 'Giáo viên tiểu học',
-        2 => 'Giáo viên thcs',
-        3 => 'Cán bộ quản lý',
-        4 => 'Nhân viên',
+        2 => 'Giáo viên nhà trẻ',
+        3 => 'Giáo viên mẫu giáo',
+        4 => 'Giáo viên tiểu học',
+        5 => 'Giáo viên thcs',
+        6 => 'Cán bộ quản lý',
+        7 => 'Nhân viên',
     ],
 
     'level_of_teacher' => [
@@ -64,39 +55,8 @@ return [
         1 => 'Có',
         2 => 'Không',
     ],
-    'level_of_student_nursery' => [
-        1 => 'nhóm 3-12 tháng',
-        2 => 'nhóm 13-24 tháng',
-        3 => 'nhóm 25-36 tháng',
-        4 => 'nhóm trẻ lớp ghép',
-        5 => 'nhóm 3-4 tuổi',
-        6 => 'nhóm 4-5 tuổi',
-        7 => 'nhóm 5-6 tuổi',
-        8 => 'nhóm mẫu giáo lớp ghép',
-    ],
 
-    'level_of_student_primary' => [
-        1 => 'Lớp 1',
-        2 => 'Lớp 2',
-        3 => 'Lớp 3',
-        4 => 'Lớp 4',
-        5 => 'Lớp 5',
-    ],
-
-    'level_of_student_junior_high' => [
-        1 => 'Lớp 6',
-        2 => 'Lớp 7',
-        3 => 'Lớp 8',
-        4 => 'Lớp 9',
-    ],
-
-    'level_of_student_high' => [
-        1 => 'Lớp 10',
-        2 => 'Lớp 11',
-        3 => 'Lớp 12',
-    ],
-
-    'level_of_student_primary_junior_high' => [
+    'level_of_student'  => [
         1 => 'Lớp 1',
         2 => 'Lớp 2',
         3 => 'Lớp 3',
@@ -106,16 +66,13 @@ return [
         7 => 'Lớp 7',
         8 => 'Lớp 8',
         9 => 'Lớp 9',
-    ],
-
-    'level_of_student_cen' => [
-        1 => 'Lớp 6',
-        2 => 'Lớp 7',
-        3 => 'Lớp 8',
-        4 => 'Lớp 9',
-        5 => 'Lớp 10',
-        6 => 'Lớp 11',
-        7 => 'Lớp 12',
+        10 => 'Lớp 10',
+        11 => 'Lớp 11',
+        12 => 'Lớp 12',
+        13 => 'Nghề 8',
+        14 => 'Nghề 11',
+        15 => 'Học viên cc tin học A, B, C',
+        16 => 'Học viên cc ngoại ngữ A, B, C',
     ],
 
     'type_of_student' => [

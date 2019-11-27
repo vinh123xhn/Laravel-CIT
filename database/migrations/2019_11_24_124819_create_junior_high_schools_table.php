@@ -15,25 +15,18 @@ class CreateJuniorHighSchoolsTable extends Migration
     {
         Schema::create('junior_high_schools', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->integer('district_id')->comment('id quận/huyện')->nullable();
-            $table->integer('commune_id')->comment('id phường/xã')->nullable();
-            $table->string('address', 255)->comment('địa chỉ');
-            $table->string('phone', 20)->comment('số điện thoại trường')->nullable();
-            $table->string('email', 100)->comment('email')->nullable();
-            $table->string('website', 100)->comment('website')->nullable();
-            $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
-            $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
-            $table->integer('total_of_class')->comment('tổng số lớp')->nullable();
-            $table->integer('total_of_6')->comment('tổng số lớp 6')->nullable();
-            $table->integer('total_of_7')->comment('tổng số lớp 7')->nullable();
-            $table->integer('total_of_8')->comment('tổng số lớp 8')->nullable();
-            $table->integer('total_of_9')->comment('tổng số lớp 9')->nullable();
-            $table->integer('total_classroom')->comment('tổng số phòng học')->nullable();
-            $table->integer('total_function_room')->comment('tổng số phòng chức năng')->nullable();
-            $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->nullable();
-            $table->integer('total_device_full')->comment('tổng số trang thiết bị tối thiểu đầy đủ')->nullable();
-            $table->integer('total_device_not_full')->comment('tổng số trang thiết bị tối thiểu không đầy đủ')->nullable();
+            $table->integer('school_id')->comment('id trường học')->nullable();
+            $table->integer('type_school')->comment('Phân loại')->nullable();
+            $table->integer('total_of_class')->comment('tổng số lớp')->default(0)->nullable();
+            $table->integer('total_of_6')->comment('tổng số lớp 6')->default(0)->nullable();
+            $table->integer('total_of_7')->comment('tổng số lớp 7')->default(0)->nullable();
+            $table->integer('total_of_8')->comment('tổng số lớp 8')->default(0)->nullable();
+            $table->integer('total_of_9')->comment('tổng số lớp 9')->default(0)->nullable();
+            $table->integer('total_classroom')->comment('tổng số phòng học')->default(0)->nullable();
+            $table->integer('total_function_room')->comment('tổng số phòng chức năng')->default(0)->nullable();
+            $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->default(0)->nullable();
+            $table->integer('total_device_full')->comment('tổng số trang thiết bị tối thiểu đầy đủ')->default(0)->nullable();
+            $table->integer('total_device_not_full')->comment('tổng số trang thiết bị tối thiểu không đầy đủ')->default(0)->nullable();
             $table->timestamps();
         });
     }

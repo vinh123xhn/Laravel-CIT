@@ -46,10 +46,10 @@
                     <td>{{config('base.gender')[$item->gender]}}</td>
                     <td>{{$item->phone}}</td>
                     <td>{{$item->email}}</td>
-                    <td>{{$item->district->name}}</td>
-                    <td>{{$item->commune->name}}</td>
+                    <td>{{$item['district']['name']}}</td>
+                    <td>{{$item['commune']['name']}}</td>
                     <td>{{$item->address}}</td>
-                    <td>{{$item->school->name}}</td>
+                    <td>{{$item['school']['name']}}</td>
                     <td>{{config('base.type_of_teacher')[$item->type_teacher]}}</td>
                     <td>{{config('base.level_of_teacher')[$item->level]}}</td>
                     <td class="text-center">

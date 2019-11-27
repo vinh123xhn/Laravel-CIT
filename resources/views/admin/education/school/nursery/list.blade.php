@@ -21,7 +21,7 @@
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
-        <table id="school" class="table table-bordered table-hover" style="width: 2500px">
+        <table id="school" class="table table-bordered table-hover" style="width: 8000px">
             <thead>
             <tr>
                 <th>Tên cơ sở</th>
@@ -68,15 +68,45 @@
             @foreach($schools as $item)
                 <tr>
                     <td>{{$item->name}}</td>
-                    <td>{{config('base.type_of_school')[$item->type_of_school]}}</td>
+                    <td>{{$item->district->name}}</td>
+                    <td>{{$item->commune->name}}</td>
                     <td>{{$item->address}}</td>
                     <td>{{$item->phone}}</td>
                     <td>{{$item->email}}</td>
                     <td>{{$item->website}}</td>
+                    <td>{{$item->acreage}}</td>
+                    <td>{{$item->name_of_principal}}</td>
+                    <td>{{$item["nursery"]['total_of_nursery_class']}}</td>
+                    <td>{{$item["nursery"]['total_of_nursery_3_12']}}</td>
+                    <td>{{$item["nursery"]['total_of_nursery_13_24']}}</td>
+                    <td>{{$item["nursery"]['total_of_nursery_25_36']}}</td>
+                    <td>{{$item["nursery"]['total_of_nursery_collect']}}</td>
+                    <td>{{$item["nursery"]['total_of_kindergarten_class']}}</td>
+                    <td>{{$item["nursery"]['total_of_kindergarten_3_4']}}</td>
+                    <td>{{$item["nursery"]['total_of_kindergarten_4_5']}}</td>
+                    <td>{{$item["nursery"]['total_of_kindergarten_5_6']}}</td>
+                    <td>{{$item["nursery"]['total_of_kindergarten_collect']}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{$item["nursery"]['total_classroom_nursery']}}</td>
+                    <td>{{$item["nursery"]['total_classroom_kindergarten']}}</td>
+                    <td>{{$item["nursery"]['total_function_room']}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.school.detail', $item->id)}}"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.school.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
-                        <a href="{{route('admin.school.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('admin.school.nursery.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
+                        <a href="{{route('admin.school.nursery.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             @endforeach

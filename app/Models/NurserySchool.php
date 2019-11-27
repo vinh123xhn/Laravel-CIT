@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\School;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class NurserySchool extends Model
 {
@@ -10,18 +13,11 @@ class NurserySchool extends Model
 
     protected $fillable = [
         'id',
-        'name',
-        'district_id',
-        'commune_id',
-        'address',
-        'phone',
-        'email',
-        'website',
-        'acreage',
-        'name_of_principal',
+        'school_id',
+        'type_school',
         'total_of_nursery_class',
         'total_of_nursery_3_12',
-        'total_of_nursery_12_24',
+        'total_of_nursery_13_24',
         'total_of_nursery_25_36',
         'total_of_nursery_collect',
         'total_of_kindergarten_class',
@@ -36,12 +32,4 @@ class NurserySchool extends Model
         'total_device_full',
         'total_device_not_full',
     ];
-
-    public function district(){
-        return $this->belongsTo('App\Models\District', 'district_id');
-    }
-
-    public function commune(){
-        return $this->belongsTo('App\Models\Commune', 'commune_id');
-    }
 }

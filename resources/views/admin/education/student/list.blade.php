@@ -48,10 +48,10 @@
                     <td>{{$item->phone}}</td>
                     <td>{{$item->name_of_dad}}</td>
                     <td>{{$item->name_of_mom}}</td>
-                    <td>{{$item->district->name}}</td>
-                    <td>{{$item->commune->name}}</td>
+                    <td>{{$item['district']['name']}}</td>
+                    <td>{{$item['commune']['name']}}</td>
                     <td>{{$item->address}}</td>
-                    <td>{{$item->school->name}}</td>
+                    <td>{{$item['school']['name']}}</td>
                     <td>{{config('base.type_of_student')[$item->type_of_student]}}</td>
                     <td>{{config('base.level_of_student')[$item->level]}}</td>
                     <td class="text-center">

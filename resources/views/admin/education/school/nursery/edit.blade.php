@@ -125,7 +125,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp nhóm trẻ</label>
-                            <input type="text" class="form-control" name="total_of_nursery_class" placeholder="Nhập tổng số lớp nhóm trẻ" value="{{old('total_of_nursery_class') ? old('total_of_nursery_class') : $school->total_of_nursery_class}}">
+                            <input type="text" class="form-control" name="total_of_nursery_class" placeholder="Nhập tổng số lớp nhóm trẻ" value="{{old('total_of_nursery_class') ? old('total_of_nursery_class') : $data->total_of_nursery_class}}">
                             @error('total_of_nursery_class')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -134,7 +134,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp nhóm 3 - 12 tháng</label>
-                            <input type="text" class="form-control" name="total_of_nursery_3_12" placeholder="Nhập tổng số lớp nhóm 3 - 12 tháng" value="{{old('total_of_nursery_3_12') ? old('total_of_nursery_3_12') : $school->total_of_nursery_3_12}}">
+                            <input type="text" class="form-control" name="total_of_nursery_3_12" placeholder="Nhập tổng số lớp nhóm 3 - 12 tháng" value="{{old('total_of_nursery_3_12') ? old('total_of_nursery_3_12') : $data->total_of_nursery_3_12}}">
                             @error('total_of_nursery_3_12')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -143,7 +143,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp nhóm 13 - 24 tháng</label>
-                            <input type="text" class="form-control" name="total_of_nursery_13_24" placeholder="Nhập tổng số lớp nhóm 13 - 24 tháng" value="{{old('total_of_nursery_13_24') ? old('total_of_nursery_13_24') : $school->total_of_nursery_13_24}}">
+                            <input type="text" class="form-control" name="total_of_nursery_13_24" placeholder="Nhập tổng số lớp nhóm 13 - 24 tháng" value="{{old('total_of_nursery_13_24') ? old('total_of_nursery_13_24') : $data->total_of_nursery_13_24}}">
                             @error('total_of_nursery_13_24')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -152,7 +152,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp nhóm 25 - 36 tháng</label>
-                            <input type="text" class="form-control" name="total_of_nursery_25_36" placeholder="Nhập tổng số lớp nhóm 25 - 36 tháng" value="{{old('total_of_nursery_25_36') ? old('total_of_nursery_25_36') : $school->total_of_nursery_25_36}}">
+                            <input type="text" class="form-control" name="total_of_nursery_25_36" placeholder="Nhập tổng số lớp nhóm 25 - 36 tháng" value="{{old('total_of_nursery_25_36') ? old('total_of_nursery_25_36') : $data->total_of_nursery_25_36}}">
                             @error('total_of_nursery_25_36')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -161,7 +161,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp nhóm trẻ ghép</label>
-                            <input type="text" class="form-control" name="total_of_nursery_collect" placeholder="Nhập tổng số lớp nhóm trẻ ghép" value="{{old('total_of_nursery_collect') ? old('total_of_nursery_collect') : $school->total_of_nursery_collect}}">
+                            <input type="text" class="form-control" name="total_of_nursery_collect" placeholder="Nhập tổng số lớp nhóm trẻ ghép" value="{{old('total_of_nursery_collect') ? old('total_of_nursery_collect') : $data->total_of_nursery_collect}}">
                             @error('total_of_nursery_collect')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -170,7 +170,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp mẫu giáo</label>
-                            <input type="text" class="form-control" name="total_of_kindergarten_class" placeholder="Nhập tổng số phòng học" value="{{old('total_of_kindergarten_class') ? old('total_of_kindergarten_class') : $school->total_of_kindergarten_class}}">
+                            <input type="text" class="form-control" name="total_of_kindergarten_class" placeholder="Nhập tổng số phòng học" value="{{old('total_of_kindergarten_class') ? old('total_of_kindergarten_class') : $data->total_of_kindergarten_class}}">
                             @error('total_of_kindergarten_class')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -179,7 +179,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp 3 - 4 tuổi</label>
-                            <input type="text" class="form-control" name="total_of_kindergarten_3_4" placeholder="Nhập tổng số lớp 3 - 4 tuổi" value="{{old('total_of_kindergarten_3_4') ? old('total_of_kindergarten_3_4') : $school->total_of_kindergarten_3_4}}">
+                            <input type="text" class="form-control" name="total_of_kindergarten_3_4" placeholder="Nhập tổng số lớp 3 - 4 tuổi" value="{{old('total_of_kindergarten_3_4') ? old('total_of_kindergarten_3_4') : $data->total_of_kindergarten_3_4}}">
                             @error('total_of_kindergarten_3_4')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -188,7 +188,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp 4 - 5 tuổi</label>
-                            <input type="text" class="form-control" name="total_of_kindergarten_4_5" placeholder="Nhập tổng số lớp 4 - 5 tuổi" value="{{old('total_of_kindergarten_4_5') ? old('total_of_kindergarten_4_5') : $school->total_of_kindergarten_4_5}}">
+                            <input type="text" class="form-control" name="total_of_kindergarten_4_5" placeholder="Nhập tổng số lớp 4 - 5 tuổi" value="{{old('total_of_kindergarten_4_5') ? old('total_of_kindergarten_4_5') : $data->total_of_kindergarten_4_5}}">
                             @error('total_of_kindergarten_4_5')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -197,7 +197,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp 5 - 6 tuổi</label>
-                            <input type="text" class="form-control" name="total_of_kindergarten_5_6" placeholder="Nhập tổng số lớp 5 - 6 tuổi" value="{{old('total_of_kindergarten_5_6') ? old('total_of_kindergarten_5_6') : $school->total_of_kindergarten_5_6}}">
+                            <input type="text" class="form-control" name="total_of_kindergarten_5_6" placeholder="Nhập tổng số lớp 5 - 6 tuổi" value="{{old('total_of_kindergarten_5_6') ? old('total_of_kindergarten_5_6') : $data->total_of_kindergarten_5_6}}">
                             @error('total_of_kindergarten_5_6')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -206,7 +206,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp mẫu giáo ghép</label>
-                            <input type="text" class="form-control" name="total_of_kindergarten_collect" placeholder="Nhập tổng số phòng học" value="{{old('total_of_kindergarten_collect') ? old('total_of_kindergarten_collect') : $school->total_of_kindergarten_collect}}">
+                            <input type="text" class="form-control" name="total_of_kindergarten_collect" placeholder="Nhập tổng số phòng học" value="{{old('total_of_kindergarten_collect') ? old('total_of_kindergarten_collect') : $data->total_of_kindergarten_collect}}">
                             @error('total_of_kindergarten_collect')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -215,7 +215,7 @@
                     <div class="float-left col-md-6">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số phòng học nhà trẻ</label>
-                            <input type="text" class="form-control" name="total_classroom_nursery" placeholder="Nhập tổng số phòng học nhà trẻ" value="{{old('total_classroom_nursery') ? old('total_classroom_nursery') : $school->total_classroom_nursery}}">
+                            <input type="text" class="form-control" name="total_classroom_nursery" placeholder="Nhập tổng số phòng học nhà trẻ" value="{{old('total_classroom_nursery') ? old('total_classroom_nursery') : $data->total_classroom_nursery}}">
                             @error('total_classroom_nursery')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -224,7 +224,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số phòng học mẫu giáo</label>
-                            <input type="text" class="form-control" name="total_classroom_kindergarten" placeholder="Nhập tổng số trang thiết bị tối thiểu không đầy đủ" value="{{old('total_classroom_kindergarten') ? old('total_classroom_kindergarten') : $school->total_classroom_kindergarten}}">
+                            <input type="text" class="form-control" name="total_classroom_kindergarten" placeholder="Nhập tổng số trang thiết bị tối thiểu không đầy đủ" value="{{old('total_classroom_kindergarten') ? old('total_classroom_kindergarten') : $data->total_classroom_kindergarten}}">
                             @error('total_classroom_kindergarten')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -233,7 +233,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số phòng chức năng</label>
-                            <input type="text" class="form-control" name="total_function_room" placeholder="Nhập tổng số phòng chức năng" value="{{old('total_function_room') ? old('total_function_room') : $school->total_function_room}}">
+                            <input type="text" class="form-control" name="total_function_room" placeholder="Nhập tổng số phòng chức năng" value="{{old('total_function_room') ? old('total_function_room') : $data->total_function_room}}">
                             @error('total_function_room')
                             <p class="danger">{{ $message }}</p>
                             @enderror

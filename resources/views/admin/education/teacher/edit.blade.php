@@ -107,8 +107,24 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputPassword1">Phân cấp trường học</label>
+                        <select class="form-control select2" name="type_school" id="type_school" style="width: 100%;">
+                            @foreach(config('base.type_of_school') as $k => $item)
+                                <option
+                                    @if($teacher->type_school == $k)
+                                    {{"selected"}}
+                                    @endif
+                                    value="{{$k}}">{{$item}}
+                                </option>
+                            @endforeach
+                        </select>
+                        @error('type_school')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputPassword1">Trường</label>
-                        <select class="form-control select2" name="school_id" style="width: 100%;">
+                        <select class="form-control select2" id="school" name="school_id" style="width: 100%;">
                             @foreach($schools as $k => $item)
                                 <option
                                     @if($teacher->school_id == $k)
@@ -168,14 +184,23 @@
 @section('js')
     <script>
         $('#district').on('change', function (e) {
-            console.log(e);
-
             var cat_id = e.target.value;
 
             $.get('/ajax-get-commune?cat_id=' + cat_id, function (data) {
                 $('#commune').empty();
                 $.each(data, function (index, commune) {
                     $('#commune').append('<option value="'+commune.id+'">'+commune.name+'</option>');
+                })
+            })
+        });
+
+        $('#type_school').on('change', function (e) {
+            var cat_id = e.target.value;
+
+            $.get('/ajax-get-type-student?cat_id=' + cat_id, function (data) {
+                $('#school').empty();
+                $.each(data, function (index, value) {
+                    $('#school').append('<option value="'+value.id+'">'+value.name+'</option>');
                 })
             })
         });

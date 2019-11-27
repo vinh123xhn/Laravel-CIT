@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeachersTable extends Migration
+class CreateSchoolsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,18 @@ class CreateTeachersTable extends Migration
      */
     public function up()
     {
-        Schema::create('teachers', function (Blueprint $table) {
+        Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('type_school')->comment('Phân loại')->nullable();
             $table->string('name', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
             $table->integer('commune_id')->comment('id phường/xã')->nullable();
-            $table->integer('school_id')->comment('id phường/xã')->nullable();
             $table->string('address', 255)->comment('địa chỉ');
-            $table->string('birthday', 255)->comment('ngày sinh');
             $table->string('phone', 20)->comment('số điện thoại trường')->nullable();
             $table->string('email', 100)->comment('email')->nullable();
-            $table->integer('type_school')->comment('phân cấp trường học')->nullable();
-            $table->integer('type_teacher')->comment('phân loại giáo viên')->nullable();
-            $table->integer('level')->comment('trình độ học vấn')->nullable();
+            $table->string('website', 100)->comment('website')->nullable();
+            $table->string('acreage', 100)->comment('diện tích mặt đất')->nullable();
+            $table->string('name_of_principal', 100)->comment('tên hiệu trưởng')->nullable();
             $table->timestamps();
         });
     }
@@ -37,6 +36,6 @@ class CreateTeachersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('teachers');
+        Schema::dropIfExists('schools');
     }
 }

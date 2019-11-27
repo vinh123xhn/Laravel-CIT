@@ -105,7 +105,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tên hiệu trưởng</label>
-                            <input type="text" class="form-control" name="total_of_nursery_class" placeholder="Nhập tên hiệu trưởng" value="{{old('name_of_principal')}}">
+                            <input type="text" class="form-control" name="name_of_principal" placeholder="Nhập tên hiệu trưởng" value="{{old('name_of_principal')}}">
                             @error('name_of_principal')
                             <p class="danger">{{ $message }}</p>
                             @enderror

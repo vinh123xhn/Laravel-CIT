@@ -34,20 +34,6 @@
                     </div>
                     <div class="col-md-6 float-left">
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Loại trường học</label>
-                            <select class="form-control select2" name="type_of_school" style="width: 100%;">
-                                <option value="">Lựa chọn</option>
-                                @foreach(config('base.type_of_school') as $k => $item)
-                                    <option value="{{$k}}">{{$item}}</option>
-                                @endforeach
-                            </select>
-                            @error('type_of_school')
-                            <p class="danger">{{ $message }}</p>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="col-md-6 float-left">
-                        <div class="form-group">
                             <label for="exampleInputPassword1">Quận/ huyện</label>
                             <select class="form-control select2" name="district_id" id="district" style="width: 100%;">
                                 <option value="">Lựa chọn</option>
@@ -164,7 +150,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp 9</label>
-                            <input type="text" class="form-control" name="total_of_8" placeholder="Nhập tổng số lớp 9" value="{{old('total_of_9')}}">
+                            <input type="text" class="form-control" name="total_of_9" placeholder="Nhập tổng số lớp 9" value="{{old('total_of_9')}}">
                             @error('total_of_9')
                             <p class="danger">{{ $message }}</p>
                             @enderror
@@ -211,6 +197,15 @@
                             <label for="exampleInputPassword1">Tổng số phòng chức năng</label>
                             <input type="text" class="form-control" name="total_function_room" placeholder="Nhập tổng số phòng chức năng" value="{{old('total_function_room')}}">
                             @error('total_function_room')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Tổng số phòng bộ môn</label>
+                            <input type="text" class="form-control" name="total_subject_room" placeholder="Nhập tổng số phòng bộ môn" value="{{old('total_subject_room')}}">
+                            @error('total_subject_room')
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>

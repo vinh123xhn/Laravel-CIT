@@ -11,3 +11,10 @@
 .float-right {
     float: right;
 }
+
+.set-menu-width {
+    max-width: 240px;
+    overflow: hidden;
+    white-space: initial;
+    text-overflow: ellipsis;
+}

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Commune;
 use App\Models\District;
 use App\Models\PrimarySchool;
+use App\Models\School;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -17,8 +18,7 @@ class PrimarySchoolController extends Controller
     }
 
     public function index() {
-        $schools = PrimarySchool::get();
-
+        $schools = School::where('type_school', '=', 2)->with('commune','district','primary')->get();
         return view('admin.education.school.primary.list')->with(compact('schools'));
     }
 
@@ -32,7 +32,6 @@ class PrimarySchoolController extends Controller
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
-            'type_of_school' => 'required',
             'address' => 'required',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
@@ -42,7 +41,6 @@ class PrimarySchoolController extends Controller
         $messages = [
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
-            'type_of_school.required' => 'phân loại trường không được để trống',
             'phone.numeric' => 'Số điện thoại phải nhập số',
             'phone.max' => 'Số điện thoại nhập tối đa 20 ký tự',
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
@@ -59,16 +57,32 @@ class PrimarySchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            PrimarySchool::create($request->all());
+            $request['type_school'] = 2;
+            $school = School::create($request->all());
+            PrimarySchool::create([
+                'school_id' => $school->id,
+                'type_school' => 2,
+                'total_of_class' => $request->total_of_class,
+                'total_of_1' => $request->total_of_1,
+                'total_of_2' => $request->total_of_2,
+                'total_of_3' => $request->total_of_3,
+                'total_of_4' => $request->total_of_4,
+                'total_of_5' => $request->total_of_5,
+                'total_classroom' => $request->total_classroom,
+                'total_function_room' => $request->total_function_room,
+                'total_device_full' => $request->total_device_full,
+                'total_device_not_full' => $request->total_device_not_full,
+            ]);
             return redirect()->route('admin.school.primary.list');
         }
     }
 
     public function editForm($id) {
         $districts = District::pluck('name', 'id');
-        $school = PrimarySchool::FindOrFail($id);
+        $school = School::FindOrFail($id);
         $communes = Commune::where('district_id', '=', $school->district_id)->pluck('name', 'id');
-        return view('admin.education.school.primary.edit', compact('school', 'districts', 'communes'));
+        $data = PrimarySchool::where('school_id', '=', $id)->first();
+        return view('admin.education.school.primary.edit', compact('school', 'districts', 'communes', 'data'));
     }
 
     public function updateForm(Request $request, $id) {
@@ -76,7 +90,6 @@ class PrimarySchoolController extends Controller
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
-            'type_of_school' => 'required',
             'address' => 'required',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
@@ -86,7 +99,6 @@ class PrimarySchoolController extends Controller
         $messages = [
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
-            'type_of_school.required' => 'phân loại trường không được để trống',
             'phone.numeric' => 'Số điện thoại phải nhập số',
             'phone.max' => 'Số điện thoại nhập tối đa 20 ký tự',
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
@@ -103,9 +115,29 @@ class PrimarySchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            $updateRequest = $request->all();
-            unset($updateRequest['_token']);
-            PrimarySchool::where('id', '=', $id)->update($updateRequest);
+            School::where('id', '=', $id)->update([
+                'name' => $request->name,
+                'district_id' => $request->district_id,
+                'commune_id' => $request->commune_id,
+                'address' => $request->address,
+                'phone' => $request->phone,
+                'email' => $request->email,
+                'website' => $request->website,
+                'acreage' => $request->acreage,
+                'name_of_principal' => $request->name_of_principal,
+            ]);
+            PrimarySchool::where('school_id', '=', $id)->update([
+                'total_of_class' => $request->total_of_class,
+                'total_of_1' => $request->total_of_1,
+                'total_of_2' => $request->total_of_2,
+                'total_of_3' => $request->total_of_3,
+                'total_of_4' => $request->total_of_4,
+                'total_of_5' => $request->total_of_5,
+                'total_classroom' => $request->total_classroom,
+                'total_function_room' => $request->total_function_room,
+                'total_device_full' => $request->total_device_full,
+                'total_device_not_full' => $request->total_device_not_full,
+            ]);
             return redirect()->route('admin.school.primary.list');
         }
     }
@@ -115,7 +147,7 @@ class PrimarySchoolController extends Controller
     }
 
     public function delete($id) {
-        PrimarySchool::FindOrFail($id)->delete();
+        School::FindOrFail($id)->delete();
         return redirect()->back();
     }
 }

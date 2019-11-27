@@ -21,7 +21,7 @@
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
-        <table id="school" class="table table-bordered table-hover" style="width: 2500px">
+        <table id="school" class="table table-bordered table-hover" style="width: 7000px">
             <thead>
             <tr>
                 <th>Tên cơ sở</th>
@@ -57,15 +57,34 @@
             @foreach($schools as $item)
                 <tr>
                     <td>{{$item->name}}</td>
-                    <td>{{config('base.type_of_school')[$item->type_of_school]}}</td>
+                    <td>{{$item->district->name}}</td>
+                    <td>{{$item->commune->name}}</td>
                     <td>{{$item->address}}</td>
                     <td>{{$item->phone}}</td>
                     <td>{{$item->email}}</td>
                     <td>{{$item->website}}</td>
+                    <td>{{$item->acreage}}</td>
+                    <td>{{$item->name_of_principal}}</td>
+                    <td>{{$item['high']['total_of_class']}}</td>
+                    <td>{{$item['high']['total_of_10']}}</td>
+                    <td>{{$item['high']['total_of_11']}}</td>
+                    <td>{{$item['high']['total_of_12']}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{$item['high']['total_classroom']}}</td>
+                    <td>{{$item['high']['total_function_room']}}</td>
+                    <td>{{$item['high']['total_subject_room']}}</td>
+                    <td>{{$item['high']['total_device_full']}}</td>
+                    <td>{{$item['high']['total_device_not_full']}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.school.detail', $item->id)}}"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.school.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
-                        <a href="{{route('admin.school.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('admin.school.high.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
+                        <a href="{{route('admin.school.high.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             @endforeach

@@ -16,12 +16,12 @@
 @endsection
 @section('content')
     <div class="col-md-12">
-        <a class="btn btn-primary float-right" href="{{route('admin.school.cen.form.get')}}">
+        <a class="btn btn-primary float-right" href="{{route('admin.school.cec.form.get')}}">
             Tạo mới trung tâm giáo dục thường xuyên
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
-        <table id="school" class="table table-bordered table-hover" style="width: 2500px">
+        <table id="school" class="table table-bordered table-hover" style="width: 7000px">
             <thead>
             <tr>
                 <th>Tên cơ sở</th>
@@ -71,15 +71,48 @@
             @foreach($schools as $item)
                 <tr>
                     <td>{{$item->name}}</td>
-                    <td>{{config('base.type_of_school')[$item->type_of_school]}}</td>
+                    <td>{{$item->district->name}}</td>
+                    <td>{{$item->commune->name}}</td>
                     <td>{{$item->address}}</td>
                     <td>{{$item->phone}}</td>
                     <td>{{$item->email}}</td>
                     <td>{{$item->website}}</td>
+                    <td>{{$item->acreage}}</td>
+                    <td>{{$item->name_of_principal}}</td>
+                    <td>{{$item['cec']['total_of_class']}}</td>
+                    <td>{{$item['cec']['total_of_xmc']}}</td>
+                    <td>{{$item['cec']['total_of_gdttskbc']}}</td>
+                    <td>{{$item['cec']['total_of_6']}}</td>
+                    <td>{{$item['cec']['total_of_7']}}</td>
+                    <td>{{$item['cec']['total_of_8']}}</td>
+                    <td>{{$item['cec']['total_of_9']}}</td>
+                    <td>{{$item['cec']['total_of_10']}}</td>
+                    <td>{{$item['cec']['total_of_11']}}</td>
+                    <td>{{$item['cec']['total_of_12']}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>{{$item['cec']['total_classroom']}}</td>
+                    <td>{{$item['cec']['total_subject_room']}}</td>
+                    <td>{{$item['cec']['total_function_room']}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.school.detail', $item->id)}}"><i class="fa fa-eye"></i></a>
-                        <a href="{{route('admin.school.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
-                        <a href="{{route('admin.school.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('admin.school.cec.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
+                        <a href="{{route('admin.school.cec.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             @endforeach

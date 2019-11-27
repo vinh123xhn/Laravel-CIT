@@ -20,7 +20,8 @@ class Teacher extends Model
         'type_teacher',
         'level',
         'birthday',
-        'gender'
+        'gender',
+        'type_school'
     ];
 
     public function school(){

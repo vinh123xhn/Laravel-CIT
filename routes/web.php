@@ -37,6 +37,36 @@ Route::get('/ajax-get-commune', function () {
     return Response::json($commune);
 });
 
+Route::get('/ajax-get-type-student', function () {
+    $cat_id = \Illuminate\Support\Facades\Input::get('cat_id');
+
+    switch ($cat_id) {
+        case 1:
+            $data = \App\Models\School::where('type_school', '=', 1)->get();
+            break;
+        case 2:
+            $data = \App\Models\School::where('type_school', '=', 2)->get();
+            break;
+        case 3:
+            $data = \App\Models\School::where('type_school', '=', 3)->get();
+            break;
+        case 4:
+            $data = \App\Models\School::where('type_school', '=', 4)->get();
+            break;
+        case 5:
+            $data = \App\Models\School::where('type_school', '=', 5)->get();
+            break;
+        case 6:
+            $data = \App\Models\School::where('type_school', '=', 6)->get();
+            break;
+        case 7:
+            $data = \App\Models\School::where('type_school', '=', 7)->get();
+            break;
+    }
+
+    return Response::json($data);
+});
+
 Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' => '/'], function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
@@ -132,14 +162,14 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' 
                 Route::get('/delete/{id}', 'JuniorAndHighSchoolController@delete')->name('admin.school.junior_and_high.delete');
             });
 
-            Route::group(['prefix' => 'cen'], function () {
-                Route::get('/', 'CenSchoolController@index')->name('admin.school.cen.list');
-                Route::get('/detail/{id}', 'CenSchoolController@index')->name('admin.school.cen.detail');
-                Route::get('/form', 'CenSchoolController@getForm')->name('admin.school.cen.form.get');
-                Route::post('/form', 'CenSchoolController@saveForm')->name('admin.school.cen.form.post');
-                Route::get('/edit/{id}', 'CenSchoolController@editForm')->name('admin.school.cen.form.edit');
-                Route::post('/update/{id}', 'CenSchoolController@updateForm')->name('admin.school.cen.form.update');
-                Route::get('/delete/{id}', 'CenSchoolController@delete')->name('admin.school.cen.delete');
+            Route::group(['prefix' => 'cec'], function () {
+                Route::get('/', 'CecSchoolController@index')->name('admin.school.cec.list');
+                Route::get('/detail/{id}', 'CecSchoolController@index')->name('admin.school.cec.detail');
+                Route::get('/form', 'CecSchoolController@getForm')->name('admin.school.cec.form.get');
+                Route::post('/form', 'CecSchoolController@saveForm')->name('admin.school.cec.form.post');
+                Route::get('/edit/{id}', 'CecSchoolController@editForm')->name('admin.school.cec.form.edit');
+                Route::post('/update/{id}', 'CecSchoolController@updateForm')->name('admin.school.cec.form.update');
+                Route::get('/delete/{id}', 'CecSchoolController@delete')->name('admin.school.cec.delete');
             });
         });
 
