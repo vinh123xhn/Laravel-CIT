@@ -28,7 +28,22 @@ class TeacherController extends Controller
 
     public function index() {
         $teachers = Teacher::with('school', 'commune', 'district')->get();
-        return view('admin.education.teacher.list')->with(compact('teachers'));
+        $districts = District::pluck('name', 'id');
+        return view('admin.education.teacher.list')->with(compact('teachers', 'districts'));
+    }
+
+    public function filter(Request $request) {
+        $districts = District::pluck('name', 'id');
+        $teachers = Teacher::with('commune','district', 'school');
+        $filter = [];
+        if ($request->district_id) {
+            $filter['district_id'] = $request->district_id;
+        }
+        if ($request->commune_id) {
+            $filter['commune_id'] = $request->commune_id;
+        }
+        $teachers = $teachers->where($filter)->get();
+        return view('admin.education.teacher.list')->with(compact('teachers', 'districts'));
     }
 
     public function getForm() {
@@ -131,6 +146,44 @@ class TeacherController extends Controller
             Teacher::where('id', '=', $id)->update($updateRequest);
             return redirect()->route('admin.teacher.list');
         }
+    }
+
+    public function exportData() {
+//        field => title
+        $exportFields = [
+            'name' => __('Họ và tên'),
+            'gender' => __('Giới tính'),
+            'birthday' => __('Ngày sinh'),
+            'address' => __('địa chỉ'),
+            'district_id' => __('Quận/ huyện'),
+            'commune_id' => __('Phường/ xã'),
+            'phone' => __('Số điện thoại'),
+            'email' => __('Thư điện tử'),
+            'school_id' => __('Đang học tại trường'),
+            'type_school' => __('Cấp'),
+            'type_teacher' => __('Chức vụ'),
+            'level' => __('Trình độ học vấn'),
+        ];
+        $teachers = Teacher::with('district', 'commune', 'school')->orderBy('created_at', 'desc')->get();
+        $gender = config('base.gender');
+        $type_school = config('base.type_of_school');
+        $level = config('base.level_of_teacher');
+        $type_teacher = config('base.type_of_teacher');
+
+        $data = [];
+        foreach ($teachers as $item) {
+            $item['gender'] = $item->gender ? $gender[$item->gender] : '';
+            $item['district_id'] = $item['district'] ['name'];
+            $item['commune_id'] = $item['commune'] ['name'];
+            $item['school_id'] = $item['school']['name'];
+            $item['type_school'] = $item->type_school ? $type_school[$item->type_school] : '';
+            $item['type_teacher'] = $item->type_teacher ? $type_teacher[$item->type_teacher] : '';
+            $item['level'] = $item->level ? $level[$item->level] : '';
+
+            $item = $item->toArray();
+            $data[] = $item;
+        }
+        $this->downloadExcel('Nhân sự data'.date('Y-m-d'), $exportFields, $data, 'Nhân sự-'.date('Y-m-d').'.xlsx');
     }
 
     public function delete($id) {

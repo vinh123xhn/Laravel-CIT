@@ -14,15 +14,30 @@ class PrimaryJuniorHighSchool extends Model
         'school_id',
         'type_school',
         'total_of_class',
-        'total_of_1',
-        'total_of_2',
-        'total_of_3',
-        'total_of_4',
-        'total_of_5',
-        'total_of_6',
-        'total_of_7',
-        'total_of_8',
-        'total_of_9',
+        'total_of_grade_1',
+        'total_of_grade_2',
+        'total_of_grade_3',
+        'total_of_grade_4',
+        'total_of_grade_5',
+        'total_of_grade_6',
+        'total_of_grade_7',
+        'total_of_grade_8',
+        'total_of_grade_9',
+        'total_of_student',
+        'total_of_student_1',
+        'total_of_student_2',
+        'total_of_student_3',
+        'total_of_student_4',
+        'total_of_student_5',
+        'total_of_student_6',
+        'total_of_student_7',
+        'total_of_student_8',
+        'total_of_student_9',
+        'total_of_all_employees',
+        'total_of_manager',
+        'total_of_primary_teacher',
+        'total_of_junior_high_teacher',
+        'total_of_employees',
         'total_classroom',
         'total_function_room',
         'total_subject_room',
@@ -30,21 +45,5 @@ class PrimaryJuniorHighSchool extends Model
         'total_device_not_full',
     ];
 
-//    public static function boot()
-//    {
-//        parent::boot();
-//
-//        self::created(function($model){
-//            DB::table('schools')->insert([
-//                [
-//                    'school_id' => $model->id,
-//                    'type_school' => 5
-//                ]
-//            ]);
-//        });
-//
-//        self::deleted(function($model){
-//            DB::table('schools')->where('school_id', '=', $model->id)->delete();
-//        });
-//    }
+
 }

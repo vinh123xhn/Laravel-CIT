@@ -37,6 +37,50 @@ Route::get('/ajax-get-commune', function () {
     return Response::json($commune);
 });
 
+Route::get('/ajax-get-school', function () {
+    $data = [];
+    $districts = \App\Models\District::orderBy('id')->withCount('school_nursery', 'school_primary', 'school_junior_high', 'school_high', 'school_primary_junior_high', 'school_junior_and_high', 'school_cec')->get();
+    foreach ($districts as $k => $item) {
+        $data['district'][$k] = $item->name;
+        $data['nursery'][$k] = $item['school_nursery_count'];
+        $data['primary'][$k] = $item['school_primary_count'];
+        $data['junior_high'][$k] = $item['school_junior_high_count'];
+        $data['high'][$k] = $item['school_high_count'];
+        $data['primary_junior_high'][$k] = $item['school_primary_junior_high_count'];
+        $data['junior_and_high'][$k] = $item['school_junior_and_high_count'];
+        $data['cec'][$k] = $item['school_cec_count'];
+    }
+    return Response::json($data);
+});
+
+Route::get('/ajax-get-teacher', function () {
+    $data = [];
+    $districts = \App\Models\District::orderBy('id')->withCount('teacher', 'manager', 'employee')->get();
+    foreach ($districts as $k => $item) {
+        $data['district'][$k] = $item->name;
+        $data['teacher'][$k] = $item['teacher_count'];
+        $data['manager'][$k] = $item['manager_count'];
+        $data['employee'][$k] = $item['employee_count'];
+    }
+    return Response::json($data);
+});
+
+Route::get('/ajax-get-student', function () {
+    $data = [];
+    $districts = \App\Models\District::orderBy('id')->withCount('student_nursery', 'student_primary', 'student_junior_high', 'student_high', 'student_primary_junior_high', 'student_junior_and_high', 'student_cec')->get();
+    foreach ($districts as $k => $item) {
+        $data['district'][$k] = $item->name;
+        $data['nursery'][$k] = $item['student_nursery_count'];
+        $data['primary'][$k] = $item['student_primary_count'];
+        $data['junior_high'][$k] = $item['student_junior_high_count'];
+        $data['high'][$k] = $item['student_high_count'];
+        $data['primary_junior_high'][$k] = $item['student_primary_junior_high_count'];
+        $data['junior_and_high'][$k] = $item['student_junior_and_high_count'];
+        $data['cec'][$k] = $item['student_cec_count'];
+    }
+    return Response::json($data);
+});
+
 Route::get('/ajax-get-type-student', function () {
     $cat_id = \Illuminate\Support\Facades\Input::get('cat_id');
 
@@ -104,93 +148,102 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' 
         Route::group(['prefix' => 'school', 'namespace' => 'School'], function () {
             Route::group(['prefix' => 'nursery'], function () {
                 Route::get('/', 'NurserySchoolController@index')->name('admin.school.nursery.list');
-                Route::get('/detail/{id}', 'NurserySchoolController@index')->name('admin.school.nursery.detail');
+                Route::get('/filter', 'NurserySchoolController@filter')->name('admin.school.nursery.filter');
                 Route::get('/form', 'NurserySchoolController@getForm')->name('admin.school.nursery.form.get');
                 Route::post('/form', 'NurserySchoolController@saveForm')->name('admin.school.nursery.form.post');
                 Route::get('/edit/{id}', 'NurserySchoolController@editForm')->name('admin.school.nursery.form.edit');
                 Route::post('/update/{id}', 'NurserySchoolController@updateForm')->name('admin.school.nursery.form.update');
                 Route::get('/delete/{id}', 'NurserySchoolController@delete')->name('admin.school.nursery.delete');
+                Route::get('/export-excel', 'NurserySchoolController@exportData')->name('admin.school.nursery.export-excel');
             });
 
             Route::group(['prefix' => 'primary'], function () {
                 Route::get('/', 'PrimarySchoolController@index')->name('admin.school.primary.list');
-                Route::get('/detail/{id}', 'PrimarySchoolController@index')->name('admin.school.primary.detail');
+                Route::get('/filter', 'PrimarySchoolController@filter')->name('admin.school.primary.filter');
                 Route::get('/form', 'PrimarySchoolController@getForm')->name('admin.school.primary.form.get');
                 Route::post('/form', 'PrimarySchoolController@saveForm')->name('admin.school.primary.form.post');
                 Route::get('/edit/{id}', 'PrimarySchoolController@editForm')->name('admin.school.primary.form.edit');
                 Route::post('/update/{id}', 'PrimarySchoolController@updateForm')->name('admin.school.primary.form.update');
                 Route::get('/delete/{id}', 'PrimarySchoolController@delete')->name('admin.school.primary.delete');
+                Route::get('/export-excel', 'PrimarySchoolController@exportData')->name('admin.school.primary.export-excel');
             });
 
             Route::group(['prefix' => 'junior-high'], function () {
                 Route::get('/', 'JuniorHighSchoolController@index')->name('admin.school.junior_high.list');
-                Route::get('/detail/{id}', 'JuniorHighSchoolController@index')->name('admin.school.junior_high.detail');
+                Route::get('/filter', 'JuniorHighSchoolController@filter')->name('admin.school.junior_high.filter');
                 Route::get('/form', 'JuniorHighSchoolController@getForm')->name('admin.school.junior_high.form.get');
                 Route::post('/form', 'JuniorHighSchoolController@saveForm')->name('admin.school.junior_high.form.post');
                 Route::get('/edit/{id}', 'JuniorHighSchoolController@editForm')->name('admin.school.junior_high.form.edit');
                 Route::post('/update/{id}', 'JuniorHighSchoolController@updateForm')->name('admin.school.junior_high.form.update');
                 Route::get('/delete/{id}', 'JuniorHighSchoolController@delete')->name('admin.school.junior_high.delete');
+                Route::get('/export-excel', 'JuniorHighSchoolController@exportData')->name('admin.school.junior_high.export-excel');
             });
 
             Route::group(['prefix' => 'high'], function () {
                 Route::get('/', 'HighSchoolController@index')->name('admin.school.high.list');
-                Route::get('/detail/{id}', 'HighSchoolController@index')->name('admin.school.high.detail');
+                Route::get('/filter', 'HighSchoolController@filter')->name('admin.school.high.filter');
                 Route::get('/form', 'HighSchoolController@getForm')->name('admin.school.high.form.get');
                 Route::post('/form', 'HighSchoolController@saveForm')->name('admin.school.high.form.post');
                 Route::get('/edit/{id}', 'HighSchoolController@editForm')->name('admin.school.high.form.edit');
                 Route::post('/update/{id}', 'HighSchoolController@updateForm')->name('admin.school.high.form.update');
                 Route::get('/delete/{id}', 'HighSchoolController@delete')->name('admin.school.high.delete');
+                Route::get('/export-excel', 'HighSchoolController@exportData')->name('admin.school.high.export-excel');
             });
 
             Route::group(['prefix' => 'primary-junior-high'], function () {
                 Route::get('/', 'PrimaryJuniorHighSchoolController@index')->name('admin.school.primary_junior_high.list');
-                Route::get('/detail/{id}', 'PrimaryJuniorHighSchoolController@index')->name('admin.school.primary_junior_high.detail');
+                Route::get('/filter', 'PrimaryJuniorHighSchoolController@filter')->name('admin.school.primary_junior_high.filter');
                 Route::get('/form', 'PrimaryJuniorHighSchoolController@getForm')->name('admin.school.primary_junior_high.form.get');
                 Route::post('/form', 'PrimaryJuniorHighSchoolController@saveForm')->name('admin.school.primary_junior_high.form.post');
                 Route::get('/edit/{id}', 'PrimaryJuniorHighSchoolController@editForm')->name('admin.school.primary_junior_high.form.edit');
                 Route::post('/update/{id}', 'PrimaryJuniorHighSchoolController@updateForm')->name('admin.school.primary_junior_high.form.update');
                 Route::get('/delete/{id}', 'PrimaryJuniorHighSchoolController@delete')->name('admin.school.primary_junior_high.delete');
+                Route::get('/export-excel', 'PrimaryJuniorHighSchoolController@exportData')->name('admin.school.primary_junior_high.export-excel');
             });
 
             Route::group(['prefix' => 'junior-and-high'], function () {
                 Route::get('/', 'JuniorAndHighSchoolController@index')->name('admin.school.junior_and_high.list');
-                Route::get('/detail/{id}', 'JuniorAndHighSchoolController@index')->name('admin.school.junior_and_high.detail');
+                Route::get('/filter', 'JuniorAndHighSchoolController@filter')->name('admin.school.junior_and_high.filter');
                 Route::get('/form', 'JuniorAndHighSchoolController@getForm')->name('admin.school.junior_and_high.form.get');
                 Route::post('/form', 'JuniorAndHighSchoolController@saveForm')->name('admin.school.junior_and_high.form.post');
                 Route::get('/edit/{id}', 'JuniorAndHighSchoolController@editForm')->name('admin.school.junior_and_high.form.edit');
                 Route::post('/update/{id}', 'JuniorAndHighSchoolController@updateForm')->name('admin.school.junior_and_high.form.update');
                 Route::get('/delete/{id}', 'JuniorAndHighSchoolController@delete')->name('admin.school.junior_and_high.delete');
+                Route::get('/export-excel', 'JuniorAndHighSchoolController@exportData')->name('admin.school.junior_and_high.export-excel');
             });
 
             Route::group(['prefix' => 'cec'], function () {
                 Route::get('/', 'CecSchoolController@index')->name('admin.school.cec.list');
-                Route::get('/detail/{id}', 'CecSchoolController@index')->name('admin.school.cec.detail');
+                Route::get('/filter', 'CecSchoolController@filter')->name('admin.school.cec.filter');
                 Route::get('/form', 'CecSchoolController@getForm')->name('admin.school.cec.form.get');
                 Route::post('/form', 'CecSchoolController@saveForm')->name('admin.school.cec.form.post');
                 Route::get('/edit/{id}', 'CecSchoolController@editForm')->name('admin.school.cec.form.edit');
                 Route::post('/update/{id}', 'CecSchoolController@updateForm')->name('admin.school.cec.form.update');
                 Route::get('/delete/{id}', 'CecSchoolController@delete')->name('admin.school.cec.delete');
+                Route::get('/export-excel', 'CecSchoolController@exportData')->name('admin.school.cec.export-excel');
             });
         });
 
         Route::group(['prefix' => 'teacher'], function () {
             Route::get('/', 'TeacherController@index')->name('admin.teacher.list');
-            Route::get('/detail/{id}', 'TeacherController@detail')->name('admin.teacher.detail');
+            Route::get('/filter', 'TeacherController@filter')->name('admin.teacher.filter');
             Route::get('/form', 'TeacherController@getForm')->name('admin.teacher.form.get');
             Route::post('/form', 'TeacherController@saveForm')->name('admin.teacher.form.post');
             Route::get('/edit/{id}', 'TeacherController@editForm')->name('admin.teacher.form.edit');
             Route::post('/update/{id}', 'TeacherController@updateForm')->name('admin.teacher.form.update');
             Route::get('/delete/{id}', 'TeacherController@delete')->name('admin.teacher.delete');
+            Route::get('/export-excel', 'TeacherController@exportData')->name('admin.teacher.export-excel');
         });
 
         Route::group(['prefix' => 'student'], function () {
             Route::get('/', 'StudentController@index')->name('admin.student.list');
-            Route::get('/detail/{id}', 'StudentController@index')->name('admin.student.detail');
+            Route::get('/filter', 'StudentController@filter')->name('admin.student.filter');
             Route::get('/form', 'StudentController@getForm')->name('admin.student.form.get');
             Route::post('/form', 'StudentController@saveForm')->name('admin.student.form.post');
             Route::get('/edit/{id}', 'StudentController@editForm')->name('admin.student.form.edit');
             Route::post('/update/{id}', 'StudentController@updateForm')->name('admin.student.form.update');
             Route::get('/delete/{id}', 'StudentController@delete')->name('admin.student.delete');
+            Route::get('/export-excel', 'StudentController@exportData')->name('admin.student.export-excel');
         });
     });
 });

@@ -39,6 +39,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
+                    <a class="btn btn-primary" href="{{route('admin.commune.list', ['district_id' => $district_id])}}">quay lại</a>
                     <button type="submit" class="btn btn-primary">Lưu</button>
                 </div>
             </form>

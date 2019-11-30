@@ -16,8 +16,39 @@
 @endsection
 @section('content')
     <div class="col-md-12">
+        <form method="get" action="{{route('admin.school.junior_high.filter')}}">
+            <div class="col-md-2 float-left">
+                <div class="form-group">
+                    <select class="form-control select2" name="district_id" id="district" style="width: 100%;">
+                        <option value="">Lựa chọn quận/ huyện</option>
+                        @foreach($districts as $k => $item)
+                            <option value="{{$k}}">{{$item}}</option>
+                        @endforeach
+                    </select>
+                    @error('district_id')
+                    <p class="danger">{{ $message }}</p>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-2 float-left">
+                <div class="form-group">
+                    <select class="form-control select2" name="commune_id" id="commune" style="width: 100%;">
+                        <option value="">Lựa chọn phường/ xã</option>
+                    </select>
+                    @error('commune_id')
+                    <p class="danger">{{ $message }}</p>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-2 float-left">
+                <button type="submit" class="btn btn-primary">Bộ lọc</button>
+            </div>
+        </form>
         <a class="btn btn-primary float-right" href="{{route('admin.school.junior_high.form.get')}}">
             Tạo mới trường thcs
+        </a>
+        <a class="btn btn-primary float-right" href="{{route('admin.school.junior_high.export-excel')}}" style="margin-right: 5px">
+            Tải xuống Excel
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
@@ -68,19 +99,19 @@
                     <td>{{$item->acreage}}</td>
                     <td>{{$item->name_of_principal}}</td>
                     <td>{{$item['junior_high']['total_of_class']}}</td>
-                    <td>{{$item['junior_high']['total_of_6']}}</td>
-                    <td>{{$item['junior_high']['total_of_7']}}</td>
-                    <td>{{$item['junior_high']['total_of_8']}}</td>
-                    <td>{{$item['junior_high']['total_of_9']}}</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$item['junior_high']['total_of_grade_6']}}</td>
+                    <td>{{$item['junior_high']['total_of_grade_7']}}</td>
+                    <td>{{$item['junior_high']['total_of_grade_8']}}</td>
+                    <td>{{$item['junior_high']['total_of_grade_9']}}</td>
+                    <td>{{$item['junior_high']['total_of_student']}}</td>
+                    <td>{{$item['junior_high']['total_of_student_6']}}</td>
+                    <td>{{$item['junior_high']['total_of_student_7']}}</td>
+                    <td>{{$item['junior_high']['total_of_student_8']}}</td>
+                    <td>{{$item['junior_high']['total_of_student_9']}}</td>
+                    <td>{{$item['junior_high']['total_of_all_employees']}}</td>
+                    <td>{{$item['junior_high']['total_of_manager']}}</td>
+                    <td>{{$item['junior_high']['total_of_teacher']}}</td>
+                    <td>{{$item['junior_high']['total_of_employees']}}</td>
                     <td>{{$item['junior_high']['total_classroom']}}</td>
                     <td>{{$item['junior_high']['total_function_room']}}</td>
                     <td>{{$item['junior_high']['total_subject_room']}}</td>
@@ -110,6 +141,19 @@
                 "info": true,
                 "autoWidth": false,
             });
+        });
+        $('#district').on('change', function (e) {
+            console.log(e);
+
+            var cat_id = e.target.value;
+
+            $.get('/ajax-get-commune?cat_id=' + cat_id, function (data) {
+                $('#commune').empty();
+                $('#commune').append('<option value="">Lựa chọn quận huyện</option>');
+                $.each(data, function (index, commune) {
+                    $('#commune').append('<option value="'+commune.id+'">'+commune.name+'</option>');
+                })
+            })
         });
     </script>
 @endsection

@@ -18,13 +18,28 @@ class CreateJuniorAndHighSchoolsTable extends Migration
             $table->integer('school_id')->comment('id trường học')->nullable();
             $table->integer('type_school')->comment('Phân loại')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->default(0)->nullable();
-            $table->integer('total_of_6')->comment('tổng số lớp 6')->default(0)->nullable();
-            $table->integer('total_of_7')->comment('tổng số lớp 7')->default(0)->nullable();
-            $table->integer('total_of_8')->comment('tổng số lớp 8')->default(0)->nullable();
-            $table->integer('total_of_9')->comment('tổng số lớp 9')->default(0)->nullable();
-            $table->integer('total_of_10')->comment('tổng số lớp 10')->default(0)->nullable();
-            $table->integer('total_of_11')->comment('tổng số lớp 11')->default(0)->nullable();
-            $table->integer('total_of_12')->comment('tổng số lớp 12')->default(0)->nullable();
+            $table->integer('total_of_grade_6')->comment('tổng số lớp 6')->default(0)->nullable();
+            $table->integer('total_of_grade_7')->comment('tổng số lớp 7')->default(0)->nullable();
+            $table->integer('total_of_grade_8')->comment('tổng số lớp 8')->default(0)->nullable();
+            $table->integer('total_of_grade_9')->comment('tổng số lớp 9')->default(0)->nullable();
+            $table->integer('total_of_grade_10')->comment('tổng số lớp 10')->default(0)->nullable();
+            $table->integer('total_of_grade_11')->comment('tổng số lớp 11')->default(0)->nullable();
+            $table->integer('total_of_grade_12')->comment('tổng số lớp 12')->default(0)->nullable();
+
+            $table->integer('total_of_student')->comment('tổng số học sinh')->default(0)->nullable();
+            $table->integer('total_of_student_6')->comment('tổng số học sinh lớp 6')->default(0)->nullable();
+            $table->integer('total_of_student_7')->comment('tổng số học sinh lớp 7')->default(0)->nullable();
+            $table->integer('total_of_student_8')->comment('tổng số học sinh lớp 8')->default(0)->nullable();
+            $table->integer('total_of_student_9')->comment('tổng số học sinh lớp 9')->default(0)->nullable();
+            $table->integer('total_of_student_10')->comment('tổng số học sinh lớp 10')->default(0)->nullable();
+            $table->integer('total_of_student_11')->comment('tổng số học sinh lớp 11')->default(0)->nullable();
+            $table->integer('total_of_student_12')->comment('tổng số học sinh lớp 12')->default(0)->nullable();
+
+            $table->integer('total_of_all_employees')->comment('tổng số nhân sự')->default(0)->nullable();
+            $table->integer('total_of_manager')->comment('tổng số cán bộ quản lý')->default(0)->nullable();
+            $table->integer('total_of_teacher')->comment('tổng số giáo viên')->default(0)->nullable();
+            $table->integer('total_of_employees')->comment('tổng số nhân viên')->default(0)->nullable();
+
             $table->integer('total_classroom')->comment('tổng số phòng học')->default(0)->nullable();
             $table->integer('total_function_room')->comment('tổng số phòng chức năng')->default(0)->nullable();
             $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->default(0)->nullable();

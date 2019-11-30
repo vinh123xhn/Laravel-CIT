@@ -24,7 +24,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item has-treeview @yield('chart-open')">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -34,7 +34,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="{{route('admin.dashboard')}}" class="nav-link @yield('chart')">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Giáo dục</p>
                             </a>
@@ -58,6 +58,8 @@
                         </p>
                     </a>
                 </li>
+                @endif
+                @if(Session::get('user')['group'] == 1 || Session::get('user')['group'] == 2)
                     <li class="nav-item has-treeview @yield('school-open')">
                         <a href="#" class="nav-link @yield('school')">
                             <i class="nav-icon fas fa-home"></i>
@@ -128,8 +130,6 @@
                             </p>
                         </a>
                     </li>
-                @endif
-                @if(Session::get('user')['group'] == 1 || Session::get('user')['group'] == 2)
                 @endif
             </ul>
         </nav>

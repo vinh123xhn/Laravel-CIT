@@ -16,12 +16,43 @@
 @endsection
 @section('content')
     <div class="col-md-12">
+        <form method="get" action="{{route('admin.student.filter')}}">
+            <div class="col-md-2 float-left">
+                <div class="form-group">
+                    <select class="form-control select2" name="district_id" id="district" style="width: 100%;">
+                        <option value="">Lựa chọn quận/ huyện</option>
+                        @foreach($districts as $k => $item)
+                            <option value="{{$k}}">{{$item}}</option>
+                        @endforeach
+                    </select>
+                    @error('district_id')
+                    <p class="danger">{{ $message }}</p>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-2 float-left">
+                <div class="form-group">
+                    <select class="form-control select2" name="commune_id" id="commune" style="width: 100%;">
+                        <option value="">Lựa chọn phường/ xã</option>
+                    </select>
+                    @error('commune_id')
+                    <p class="danger">{{ $message }}</p>
+                    @enderror
+                </div>
+            </div>
+            <div class="col-md-2 float-left">
+                <button type="submit" class="btn btn-primary">Bộ lọc</button>
+            </div>
+        </form>
         <a class="btn btn-primary float-right" href="{{route('admin.student.form.get')}}">
             Tạo mới học sinh
         </a>
+        <a class="btn btn-primary float-right" href="{{route('admin.student.export-excel')}}" style="margin-right: 5px">
+            Tải xuống Excel
+        </a>
     </div>
-    <div class="card-body">
-        <table id="children" class="table table-bordered table-hover">
+    <div class="card-body" style="width: 100%; overflow: scroll">
+        <table id="student" class="table table-bordered table-hover" style="margin-top: 0; width: 2000px">
             <thead>
             <tr>
                 <th>Họ và tên</th>
@@ -55,7 +86,6 @@
                     <td>{{config('base.type_of_student')[$item->type_of_student]}}</td>
                     <td>{{config('base.level_of_student')[$item->level]}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.student.detail', $item->id)}}"><i class="fa fa-eye"></i></a>
                         <a href="{{route('admin.student.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
                         <a href="{{route('admin.student.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
                     </td>
@@ -71,7 +101,7 @@
 
     <script>
         $(function () {
-            $('#cstudent).DataTable({
+            $('#student').DataTable({
                 "paging": true,
                 "lengthChange": false,
                 "searching": false,
@@ -79,6 +109,20 @@
                 "info": true,
                 "autoWidth": false,
             });
+        });
+
+        $('#district').on('change', function (e) {
+            console.log(e);
+
+            var cat_id = e.target.value;
+
+            $.get('/ajax-get-commune?cat_id=' + cat_id, function (data) {
+                $('#commune').empty();
+                $('#commune').append('<option value="">Lựa chọn quận huyện</option>');
+                $.each(data, function (index, commune) {
+                    $('#commune').append('<option value="'+commune.id+'">'+commune.name+'</option>');
+                })
+            })
         });
     </script>
 @endsection

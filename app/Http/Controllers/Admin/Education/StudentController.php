@@ -27,7 +27,22 @@ class StudentController extends Controller
 
     public function index() {
         $students = Student::with('district', 'commune', 'school')->get();
-        return view('admin.education.student.list')->with(compact('students'));
+        $districts = District::pluck('name', 'id');
+        return view('admin.education.student.list')->with(compact('students', 'districts'));
+    }
+
+    public function filter(Request $request) {
+        $districts = District::pluck('name', 'id');
+        $students = Student::with('commune','district', 'school');
+        $filter = [];
+        if ($request->district_id) {
+            $filter['district_id'] = $request->district_id;
+        }
+        if ($request->commune_id) {
+            $filter['commune_id'] = $request->commune_id;
+        }
+        $students = $students->where($filter)->get();
+        return view('admin.education.student.list')->with(compact('students', 'districts'));
     }
 
     public function getForm() {
@@ -130,8 +145,43 @@ class StudentController extends Controller
         }
     }
 
-    public function detail() {
+    public function exportData() {
+//        field => title
+        $exportFields = [
+            'name' => __('Họ và tên'),
+            'gender' => __('Giới tính'),
+            'birthday' => __('Ngày sinh'),
+            'name_of_dad' => __('Họ và tên bố'),
+            'name_of_mom' => __('Họ và tên mẹ'),
+            'phone' => __('Số điện thoại'),
+            'address' => __('địa chỉ'),
+            'district_id' => __('Quận/ huyện'),
+            'commune_id' => __('Phường/ xã'),
+            'school_id' => __('Đang học tại trường'),
+            'type_school' => __('Cấp'),
+            'level' => __('Lớp'),
+            'type_of_student' => __('Học lực'),
+        ];
+        $students = Student::with('district', 'commune', 'school')->orderBy('created_at', 'desc')->get();
+        $gender = config('base.gender');
+        $type_school = config('base.type_of_school');
+        $level = config('base.level_of_student');
+        $type_of_student = config('base.type_of_student');
 
+        $data = [];
+        foreach ($students as $item) {
+            $item['gender'] = $item->gender ? $gender[$item->gender] : '';
+            $item['district_id'] = $item['district'] ['name'];
+            $item['commune_id'] = $item['commune'] ['name'];
+            $item['school_id'] = $item['school']['name'];
+            $item['type_school'] = $item->type_school ? $type_school[$item->type_school] : '';
+            $item['level'] = $item->level ? $level[$item->level] : '';
+            $item['type_of_student'] = $item->type_of_student ? $type_of_student[$item->type_of_student] : '';
+
+            $item = $item->toArray();
+            $data[] = $item;
+        }
+        $this->downloadExcel('Học sinh data'.date('Y-m-d'), $exportFields, $data, 'Học sinh-'.date('Y-m-d').'.xlsx');
     }
 
     public function delete($id) {

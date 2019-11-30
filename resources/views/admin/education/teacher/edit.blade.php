@@ -174,6 +174,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
+                    <a class="btn btn-primary" href="{{route('admin.teacher.list')}}">quay lại</a>
                     <button type="submit" class="btn btn-primary">Lưu</button>
                 </div>
             </form>

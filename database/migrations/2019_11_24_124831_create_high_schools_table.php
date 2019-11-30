@@ -18,9 +18,20 @@ class CreateHighSchoolsTable extends Migration
             $table->integer('school_id')->comment('id trường học')->nullable();
             $table->integer('type_school')->comment('Phân loại')->nullable();
             $table->integer('total_of_class')->comment('tổng số lớp')->default(0)->nullable();
-            $table->integer('total_of_10')->comment('tổng số lớp 10')->default(0)->nullable();
-            $table->integer('total_of_11')->comment('tổng số lớp 11')->default(0)->nullable();
-            $table->integer('total_of_12')->comment('tổng số lớp 12')->default(0)->nullable();
+            $table->integer('total_of_grade_10')->comment('tổng số lớp 10')->default(0)->nullable();
+            $table->integer('total_of_grade_11')->comment('tổng số lớp 11')->default(0)->nullable();
+            $table->integer('total_of_grade_12')->comment('tổng số lớp 12')->default(0)->nullable();
+
+            $table->integer('total_of_student')->comment('tổng số học sinh')->default(0)->nullable();
+            $table->integer('total_of_student_10')->comment('tổng số học sinh lớp 10')->default(0)->nullable();
+            $table->integer('total_of_student_11')->comment('tổng số học sinh lớp 11')->default(0)->nullable();
+            $table->integer('total_of_student_12')->comment('tổng số học sinh lớp 12')->default(0)->nullable();
+
+            $table->integer('total_of_all_employees')->comment('tổng số nhân sự')->default(0)->nullable();
+            $table->integer('total_of_manager')->comment('tổng số cán bộ quản lý')->default(0)->nullable();
+            $table->integer('total_of_teacher')->comment('tổng số giáo viên')->default(0)->nullable();
+            $table->integer('total_of_employees')->comment('tổng số nhân viên')->default(0)->nullable();
+
             $table->integer('total_classroom')->comment('tổng số phòng học')->default(0)->nullable();
             $table->integer('total_function_room')->comment('tổng số phòng chức năng')->default(0)->nullable();
             $table->integer('total_subject_room')->comment('tổng số phòng bộ môn')->default(0)->nullable();
