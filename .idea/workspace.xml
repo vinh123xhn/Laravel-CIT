@@ -2,74 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hue_cit_admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hue_cit_admin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ContinuingEducationCenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ContinuingEducationCenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/District.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/District.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/HighSchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/HighSchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JuniorAndHighSchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JuniorAndHighSchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/JuniorHighSchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/JuniorHighSchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/NurserySchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/NurserySchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PrimaryJuniorHighSchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PrimaryJuniorHighSchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/PrimarySchool.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PrimarySchool.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/base.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_124747_create_nursery_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_124747_create_nursery_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_124803_create_primary_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_124803_create_primary_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_124819_create_junior_high_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_124819_create_junior_high_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_124831_create_high_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_124831_create_high_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_131043_create_continuing_education_centers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_131043_create_continuing_education_centers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_131200_create_junior_and_high_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_131200_create_junior_and_high_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_24_131213_create_primary_junior_high_schools_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_24_131213_create_primary_junior_high_schools_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/area/commune/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/area/commune/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/area/commune/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/area/commune/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/area/district/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/area/district/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/area/district/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/area/district/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +230,7 @@
       <workItem from="1574998619535" duration="863000" />
       <workItem from="1575024536516" duration="40000" />
       <workItem from="1575024997381" duration="7952000" />
-      <workItem from="1575089245090" duration="29806000" />
+      <workItem from="1575089245090" duration="33201000" />
     </task>
     <servers />
   </component>
