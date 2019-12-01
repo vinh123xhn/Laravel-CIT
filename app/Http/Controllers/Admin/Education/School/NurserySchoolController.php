@@ -20,11 +20,8 @@ class NurserySchoolController extends Controller
     public function index() {
         $schools = School::where('type_school', '=', 1)->with('commune','district','nursery')->get();
         $districts = District::pluck('name', 'id');
-        $test = [];
-        $test['a'] = 1;
-        $test['b'] = 1;
-        $test['c'] = 1;
-        return view('admin.education.school.nursery.list')->with(compact('schools', 'districts', 'test'));
+    
+        return view('admin.education.school.nursery.list')->with(compact('schools', 'districts'));
     }
 
     public function filter(Request $request) {
@@ -312,6 +309,7 @@ class NurserySchoolController extends Controller
             $item['total_of_class'] = $item['nursery'] ['total_of_class'];
             $item['total_of_nursery_class'] = $item['nursery'] ['total_of_nursery_class'];
             $item['total_of_nursery_3_12'] = $item['nursery'] ['total_of_nursery_3_12'];
+            $item['total_of_nursery_13_24'] = $item['nursery'] ['total_of_nursery_13_24'];
             $item['total_of_nursery_25_36'] = $item['nursery'] ['total_of_nursery_25_36'];
             $item['total_of_nursery_collect'] = $item['nursery'] ['total_of_nursery_collect'];
             $item['total_of_kindergarten_class'] = $item['nursery'] ['total_of_kindergarten_class'];

@@ -11,20 +11,20 @@
 @section('content')
 {{--    <input type="hidden" id="district" value="{{$data}}">--}}
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="card">
-                <div id="school" style="min-width: 800px; height: 400px; margin: 0 auto"></div>
+                <div id="school" style="min-width: 500px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <div class="card">
-                <div id="teacher" style="min-width: 800px; height: 400px; margin: 0 auto"></div>
+                <div id="teacher" style="min-width: 500px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
 
         <div class="col-lg-6">
             <div class="card">
-                <div id="student" style="min-width: 800px; height: 400px; margin: 0 auto"></div>
+                <div id="student" style="min-width: 500px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
 
