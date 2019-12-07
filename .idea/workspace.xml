@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ForgotPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +224,8 @@
       <workItem from="1575024997381" duration="7952000" />
       <workItem from="1575089245090" duration="33243000" />
       <workItem from="1575180111393" duration="667000" />
-      <workItem from="1575711042063" duration="853000" />
+      <workItem from="1575711042063" duration="1086000" />
+      <workItem from="1575712770257" duration="495000" />
     </task>
     <servers />
   </component>
@@ -267,10 +258,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" key="SettingsEditor/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575025041675" />
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575180161268">
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575712786908">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575180161268" />
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575712786908" />
     <state x="605" y="288" width="709" height="528" key="find.popup" timestamp="1575110864376">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
