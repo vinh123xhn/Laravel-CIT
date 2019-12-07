@@ -52,7 +52,7 @@
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
-        <table id="student" class="table table-bordered table-hover" style="margin-top: 0; width: 2000px">
+        <table id="student" class="table table-bordered table-striped" style="margin-top: 0; width: 2000px">
             <thead>
             <tr>
                 <th>Họ và tên</th>
@@ -101,14 +101,7 @@
 
     <script>
         $(function () {
-            $('#student').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-            });
+            $('#student').DataTable();
         });
 
         $('#district').on('change', function (e) {

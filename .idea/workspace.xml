@@ -3,16 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ForgotPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/list.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +149,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -155,19 +157,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/primary" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Area" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/vendor" />
       <recent name="$PROJECT_DIR$/resources/views/admin/education/school/1_2" />
       <recent name="$PROJECT_DIR$/resources/views/admin/education/school/2_3" />
       <recent name="$PROJECT_DIR$/resources/views/admin/education/school/cen" />
       <recent name="$PROJECT_DIR$/resources/views/admin/education/school/high" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/primary" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Area" />
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -230,7 +232,9 @@
       <workItem from="1574998619535" duration="863000" />
       <workItem from="1575024536516" duration="40000" />
       <workItem from="1575024997381" duration="7952000" />
-      <workItem from="1575089245090" duration="33201000" />
+      <workItem from="1575089245090" duration="33243000" />
+      <workItem from="1575180111393" duration="667000" />
+      <workItem from="1575711042063" duration="853000" />
     </task>
     <servers />
   </component>
@@ -255,18 +259,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575101408711" />
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575095247318">
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575182590463">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575095247318" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575182590463" />
     <state x="449" y="188" key="SettingsEditor" timestamp="1575025041675">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" key="SettingsEditor/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575025041675" />
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575089906414">
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575180161268">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575089906414" />
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575180161268" />
     <state x="605" y="288" width="709" height="528" key="find.popup" timestamp="1575110864376">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
