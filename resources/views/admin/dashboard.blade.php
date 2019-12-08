@@ -42,7 +42,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Cơ sở giáo dục theo quận'
+                    text: 'Thống kê cơ sở giáo dục toàn tỉnh'
                 },
                 subtitle: {
                     text: 'Đơn vị: trường'
@@ -108,7 +108,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'Nhân viên giáo dục theo quận'
+                    text: 'Thông kê nhân viên giáo dục toàn tỉnh'
                 },
                 subtitle: {
                     text: 'Đơn vị: người'
@@ -158,7 +158,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: 'học sinh theo quận theo quận'
+                    text: 'Thống kê học sinh toàn tỉnh'
                 },
                 subtitle: {
                     text: 'Đơn vị: người'

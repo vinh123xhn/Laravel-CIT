@@ -24,22 +24,13 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview @yield('chart-open')">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                <li class="nav-item set-menu-width">
+                    <a href="{{route('admin.dashboard')}}" class="nav-link @yield('chart')">
+                        <i class="nav-icon far fa-list-alt"></i>
                         <p>
                             Biểu đồ
-                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('admin.dashboard')}}" class="nav-link @yield('chart')">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Giáo dục</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 @if(Session::get('user')['group'] == 1)
                 <li class="nav-item">

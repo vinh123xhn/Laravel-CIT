@@ -24,7 +24,7 @@
         </a>
     </div>
     <div class="card-body">
-        <table id="user" class="table table-bordered table-hover">
+        <table id="user" class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th>Tên </th>
@@ -60,14 +60,7 @@
 
     <script>
         $(function () {
-            $('#user').DataTable({
-                "paging": true,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": true,
-                "info": true,
-                "autoWidth": false,
-            });
+            $('#user').DataTable();
         });
     </script>
 @endsection

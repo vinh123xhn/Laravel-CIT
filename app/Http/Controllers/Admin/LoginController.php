@@ -1,14 +1,11 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
 class LoginController extends Controller
 {
     public function login(Request $request)
@@ -17,7 +14,6 @@ class LoginController extends Controller
             'username' => 'required',
             'password' => 'required',
         ];
-
         $messages = [
             'username.required' => 'Tài khoản không được để trống',
             'password.required' => 'Mật khẩu xác nhận không được để trống',
@@ -32,16 +28,12 @@ class LoginController extends Controller
                 if ($user->active == 1) {
                     $token = $user->getAuthToken();
                     $data = $user->toArray();
-
                     if ($token == '') {
                         $data['auth_token'] = sha1('[' . $user->id . '-' . date('Y-m-d H:i:s') . ']');
                         $token = $data['auth_token'];
                     }
-
                     User::where(['id' => $user->id])->update($data);
-
                     $user = $user->toArray();
-
                     $request->session()->put('token', $token);
                     $request->session()->put('user', $user);
                     return redirect('/');
@@ -55,7 +47,6 @@ class LoginController extends Controller
             }
         }
     }
-
     public function logout(Request $request)
     {
         if($request->id)
