@@ -112,7 +112,7 @@
                     <td>{{$item->website}}</td>
                     <td>{{$item->acreage}}</td>
                     <td>{{$item->name_of_principal}}</td>
-                    <td>{{$item['cec']['total_of_class']}}</td>
+                    <td>{{$item['cec']['total_of_grade_class']}}</td>
                     <td>{{$item['cec']['total_of_grade_xmc']}}</td>
                     <td>{{$item['cec']['total_of_grade_gdttskbc']}}</td>
                     <td>{{$item['cec']['total_of_grade_6']}}</td>

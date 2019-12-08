@@ -123,8 +123,8 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp học</label>
-                            <input type="number" class="form-control" name="total_of_class" placeholder="Nhập tổng số lớp" value="{{old('total_of_class') ? old('total_of_class') : 0}}">
-                            @error('total_of_class')
+                            <input type="number" class="form-control" name="total_of_grade_class" placeholder="Nhập tổng số lớp" value="{{old('total_of_grade_class') ? old('total_of_grade_class') : 0}}">
+                            @error('total_of_grade_class')
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>
@@ -132,8 +132,8 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp xóa mù chữ</label>
-                            <input type="number" class="form-control" name="total_of_grade_class" placeholder="Nhập tổng số xóa mù chữ" value="{{old('total_of_grade_class') ? old('total_of_grade_class') : 0}}">
-                            @error('total_of_grade_class')
+                            <input type="number" class="form-control" name="total_of_grade_xmc" placeholder="Nhập tổng số xóa mù chữ" value="{{old('total_of_grade_xmc') ? old('total_of_grade_xmc') : 0}}">
+                            @error('total_of_grade_xmc')
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>

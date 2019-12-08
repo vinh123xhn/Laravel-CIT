@@ -52,7 +52,7 @@ class CecSchoolController extends Controller
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
             'name_of_principal' => 'required|max:30',
-            'total_of_class' => 'numeric',
+            'total_of_grade_class' => 'numeric',
             'total_of_grade_xmc' => 'numeric',
             'total_of_grade_gdttskbc' => 'numeric',
             'total_of_grade_6' => 'numeric',
@@ -99,7 +99,7 @@ class CecSchoolController extends Controller
             'email.max' => 'email nhập tối đa 100 ký tự',
             'name_of_principal.required' => 'tên hiểu trưởng không được để trống',
             'name_of_principal.max' => 'tên hiệu trưởng nhập tối đa 30 ký tự',
-            'total_of_class.numeric' => 'Trường này phải nhập số',
+            'total_of_grade_class.numeric' => 'Trường này phải nhập số',
             'total_of_grade_xmc.numeric' => 'Trường này phải nhập số',
             'total_of_grade_gdttskbc.numeric' => 'Trường này phải nhập số',
             'total_of_grade_6.numeric' => 'Trường này phải nhập số',
@@ -162,7 +162,7 @@ class CecSchoolController extends Controller
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
             'name_of_principal' => 'required|max:30',
-            'total_of_class' => 'numeric',
+            'total_of_grade_class' => 'numeric',
             'total_of_grade_xmc' => 'numeric',
             'total_of_grade_gdttskbc' => 'numeric',
             'total_of_grade_6' => 'numeric',
@@ -209,7 +209,7 @@ class CecSchoolController extends Controller
             'email.max' => 'email nhập tối đa 100 ký tự',
             'name_of_principal.required' => 'tên hiểu trưởng không được để trống',
             'name_of_principal.max' => 'tên hiệu trưởng nhập tối đa 30 ký tự',
-            'total_of_class.numeric' => 'Trường này phải nhập số',
+            'total_of_grade_class.numeric' => 'Trường này phải nhập số',
             'total_of_grade_xmc.numeric' => 'Trường này phải nhập số',
             'total_of_grade_gdttskbc.numeric' => 'Trường này phải nhập số',
             'total_of_grade_6.numeric' => 'Trường này phải nhập số',
@@ -287,7 +287,7 @@ class CecSchoolController extends Controller
             'website' => __('website'),
             'acreage' => __('diện tích(m2)'),
             'name_of_principal' => __('Tên hiệu trưởng'),
-            'total_of_class' => __('tổng số lớp học'),
+            'total_of_grade_class' => __('tổng số lớp học'),
             'total_of_grade_xmc' => __('tổng số lớp học XMC'),
             'total_of_grade_gdttskbc' => __('tổng số lớp học GDTTSKBC'),
             'total_of_grade_6' => __('Tổng số lớp 6'),
@@ -324,7 +324,7 @@ class CecSchoolController extends Controller
         foreach ($schools as $item) {
             $item['district_id'] = $item['district'] ['name'];
             $item['commune_id'] = $item['commune'] ['name'];
-            $item['total_of_class'] = $item['cec'] ['total_of_class'];
+            $item['total_of_grade_class'] = $item['cec'] ['total_of_grade_class'];
             $item['total_of_grade_xmc'] = $item['cec'] ['total_of_grade_xmc'];
             $item['total_of_grade_gdttskbc'] = $item['cec'] ['total_of_grade_gdttskbc'];
             $item['total_of_grade_6'] = $item['cec'] ['total_of_grade_6'];
