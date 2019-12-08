@@ -15,10 +15,12 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->increments('id');
+             $table->string('code', 255)->comment('mã giáo viên');
             $table->string('name', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
             $table->integer('commune_id')->comment('id phường/xã')->nullable();
-            $table->integer('school_id')->comment('id phường/xã')->nullable();
+            $table->integer('school_id')->comment('id trường học')->nullable();
+            $table->integer('gender')->comment('giới tính')->nullable();
             $table->string('address', 255)->comment('địa chỉ');
             $table->string('birthday', 255)->comment('ngày sinh');
             $table->string('phone', 20)->comment('số điện thoại trường')->nullable();
