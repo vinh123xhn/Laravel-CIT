@@ -44,6 +44,7 @@ class HighSchoolController extends Controller
 
     public function saveForm(Request $request) {
         $rules = [
+            'code' => 'required',
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
@@ -71,6 +72,7 @@ class HighSchoolController extends Controller
         ];
 
         $messages = [
+            'code.required' => 'mã trường không được để trống',
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
             'phone.numeric' => 'Số điện thoại phải nhập số',
@@ -124,6 +126,7 @@ class HighSchoolController extends Controller
 
     public function updateForm(Request $request, $id) {
         $rules = [
+            'code' => 'required',
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
@@ -131,9 +134,27 @@ class HighSchoolController extends Controller
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
             'name_of_principal' => 'required|max:30',
+            'total_of_class' => 'numeric',
+            'total_of_grade_10' => 'numeric',
+            'total_of_grade_11' => 'numeric',
+            'total_of_grade_12' => 'numeric',
+            'total_of_student' => 'numeric',
+            'total_of_student_10' => 'numeric',
+            'total_of_student_11' => 'numeric',
+            'total_of_student_12' => 'numeric',
+            'total_of_all_employees' => 'numeric',
+            'total_of_manager' => 'numeric',
+            'total_of_teacher' => 'numeric',
+            'total_of_employees' => 'numeric',
+            'total_classroom' => 'numeric',
+            'total_function_room' => 'numeric',
+            'total_subject_room' => 'numeric',
+            'total_device_full' => 'numeric',
+            'total_device_not_full' => 'numeric',
         ];
 
         $messages = [
+            'code.required' => 'mã trường không được để trống',
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
             'phone.numeric' => 'Số điện thoại phải nhập số',
@@ -170,6 +191,7 @@ class HighSchoolController extends Controller
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
             School::where('id', '=', $id)->update([
+                'code' => $request->code,
                 'name' => $request->name,
                 'district_id' => $request->district_id,
                 'commune_id' => $request->commune_id,
@@ -182,6 +204,7 @@ class HighSchoolController extends Controller
             ]);
             $update = $request->all();
             unset($update['_token']);
+            unset($update['code']);
             unset($update['name']);
             unset($update['district_id']);
             unset($update['commune_id']);
@@ -199,6 +222,7 @@ class HighSchoolController extends Controller
     public function exportData() {
 //        field => title
         $exportFields = [
+            'code' => __('Mã trường'),
             'name' => __('Tên trường'),
             'district_id' => __('Quận/ huyện'),
             'commune_id' => __('Phường/ xã'),

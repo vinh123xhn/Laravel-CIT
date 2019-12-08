@@ -25,6 +25,15 @@
                 <div class="card-body">
                     <div class="col-md-6 float-left">
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Mã cơ sở</label>
+                            <input type="text" name="code" class="form-control" placeholder="Nhập mã cơ sở giáo dục" value="{{old('code') ? old('code') : $school->code}}">
+                            @error('code')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Tên cơ sở</label>
                             <input type="text" name="name" class="form-control" placeholder="Nhập tên cơ sở y tế" value="{{old('name') ? old('name') : $school->name}}">
                             @error('name')
@@ -125,7 +134,7 @@
                     <div class="col-md-6 float-left">
                         <div class="form-group">
                             <label for="exampleInputPassword1">Tổng số lớp học</label>
-                            <input type="number" class="form-control" name="total_of_class" placeholder="Nhập tổng số lớp" value="{{old('total_of_class') ? old('total_of_class') : $data->total_of_class}}">
+                            <input type="number" class="form-control" name="total_of_grade_class" placeholder="Nhập tổng số lớp" value="{{old('total_of_grade_class') ? old('total_of_grade_class') : $data->total_of_grade_class}}">
                             @error('total_of_class')
                             <p class="danger">{{ $message }}</p>
                             @enderror

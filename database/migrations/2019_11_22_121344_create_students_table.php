@@ -15,6 +15,7 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
+             $table->string('code', 255)->comment('mã học sinh');
             $table->string('name', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
             $table->integer('commune_id')->comment('id phường/xã')->nullable();

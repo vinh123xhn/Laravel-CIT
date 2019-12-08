@@ -23,6 +23,15 @@
             <form role="form" method="post" action="{{route('admin.school.nursery.form.update', $school->id)}}">
                 @csrf
                 <div class="card-body">
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Mã cơ sở</label>
+                            <input type="text" name="code" class="form-control" placeholder="Nhập mã cơ sở giáo dục" value="{{old('code') ? old('code') : $school->code}}">
+                            @error('code')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
                    <div class="col-md-6 float-left">
                        <div class="form-group">
                            <label for="exampleInputEmail1">Tên cơ sở</label>

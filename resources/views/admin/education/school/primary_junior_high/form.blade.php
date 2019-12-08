@@ -25,6 +25,15 @@
                 <div class="card-body">
                     <div class="col-md-6 float-left">
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Mã cơ sở</label>
+                            <input type="text" name="code" class="form-control" placeholder="Nhập mã cơ sở giáo dục" value="{{old('code')}}">
+                            @error('code')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Tên cơ sở</label>
                             <input type="text" name="name" class="form-control" placeholder="Nhập tên cơ sở giáo dục" value="{{old('name')}}">
                             @error('name')

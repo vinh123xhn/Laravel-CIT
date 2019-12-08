@@ -24,22 +24,29 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
+                        <label for="exampleInputEmail1">Mã học sinh</label>
+                        <input type="text" name="code" class="form-control" placeholder="Nhập mã học sinh" value="{{old('code') ? old('code') : $student->code}}">
+                        @error('code')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Họ và tên</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nhập tên cơ sở giáo dục" value="{{old('name') ? old('name') : $student->name}}">
+                        <input type="text" name="name" class="form-control" placeholder="Nhập tên học sinh" value="{{old('name') ? old('name') : $student->name}}">
                         @error('name')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ngày sinh</label>
-                        <input type="text" name="birthday" class="form-control" placeholder="Nhập tên cơ sở giáo dục" value="{{old('birthday') ? old('birthday') : $student->birthday}}">
+                        <input type="text" name="birthday" class="form-control" placeholder="Nhập ngày sinh" value="{{old('birthday') ? old('birthday') : $student->birthday}}">
                         @error('birthday')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Số điện thoại</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Nhập mã giới thiệu" value="{{old('phone') ? old('phone') : $student->phone}}">
+                        <input type="text" class="form-control" name="phone" placeholder="Nhập số điện thoại" value="{{old('phone') ? old('phone') : $student->phone}}">
                         @error('phone')
                         <p class="danger">{{ $message }}</p>
                         @enderror

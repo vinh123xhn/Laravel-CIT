@@ -55,6 +55,7 @@
         <table id="teacher" class="table table-bordered table-hover " style="margin-top: 0;width: 2000px">
             <thead>
             <tr>
+                <th>Mã giáo viên</th>
                 <th>Họ và tên</th>
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
@@ -72,6 +73,7 @@
             <tbody>
             @foreach($teachers as $item)
                 <tr>
+                    <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->birthday}}</td>
                     <td>{{config('base.gender')[$item->gender]}}</td>

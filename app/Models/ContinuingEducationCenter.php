@@ -13,7 +13,7 @@ class ContinuingEducationCenter extends Model
         'id',
         'school_id',
         'type_school',
-        'total_of_class',
+        'total_of_grade_class',
         'total_of_grade_xmc',
         'total_of_grade_gdttskbc',
         'total_of_grade_6',

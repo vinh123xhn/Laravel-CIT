@@ -55,6 +55,7 @@
         <table id="school" class="table table-bordered table-hover" style="width: 8000px">
             <thead>
             <tr>
+                <th>Mã cơ sở</th>
                 <th>Tên cơ sở</th>
                 <th>Quận/huyện</th>
                 <th>Phường/xã</th>
@@ -98,6 +99,7 @@
             <tbody>
             @foreach($schools as $item)
                 <tr>
+                    <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item['district']['name']}}</td>
                     <td>{{$item['commune']['name']}}</td>

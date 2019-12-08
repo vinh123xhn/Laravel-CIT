@@ -24,29 +24,36 @@
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
+                        <label for="exampleInputEmail1">Mã giáo viên</label>
+                        <input type="text" name="code" class="form-control" placeholder="Nhập mã giáo viên" value="{{old('code')}}">
+                        @error('code')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Họ và tên</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nhập tên cơ sở giáo dục" value="{{old('name')}}">
+                        <input type="text" name="name" class="form-control" placeholder="Nhập tên giáo viên" value="{{old('name')}}">
                         @error('name')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Ngày sinh</label>
-                        <input type="text" name="birthday" class="form-control" placeholder="Nhập tên cơ sở giáo dục" value="{{old('birthday')}}">
+                        <input type="text" name="birthday" class="form-control" placeholder="Nhập ngày sinh" value="{{old('birthday')}}">
                         @error('birthday')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Số điện thoại</label>
-                        <input type="text" class="form-control" name="phone" placeholder="Nhập mã giới thiệu" value="{{old('phone')}}">
+                        <input type="text" class="form-control" name="phone" placeholder="Nhập số điện thoại" value="{{old('phone')}}">
                         @error('phone')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Thư điện tử</label>
-                        <input type="text" class="form-control" name="email" placeholder="Nhập mã giới thiệu" value="{{old('email')}}">
+                        <input type="text" class="form-control" name="email" placeholder="Nhập thư điện tử" value="{{old('email')}}">
                         @error('email')
                         <p class="danger">{{ $message }}</p>
                         @enderror

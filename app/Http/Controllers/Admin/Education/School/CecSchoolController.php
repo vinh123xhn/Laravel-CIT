@@ -44,6 +44,7 @@ class CecSchoolController extends Controller
 
     public function saveForm(Request $request) {
         $rules = [
+            'code' => 'required',
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
@@ -85,6 +86,7 @@ class CecSchoolController extends Controller
         ];
 
         $messages = [
+            'code.required' => 'mã trường không được để trống',
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
             'phone.numeric' => 'Số điện thoại phải nhập số',
@@ -152,6 +154,7 @@ class CecSchoolController extends Controller
 
     public function updateForm(Request $request, $id) {
         $rules = [
+            'code' => 'required',
             'name' => 'required|max:100',
             'district_id' => 'required',
             'commune_id' => 'required',
@@ -193,6 +196,7 @@ class CecSchoolController extends Controller
         ];
 
         $messages = [
+            'code.required' => 'mã trường không được để trống',
             'name.required' => 'tên trường không được để trống',
             'name.max' => 'tên trường không được quá 255 ký tự',
             'phone.numeric' => 'Số điện thoại phải nhập số',
@@ -255,6 +259,7 @@ class CecSchoolController extends Controller
             ]);
             $update = $request->all();
             unset($update['_token']);
+            unset($update['code']);
             unset($update['name']);
             unset($update['district_id']);
             unset($update['commune_id']);
@@ -272,6 +277,7 @@ class CecSchoolController extends Controller
     public function exportData() {
 //        field => title
         $exportFields = [
+            'code' => __('Mã trường'),
             'name' => __('Tên trường'),
             'district_id' => __('Quận/ huyện'),
             'commune_id' => __('Phường/ xã'),
