@@ -22,6 +22,7 @@ class School extends Model
         'website',
         'acreage',
         'name_of_principal',
+        'avatar'
     ];
 
     public function district(){

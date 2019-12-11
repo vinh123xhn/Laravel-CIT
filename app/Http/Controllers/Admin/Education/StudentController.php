@@ -16,6 +16,7 @@ use App\Models\School;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class StudentController extends Controller
@@ -89,7 +90,14 @@ class StudentController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            Student::create($request->all());
+            $data = $request->all();
+            unset($data['avatar']);
+            if($request->hasFile('avatar'))
+            {
+                $image_path = $request->file('avatar')->store('students', 'public');
+                $data['avatar'] = $image_path;
+            }
+            Student::create($data);
             return redirect()->route('admin.student.list');
         }
     }
@@ -138,8 +146,22 @@ class StudentController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
+            $student = Student::FindOrFail($id);
             $updateRequest = $request->all();
             unset($updateRequest['_token']);
+            unset($updateRequest['avatar']);
+            if ($request->hasFile('avatar')) {
+                //xoa anh cu neu co
+                $currentImg = $student->avatar;
+                if ($currentImg) {
+                    Storage::delete('public/' . $currentImg);
+                }
+                //cap nhap anh moi
+                $image = $request->file('avatar');
+                $pathImage = $image->store('students', 'public');
+                $updateRequest['avatar'] = $pathImage;
+
+            }
             Student::where('id', '=', $id)->update($updateRequest);
             return redirect()->route('admin.student.list');
         }

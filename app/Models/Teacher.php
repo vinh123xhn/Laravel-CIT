@@ -22,7 +22,8 @@ class Teacher extends Model
         'level',
         'birthday',
         'gender',
-        'type_school'
+        'type_school',
+        'avatar'
     ];
 
     public function school(){

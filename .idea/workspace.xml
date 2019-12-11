@@ -3,8 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/element/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/StudentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/StudentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/School.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/School.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Student.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Teacher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Teacher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/cec/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/high/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior-high/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/junior_and_high/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/nursery/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/school/primary_junior_high/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +253,13 @@
       <workItem from="1575089245090" duration="33243000" />
       <workItem from="1575180111393" duration="667000" />
       <workItem from="1575711042063" duration="1086000" />
-      <workItem from="1575712770257" duration="495000" />
+      <workItem from="1575712770257" duration="992000" />
+      <workItem from="1575714765926" duration="107000" />
+      <workItem from="1575715111778" duration="12000" />
+      <workItem from="1575864253297" duration="277000" />
+      <workItem from="1575951299170" duration="5804000" />
+      <workItem from="1576052106147" duration="1868000" />
+      <workItem from="1576056305209" duration="1363000" />
     </task>
     <servers />
   </component>
@@ -246,22 +280,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575101408711">
+    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1575959341237">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575101408711" />
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575182590463">
+    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575959341237" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576055447403">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575182590463" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576055447403" />
     <state x="449" y="188" key="SettingsEditor" timestamp="1575025041675">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" key="SettingsEditor/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575025041675" />
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575712786908">
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575715111306">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575712786908" />
+    <state x="616" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575715111306" />
     <state x="605" y="288" width="709" height="528" key="find.popup" timestamp="1575110864376">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

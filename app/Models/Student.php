@@ -24,7 +24,8 @@ class Student extends Model
        'level',
        'gender',
        'birthday',
-        'type_school'
+        'type_school',
+        'avatar'
     ];
 
     public function school(){

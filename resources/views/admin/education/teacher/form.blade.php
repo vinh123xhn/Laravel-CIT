@@ -20,7 +20,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post" action="{{route('admin.teacher.form.post')}}">
+            <form role="form" method="post" action="{{route('admin.teacher.form.post')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
@@ -34,6 +34,15 @@
                         <label for="exampleInputEmail1">Họ và tên</label>
                         <input type="text" name="name" class="form-control" placeholder="Nhập tên giáo viên" value="{{old('name')}}">
                         @error('name')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ảnh đại diện</label>
+                        <input type='file' onchange="readURL(this);" name="avatar"/>
+                        <br>
+                        <img id="avatar" src="#" alt="avatar"/>
+                        @error('avatar')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
@@ -178,5 +187,21 @@
                 })
             })
         });
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#avatar')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 @endsection

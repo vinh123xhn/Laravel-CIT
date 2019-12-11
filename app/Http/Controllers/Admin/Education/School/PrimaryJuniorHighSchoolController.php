@@ -8,6 +8,7 @@ use App\Models\District;
 use App\Models\PrimaryJuniorHighSchool;
 use App\Models\School;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class PrimaryJuniorHighSchoolController extends Controller
@@ -134,6 +135,11 @@ class PrimaryJuniorHighSchoolController extends Controller
         // tra ve true neu validate bi loi
         return redirect()->back()->withErrors($validator)->withInput($request->input());
     } else {
+        if($request->hasFile('avatar'))
+        {
+            $image_path = $request->file('avatar')->store('schools', 'public');
+            $request['avatar'] = $image_path;
+        }
         $request['type_school'] = 5;
         $school = School::create($request->all());
         $request['school_id'] = $school->id;
@@ -242,6 +248,17 @@ class PrimaryJuniorHighSchoolController extends Controller
         // tra ve true neu validate bi loi
         return redirect()->back()->withErrors($validator)->withInput($request->input());
     } else {
+        $school = School::FindOrFail($id);
+        if ($request->hasFile('avatar')) {
+            //xoa anh cu neu co
+            $currentImg = $school->avatar;
+            if ($currentImg) {
+                Storage::delete('public/' . $currentImg);
+            }
+            //cap nhap anh moi
+            $image = $request->file('avatar');
+            $pathImage = $image->store('schools', 'public');
+        }
         School::where('id', '=', $id)->update([
             'code' => $request->code,
             'name' => $request->name,
@@ -253,6 +270,7 @@ class PrimaryJuniorHighSchoolController extends Controller
             'website' => $request->website,
             'acreage' => $request->acreage,
             'name_of_principal' => $request->name_of_principal,
+            'avatar' => $pathImage,
         ]);
         $update = $request->all();
         unset($update['_token']);
@@ -266,6 +284,7 @@ class PrimaryJuniorHighSchoolController extends Controller
         unset($update['website']);
         unset($update['acreage']);
         unset($update['name_of_principal']);
+        unset($update['avatar']);
         PrimaryJuniorHighSchool::where('school_id', '=', $id)->update($update);
         return redirect()->route('admin.school.primary_junior_high.list');
     }

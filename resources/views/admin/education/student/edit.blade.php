@@ -20,7 +20,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post" action="{{route('admin.student.form.update', $student->id)}}">
+            <form role="form" method="post" action="{{route('admin.student.form.update', $student->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
@@ -34,6 +34,19 @@
                         <label for="exampleInputEmail1">Họ và tên</label>
                         <input type="text" name="name" class="form-control" placeholder="Nhập tên học sinh" value="{{old('name') ? old('name') : $student->name}}">
                         @error('name')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ảnh đại diện</label>
+                        <input type='file' onchange="readURL(this);" name="avatar"/>
+                        <br>
+                        @if(isset($student->avatar))
+                            <img id="avatar" style="width: 100px; height: 200px" src="{{asset('storage/'.$student->avatar)}}" alt="avatar"/>
+                        @else
+                            <img id="avatar" style="width: 100px; height: 200px" src="#" alt="avatar"/>
+                        @endif
+                        @error('avatar')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
@@ -198,6 +211,22 @@
     </div>
 @endsection
 @section('js')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#avatar')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
     <script>
         $('#district').on('change', function (e) {
             console.log(e);

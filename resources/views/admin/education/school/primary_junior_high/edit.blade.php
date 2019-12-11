@@ -20,7 +20,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post" action="{{route('admin.school.primary_junior_high.form.update', $school->id)}}">
+            <form role="form" method="post" action="{{route('admin.school.primary_junior_high.form.update', $school->id)}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="col-md-6 float-left">
@@ -40,6 +40,19 @@
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ảnh đại diện</label>
+                        <input type='file' onchange="readURL(this);" name="avatar"/>
+                        <br>
+                        @if(isset($school->avatar))
+                            <img id="avatar" style="width: 100px; height: 200px" src="{{asset('storage/'.$school->avatar)}}" alt="avatar"/>
+                        @else
+                            <img id="avatar" style="width: 100px; height: 200px" src="#" alt="avatar"/>
+                        @endif
+                        @error('avatar')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="col-md-6 float-left">
                         <div class="form-group">
@@ -427,5 +440,21 @@
                 })
             })
         });
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#avatar')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
     </script>
 @endsection

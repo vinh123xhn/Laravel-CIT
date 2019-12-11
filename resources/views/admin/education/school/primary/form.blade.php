@@ -20,7 +20,7 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post" action="{{route('admin.school.primary.form.post')}}">
+            <form role="form" method="post" action="{{route('admin.school.primary.form.post')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="col-md-6 float-left">
@@ -40,6 +40,15 @@
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Ảnh đại diện</label>
+                        <input type='file' onchange="readURL(this);" name="avatar"/>
+                        <br>
+                        <img id="avatar" src="#" alt="avatar"/>
+                        @error('avatar')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
                     </div>
                     <div class="col-md-6 float-left">
                         <div class="form-group">
@@ -310,18 +319,34 @@
     </div>
 @endsection
 @section('js')
-<script>
-    $('#district').on('change', function (e) {
-        console.log(e);
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
-        var cat_id = e.target.value;
+                reader.onload = function (e) {
+                    $('#avatar')
+                        .attr('src', e.target.result)
+                        .width(100)
+                        .height(200);
+                };
 
-        $.get('/ajax-get-commune?cat_id=' + cat_id, function (data) {
-            $('#commune').empty();
-            $.each(data, function (index, commune) {
-                $('#commune').append('<option value="'+commune.id+'">'+commune.name+'</option>');
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <script>
+        $('#district').on('change', function (e) {
+            console.log(e);
+
+            var cat_id = e.target.value;
+
+            $.get('/ajax-get-commune?cat_id=' + cat_id, function (data) {
+                $('#commune').empty();
+                $.each(data, function (index, commune) {
+                    $('#commune').append('<option value="'+commune.id+'">'+commune.name+'</option>');
+                })
             })
-        })
-    });
-</script>
+        });
+    </script>
 @endsection
