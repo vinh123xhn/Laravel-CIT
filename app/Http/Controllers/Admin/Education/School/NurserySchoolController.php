@@ -248,7 +248,7 @@ class NurserySchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            $year = new Carbon($request->day_and_year);
+            $year = !empty($request->day_and_year) ? new Carbon($request->day_and_year) : '';
             $school = School::FindOrFail($id);
             if ($request->hasFile('avatar')) {
                 //xoa anh cu neu co
@@ -259,23 +259,8 @@ class NurserySchoolController extends Controller
                 //cap nhap anh moi
                 $image = $request->file('avatar');
                 $pathImage = $image->store('schools', 'public');
-
-                School::where('id', '=', $id)->update([
-                    'code' => $request->code,
-                    'name' => $request->name,
-                    'district_id' => $request->district_id,
-                    'commune_id' => $request->commune_id,
-                    'address' => $request->address,
-                    'phone' => $request->phone,
-                    'email' => $request->email,
-                    'website' => $request->website,
-                    'acreage' => $request->acreage,
-                    'year' => $request->year,
-                    'day_and_year' => !empty($year->year) ? $year->year : '',
-                    'name_of_principal' => $request->name_of_principal,
-                    'avatar' => $pathImage,
-                ]);
             }
+            $avatar = !empty($pathImage) ? $pathImage : $school->avatar;
             School::where('id', '=', $id)->update([
                 'code' => $request->code,
                 'name' => $request->name,
@@ -286,9 +271,10 @@ class NurserySchoolController extends Controller
                 'email' => $request->email,
                 'website' => $request->website,
                 'acreage' => $request->acreage,
-                'year' => $request->year,
-                'day_and_year' => !empty($year->year) ? $year->year : '',
+                'day_and_year' => $request->day_and_year,
+                'year' => !empty($year) ? $year->year : '',
                 'name_of_principal' => $request->name_of_principal,
+                'avatar' => $avatar,
             ]);
             $update = $request->all();
             unset($update['_token']);

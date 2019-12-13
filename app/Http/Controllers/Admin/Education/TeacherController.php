@@ -165,8 +165,8 @@ class TeacherController extends Controller
                 $pathImage = $image->store('teachers', 'public');
                 $updateRequest['avatar'] = $pathImage;
             }
-            $year = new Carbon($request->day_and_year);
-            $updateRequest['year'] = $year->year;
+            $year = !empty($request->day_and_year) ? new Carbon($request->day_and_year) : '';
+            $updateRequest['year'] = !empty($year) ? $year->year : '';
             Teacher::where('id', '=', $id)->update($updateRequest);
             return redirect()->route('admin.teacher.list');
         }

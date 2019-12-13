@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_12_10_041827_add_column_teachers_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_12_10_041827_add_column_teachers_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/teacher/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +240,7 @@
       <workItem from="1576056305209" duration="2079000" />
       <workItem from="1576115277348" duration="1451000" />
       <workItem from="1576120263885" duration="16203000" />
-      <workItem from="1576202120871" duration="2990000" />
+      <workItem from="1576202120871" duration="4450000" />
     </task>
     <servers />
   </component>
