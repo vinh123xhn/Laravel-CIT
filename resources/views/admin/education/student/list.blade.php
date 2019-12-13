@@ -57,6 +57,7 @@
             <tr>
                 <th>Mã học sinh</th>
                 <th>Họ và tên</th>
+                <th>Ảnh đại diện</th>
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
                 <th>Số điện thoại</th>
@@ -76,6 +77,13 @@
                 <tr>
                     <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
+                    <td>
+                        @if(!empty($item->avatar))
+                            <a href="{{asset('storage/'.$item->avatar)}}" class="fancybox" rel="group" >
+                                <img id="avatar" style="max-width: 100px; height: 50px" src="{{asset('storage/'.$item->avatar)}}" alt="avatar"/>
+                            </a>
+                        @endif
+                    </td>
                     <td>{{$item->birthday}}</td>
                     <td>{{config('base.gender')[$item->gender]}}</td>
                     <td>{{$item->phone}}</td>
@@ -100,7 +108,6 @@
 @section('js')
     <script src="{{asset('plugins/datatables/jquery.dataTables.js')}}"></script>
     <script src="{{asset('plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
     <script>
         $(function () {
             $('#student').DataTable();

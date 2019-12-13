@@ -12,6 +12,7 @@
 */
 
 
+use Carbon\Carbon;
 
 Route::group(['prefix' => 'auth', 'namespace' => 'Admin'], function () {
     Route::get('login', function () {
@@ -53,6 +54,33 @@ Route::get('/ajax-get-school', function () {
     return Response::json($data);
 });
 
+Route::get('/ajax-get-school-2', function () {
+    $data = [];
+    $data['year'] = [];
+    $data['nursery'] = [];
+    $data['primary'] = [];
+    $data['junior_high'] = [];
+    $data['high'] = [];
+    $data['primary_junior_high'] = [];
+    $data['junior_and_high'] = [];
+    $data['cec'] = [];
+    $now = Carbon::now();
+    $year = $now->year;
+    $ago = $year - 10;
+    for ($i = $ago; $i <= $year; $i++) {
+        array_push($data['year'], $i);
+        array_push($data['nursery'], \App\Models\School::where('type_school', '=', 1)->where('year', '=', $i)->count());
+        array_push($data['primary'], \App\Models\School::where('type_school', '=', 2)->where('year', '=', $i)->count());
+        array_push($data['junior_high'], \App\Models\School::where('type_school', '=', 3)->where('year', '=', $i)->count());
+        array_push($data['high'], \App\Models\School::where('type_school', '=', 4)->where('year', '=', $i)->count());
+        array_push($data['primary_junior_high'], \App\Models\School::where('type_school', '=', 5)->where('year', '=', $i)->count());
+        array_push($data['junior_and_high'], \App\Models\School::where('type_school', '=', 6)->where('year', '=', $i)->count());
+        array_push($data['cec'], \App\Models\School::where('type_school', '=', 7)->where('year', '=', $i)->count());
+    }
+
+    return Response::json($data);
+});
+
 Route::get('/ajax-get-teacher', function () {
     $data = [];
     $districts = \App\Models\District::orderBy('id')->withCount('teacher', 'manager', 'employee')->get();
@@ -62,6 +90,25 @@ Route::get('/ajax-get-teacher', function () {
         $data['manager'][$k] = $item['manager_count'];
         $data['employee'][$k] = $item['employee_count'];
     }
+    return Response::json($data);
+});
+
+Route::get('/ajax-get-teacher-2', function () {
+    $data = [];
+    $data['year'] = [];
+    $data['teacher'] = [];
+    $data['manager'] = [];
+    $data['employee'] = [];
+    $now = Carbon::now();
+    $year = $now->year;
+    $ago = $year - 10;
+    for ($i = $ago; $i <= $year; $i++) {
+        array_push($data['year'], $i);
+        array_push($data['teacher'], \App\Models\Teacher::whereIn('type_teacher', [1,2,3,4,5])->where('year', '=', $i)->count());
+        array_push($data['manager'], \App\Models\Teacher::where('type_school', '=', 6)->where('year', '=', $i)->count());
+        array_push($data['employee'], \App\Models\Teacher::where('type_school', '=', 7)->where('year', '=', $i)->count());
+    }
+
     return Response::json($data);
 });
 

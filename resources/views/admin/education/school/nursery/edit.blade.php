@@ -136,6 +136,15 @@
                         </div>
                     </div>
                     <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ngày thành lập</label>
+                            <input type="text" class="form-control" name="day_and_year" placeholder="Nhập ngày thành lập" value="{{old('day_and_year') ? old('day_and_year') : $school->day_and_year}}">
+                            @error('day_and_year')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6 float-left">
                        <div class="form-group">
                            <label for="exampleInputPassword1">Tên hiệu trưởng</label>
                            <input type="text" class="form-control" name="name_of_principal" placeholder="Nhập tên hiệu trưởng" value="{{old('name_of_principal') ? old('name_of_principal') : $school->name_of_principal}}">

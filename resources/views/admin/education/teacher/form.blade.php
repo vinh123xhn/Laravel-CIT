@@ -107,6 +107,15 @@
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ngày vào làm việc</label>
+                            <input type="text" class="form-control" name="day_and_year" placeholder="Nhập ngày vào làm việc" value="{{old('day_and_year')}}">
+                            @error('day_and_year')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Phân cấp trường học</label>
                         <select class="form-control select2" id="type_school" name="type_school" style="width: 100%;">

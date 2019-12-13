@@ -57,6 +57,7 @@
             <tr>
                 <th>Mã giáo viên</th>
                 <th>Họ và tên</th>
+                <th>Ảnh đại diện</th>
                 <th>Ngày sinh</th>
                 <th>Giới tính</th>
                 <th>Số điện thoại</th>
@@ -65,6 +66,7 @@
                 <th>Phường/xã</th>
                 <th>Địa chỉ</th>
                 <th>Trường</th>
+                <th>Ngày vào làm việc</th>
                 <th>Phân loại giáo viên</th>
                 <th>Trình độ học vấn</th>
                 <th>Hành động</th>
@@ -75,6 +77,13 @@
                 <tr>
                     <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
+                    <td>
+                        @if(!empty($item->avatar))
+                            <a href="{{asset('storage/'.$item->avatar)}}" class="fancybox" rel="group" >
+                                <img id="avatar" style="max-width: 100px; height: 50px" src="{{asset('storage/'.$item->avatar)}}" alt="avatar"/>
+                            </a>
+                        @endif
+                    </td>
                     <td>{{$item->birthday}}</td>
                     <td>{{config('base.gender')[$item->gender]}}</td>
                     <td>{{$item->phone}}</td>
@@ -83,6 +92,7 @@
                     <td>{{$item['commune']['name']}}</td>
                     <td>{{$item->address}}</td>
                     <td>{{$item['school']['name']}}</td>
+                    <td>{{$item->year}}</td>
                     <td>{{config('base.type_of_teacher')[$item->type_teacher]}}</td>
                     <td>{{config('base.level_of_teacher')[$item->level]}}</td>
                     <td class="text-center">

@@ -41,18 +41,20 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Ảnh đại diện</label>
-                        <input type='file' onchange="readURL(this);" name="avatar"/>
-                        <br>
-                        @if(isset($school->avatar))
-                            <img id="avatar" style="width: 100px; height: 200px" src="{{asset('storage/'.$school->avatar)}}" alt="avatar"/>
-                        @else
-                            <img id="avatar" style="width: 100px; height: 200px" src="#" alt="avatar"/>
-                        @endif
-                        @error('avatar')
-                        <p class="danger">{{ $message }}</p>
-                        @enderror
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ảnh đại diện</label>
+                            <input type='file' onchange="readURL(this);" name="avatar"/>
+                            <br>
+                            @if(isset($school->avatar))
+                                <img id="avatar" style="width: 100px; height: 200px" src="{{asset('storage/'.$school->avatar)}}" alt="avatar"/>
+                            @else
+                                <img id="avatar" style="width: 100px; height: 200px" src="#" alt="avatar"/>
+                            @endif
+                            @error('avatar')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
                     </div>
                     <div class="col-md-6 float-left">
                         <div class="form-group">
@@ -131,6 +133,15 @@
                             <label for="exampleInputPassword1">Diện tích (m2)</label>
                             <input type="text" class="form-control" name="acreage" placeholder="Nhập diện tích trường" value="{{old('acreage') ? old('acreage') : $school->acreage}}">
                             @error('acreage')
+                            <p class="danger">{{ $message }}</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="col-md-6 float-left">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Ngày thành lập</label>
+                            <input type="text" class="form-control" name="day_and_year" placeholder="Nhập ngày thành lập" value="{{old('day_and_year') ? old('day_and_year') : $school->day_and_year}}">
+                            @error('day_and_year')
                             <p class="danger">{{ $message }}</p>
                             @enderror
                         </div>

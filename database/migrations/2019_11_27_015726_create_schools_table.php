@@ -17,6 +17,7 @@ class CreateSchoolsTable extends Migration
             $table->increments('id');
             $table->integer('type_school')->comment('Phân loại')->nullable();
             $table->string('name', 100);
+            $table->string('code', 100);
             $table->integer('district_id')->comment('id quận/huyện')->nullable();
             $table->integer('commune_id')->comment('id phường/xã')->nullable();
             $table->string('address', 255)->comment('địa chỉ');

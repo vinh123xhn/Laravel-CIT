@@ -7,6 +7,7 @@ use App\Models\Commune;
 use App\Http\Controllers\Controller;
 use App\Models\District;
 use App\Models\School;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
@@ -137,15 +138,19 @@ class CecSchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
+            $update = $request->all();
+            unset($update['avatar']);
             if($request->hasFile('avatar'))
             {
                 $image_path = $request->file('avatar')->store('schools', 'public');
-                $request['avatar'] = $image_path;
+                $update['avatar'] = $image_path;
             }
-            $request['type_school'] = 7;
-            $school = School::create($request->all());
-            $request['school_id'] = $school->id;
-            ContinuingEducationCenter::create($request->all());
+            $update['type_school'] = 7;
+            $year = new Carbon($request->day_and_year);
+            $update['year'] = $year->year;
+            $school = School::create($update);
+            $update['school_id'] = $school->id;
+            ContinuingEducationCenter::create($update);
             return redirect()->route('admin.school.cec.list');
         }
     }
@@ -252,6 +257,7 @@ class CecSchoolController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
+            $year = new Carbon($request->day_and_year);
             $school = School::FindOrFail($id);
             if ($request->hasFile('avatar')) {
                 //xoa anh cu neu co
@@ -262,6 +268,22 @@ class CecSchoolController extends Controller
                 //cap nhap anh moi
                 $image = $request->file('avatar');
                 $pathImage = $image->store('schools', 'public');
+
+                School::where('id', '=', $id)->update([
+                    'code' => $request->code,
+                    'name' => $request->name,
+                    'district_id' => $request->district_id,
+                    'commune_id' => $request->commune_id,
+                    'address' => $request->address,
+                    'phone' => $request->phone,
+                    'email' => $request->email,
+                    'website' => $request->website,
+                    'acreage' => $request->acreage,
+                    'year' => $request->year,
+                    'day_and_year' => !empty($year->year) ? $year->year : '',
+                    'name_of_principal' => $request->name_of_principal,
+                    'avatar' => $pathImage,
+                ]);
             }
             School::where('id', '=', $id)->update([
                 'code' => $request->code,
@@ -273,8 +295,9 @@ class CecSchoolController extends Controller
                 'email' => $request->email,
                 'website' => $request->website,
                 'acreage' => $request->acreage,
+                'year' => $request->year,
+                'day_and_year' => !empty($year->year) ? $year->year : '',
                 'name_of_principal' => $request->name_of_principal,
-                'avatar' => $pathImage,
             ]);
             $update = $request->all();
             unset($update['_token']);
@@ -289,6 +312,7 @@ class CecSchoolController extends Controller
             unset($update['acreage']);
             unset($update['name_of_principal']);
             unset($update['avatar']);
+            unset($update['day_and_year']);
             ContinuingEducationCenter::where('school_id', '=', $id)->update($update);
             return redirect()->route('admin.school.cec.list');
         }

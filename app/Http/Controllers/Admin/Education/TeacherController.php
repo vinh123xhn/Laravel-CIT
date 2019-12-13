@@ -15,6 +15,7 @@ use App\Models\PrimaryJuniorHighSchool;
 use App\Models\PrimarySchool;
 use App\Models\School;
 use App\Models\Teacher;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -164,6 +165,8 @@ class TeacherController extends Controller
                 $pathImage = $image->store('teachers', 'public');
                 $updateRequest['avatar'] = $pathImage;
             }
+            $year = new Carbon($request->day_and_year);
+            $updateRequest['year'] = $year->year;
             Teacher::where('id', '=', $id)->update($updateRequest);
             return redirect()->route('admin.teacher.list');
         }

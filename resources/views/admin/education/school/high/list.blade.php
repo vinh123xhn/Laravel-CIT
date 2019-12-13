@@ -1,6 +1,7 @@
 @extends('layout.master')
 @section('css')
     <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
+
 @endsection
 @section('school', 'active')
 @section('high_school', 'active')
@@ -57,6 +58,7 @@
             <tr>
                 <th>Mã cơ sở</th>
                 <th>Tên cơ sở</th>
+                <th>Ảnh đại diện</th>
                 <th>Quận/huyện</th>
                 <th>Phường/xã</th>
                 <th>Địa chỉ</th>
@@ -64,6 +66,7 @@
                 <th>Email</th>
                 <th>Diện tích</th>
                 <th>Website</th>
+                <th>Ngày thành lập</th>
                 <th>Tên hiệu trưởng</th>
                 <th>Tổng số lớp</th>
                 <th>Tổng số lớp 10</th>
@@ -90,6 +93,13 @@
                 <tr>
                     <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
+                    <td>
+                        @if(!empty($item->avatar))
+                            <a href="{{asset('storage/'.$item->avatar)}}" class="fancybox" rel="group" >
+                                <img id="avatar" style="max-width: 100px; height: 50px" src="{{asset('storage/'.$item->avatar)}}" alt="avatar"/>
+                            </a>
+                        @endif
+                    </td>
                     <td>{{$item['district']['name']}}</td>
                     <td>{{$item['commune']['name']}}</td>
                     <td>{{$item->address}}</td>
@@ -97,6 +107,7 @@
                     <td>{{$item->email}}</td>
                     <td>{{$item->website}}</td>
                     <td>{{$item->acreage}}</td>
+                    <td>{{$item->day_and_year}}</td>
                     <td>{{$item->name_of_principal}}</td>
                     <td>{{$item['high']['total_of_class']}}</td>
                     <td>{{$item['high']['total_of_grade_10']}}</td>
