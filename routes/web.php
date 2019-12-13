@@ -105,8 +105,8 @@ Route::get('/ajax-get-teacher-2', function () {
     for ($i = $ago; $i <= $year; $i++) {
         array_push($data['year'], $i);
         array_push($data['teacher'], \App\Models\Teacher::whereIn('type_teacher', [1,2,3,4,5])->where('year', '=', $i)->count());
-        array_push($data['manager'], \App\Models\Teacher::where('type_school', '=', 6)->where('year', '=', $i)->count());
-        array_push($data['employee'], \App\Models\Teacher::where('type_school', '=', 7)->where('year', '=', $i)->count());
+        array_push($data['manager'], \App\Models\Teacher::where('type_teacher', '=', 6)->where('year', '=', $i)->count());
+        array_push($data['employee'], \App\Models\Teacher::where('type_teacher', '=', 7)->where('year', '=', $i)->count());
     }
 
     return Response::json($data);

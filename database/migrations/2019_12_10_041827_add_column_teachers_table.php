@@ -15,8 +15,8 @@ class AddColumnTeachersTable extends Migration
     public function up()
     {
         DB::statement("ALTER TABLE `teachers` ADD `avatar` VARCHAR(255) NULL COMMENT 'Ảnh đại diện' AFTER `level`;");
-        DB::statement("ALTER TABLE `teachers` ADD `day_and_year` VARCHAR(255) NULL COMMENT 'Ngày bắt đầu làm việc' AFTER `avatar`;");
         DB::statement("ALTER TABLE `teachers` ADD `year` VARCHAR(255) NULL COMMENT 'Năm bắt đầu làm việc' AFTER `avatar`;");
+        DB::statement("ALTER TABLE `teachers` ADD `day_and_year` VARCHAR(255) NULL COMMENT 'Ngày bắt đầu làm việc' AFTER `year`;");
     }
 
     /**
