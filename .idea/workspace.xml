@@ -2,15 +2,800 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6ab832-039b-490d-be82-2395607ecd3d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/highchart/.idea/Highcharts-8.0.0.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/api.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/annotations/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/annotations/popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/highcharts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/highcharts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/stocktools/gui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/stocktools/gui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/dark-unica.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/dark-unica.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/grid-light.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/grid-light.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/sand-signika.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/css/themes/sand-signika.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/ControlPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/MockPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/ControllableCircle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/ControllableImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/ControllableLabel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/ControllablePath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/ControllableRect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/controllableMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/controllable/markerMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/eventEmitterMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/navigationBindings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/CrookedLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/ElliottWave.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/Fibonacci.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/InfinityLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/Measure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/Pitchfork.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/Tunnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/annotations/types/VerticalLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/error-messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/highcharts-3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/highcharts-more.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/highcharts.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/accessibility.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/annotations-advanced.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/arrow-symbols.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/boost.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/coloraxis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/current-date-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/datagrouping.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/dotplot.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/dumbbell.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/funnel3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/gantt.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/grid-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/heatmap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/histogram-bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/lollipop.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/marker-clusters.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/organization.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/pathfinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/pyramid3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/sonification.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/stock-tools.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/stock.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/treegrid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/avocado.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/dark-blue.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/dark-green.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/dark-unica.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/gray.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/grid-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/grid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/high-contrast-dark.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/high-contrast-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/sand-signika.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/skies.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/masters/themes/sunset.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/centered-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/derived-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/download-url.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/draw-point.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/geometry-circles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/geometry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/indicator-required.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/multipe-lines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/nelder-mead.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/nodes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/on-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/polygon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/reduce-array.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/mixins/tree-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/AccessibilityComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/KeyboardNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/KeyboardNavigationHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/a11y-i18n.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/accessibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/ContainerComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/InfoRegionsComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/LegendComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/MenuComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/RangeSelectorComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/SeriesComponent/NewDataAnnouncer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/SeriesComponent/SeriesComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/SeriesComponent/SeriesDescriber.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/SeriesComponent/SeriesKeyboardNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/SeriesComponent/forcedMarkers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/components/ZoomComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/focusBorder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/high-contrast-mode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/high-contrast-theme.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/options/deprecatedOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/options/langOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/options/options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/utils/DOMElementProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/utils/EventProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/utils/chartUtilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/accessibility/utils/htmlUtilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost-attach.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost-options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost-overrides.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost-utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boostable-map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/boostables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/named-colors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/wgl-renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/wgl-shader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/boost/wgl-vbuffer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/dotplot.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/dumbbell.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/funnel3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/histogram.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/lollipop.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/marker-clusters.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/networkgraph/QuadTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/networkgraph/draggable-nodes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/networkgraph/integrations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/networkgraph/layouts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/networkgraph/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/organization.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/pyramid3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/Earcon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/Instrument.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/Timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/chartSonify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/instrumentDefinitions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/musicalFrequencies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/pointSonify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/sonification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sonification/utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/stock-tools-bindings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/stock-tools-gui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Column.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Math.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/SVGRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Scatter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/Series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-3d/VMLRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/ArrowSymbols.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/CurrentDateIndicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/GanttChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/GanttSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/GridAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/Pathfinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/PathfinderAlgorithms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/Tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-gantt/TreeGrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/ColorAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/ColorMapSeriesMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/ColorSeriesMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/GeoJSON.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/HeatmapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/Map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapBubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapLineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapPointSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-map/MapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/AreaRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/AreaSplineRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/BoxPlotSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/BubbleLegend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/BubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/ColumnPyramidSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/ColumnRangeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/ErrorBarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/GaugeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/PackedBubbleSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/Pane.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/Polar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/PolygonSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/RadialAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts-more/WaterfallSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/AreaSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/AreaSplineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/BarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/CandlestickSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/ColumnSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/DataGrouping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/DataLabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/DateTimeAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Dynamics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/FlagsSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Globals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Interaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/LogarithmicAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/MSPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Navigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/OHLCSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Options.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/OrdinalAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/PieSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/PlotLineOrBand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Point.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Pointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/RangeSelector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Responsive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/ScatterSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/ScrollablePlotArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/SplineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Stacking.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/StockChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/SvgRenderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Tick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/TouchPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/parts/Utilities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/avocado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/dark-green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/dark-unica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/grid-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/high-contrast-dark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/high-contrast-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/sand-signika.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/skies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/es-modules/themes/sunset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-3d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-3d.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-more.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-more.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts-more.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/highcharts.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/canvg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/canvg.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/jspdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/jspdf.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/rgbcolor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/rgbcolor.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/svg2pdf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/lib/svg2pdf.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/accessibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/accessibility.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/accessibility.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations-advanced.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations-advanced.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations-advanced.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/annotations.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/arrow-symbols.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/arrow-symbols.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/arrow-symbols.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost-canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost-canvas.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost-canvas.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/boost.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/broken-axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/broken-axis.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/broken-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/bullet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/bullet.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/bullet.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/coloraxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/coloraxis.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/coloraxis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/current-date-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/current-date-indicator.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/current-date-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/cylinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/cylinder.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/cylinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/data.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/datagrouping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/datagrouping.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/datagrouping.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/debugger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/debugger.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/debugger.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dependency-wheel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dependency-wheel.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dependency-wheel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dotplot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dotplot.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dotplot.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drag-panes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drag-panes.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drag-panes.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/draggable-points.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/draggable-points.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/draggable-points.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drilldown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drilldown.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/drilldown.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dumbbell.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dumbbell.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/dumbbell.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/export-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/export-data.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/export-data.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/exporting.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/full-screen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/full-screen.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/full-screen.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel3d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel3d.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/funnel3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/gantt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/gantt.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/gantt.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/grid-axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/grid-axis.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/grid-axis.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/heatmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/heatmap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/heatmap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/histogram-bellcurve.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/histogram-bellcurve.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/histogram-bellcurve.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/item-series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/item-series.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/item-series.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/lollipop.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/lollipop.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/lollipop.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/marker-clusters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/marker-clusters.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/marker-clusters.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/networkgraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/networkgraph.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/networkgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/no-data-to-display.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/no-data-to-display.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/no-data-to-display.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/offline-exporting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/offline-exporting.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/offline-exporting.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie-polyfills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie-polyfills.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie-polyfills.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/oldie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/organization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/organization.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/organization.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/overlapping-datalabels.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/overlapping-datalabels.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/overlapping-datalabels.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/parallel-coordinates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/parallel-coordinates.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/parallel-coordinates.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pareto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pareto.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pareto.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pathfinder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pathfinder.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pathfinder.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pattern-fill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pattern-fill.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pattern-fill.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/price-indicator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/price-indicator.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/price-indicator.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pyramid3d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pyramid3d.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/pyramid3d.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sankey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sankey.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sankey.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/series-label.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/series-label.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/series-label.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/solid-gauge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/solid-gauge.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/solid-gauge.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sonification.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sonification.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sonification.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/static-scale.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/static-scale.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/static-scale.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock-tools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock-tools.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock-tools.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/stock.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/streamgraph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/streamgraph.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/streamgraph.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sunburst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sunburst.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/sunburst.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/tilemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/tilemap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/tilemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/timeline.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/timeline.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treegrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treegrid.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treegrid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treemap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/treemap.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variable-pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variable-pie.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variable-pie.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variwide.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variwide.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/variwide.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/vector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/vector.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/vector.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/venn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/venn.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/venn.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/windbarb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/windbarb.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/windbarb.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/wordcloud.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/wordcloud.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/wordcloud.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/xrange.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/xrange.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/modules/xrange.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/avocado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/avocado.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/avocado.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-blue.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-blue.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-green.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-green.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-unica.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-unica.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/dark-unica.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/gray.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/gray.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid-light.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/grid.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-dark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-dark.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-dark.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-light.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/high-contrast-light.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sand-signika.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sand-signika.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sand-signika.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/skies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/skies.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/skies.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sunset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sunset.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/code/themes/sunset.src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-column-interactive/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-column-null-values/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-column-stacking-grouping/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-pie-donut/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/3d-scatter-draggable/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/accessible-line/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/accessible-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/advanced-accessible/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/annotations/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-inverted/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-missing/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-negative/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-stacked-percent/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/area-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/arearange-line/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/arearange/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/areaspline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bar-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bar-negative-stack/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bar-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bellcurve/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/box-plot/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bubble-3d/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bubble/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/bullet-graph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/chart-update/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-drilldown/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-negative/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-parsed/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-placement/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-pyramid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-rotated-labels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-stacked-and-grouped/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-stacked-percent/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/column-stacked/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/columnrange/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo-dual-axes/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo-meteogram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo-multi-axes/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo-regression/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo-timeline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/combo/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/cylinder/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/dependency-wheel/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/dumbbell/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/dynamic-click-to-add/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/dynamic-master-detail/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/dynamic-update/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/error-bar/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/euler-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/flame/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/funnel/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/funnel3d/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-activity/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-clock/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-dual/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-solid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-speedometer/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/gauge-vu-meter/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/heatmap-canvas/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/heatmap/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/histogram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/honeycomb-usa/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-ajax/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-boost/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-labels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-log-axis/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/line-time-series/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/live-data/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/lollipop/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/network-graph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/organization-chart/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/packed-bubble-split/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/packed-bubble/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/parallel-coordinates/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pareto/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/parliament-chart/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-basic/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-donut/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-drilldown/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-gradient/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-legend/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-monochrome/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pie-semi-circle/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/polar-radial-bar/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/polar-spider/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/polar-wind-rose/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/polar/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/polygon/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pyramid/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/pyramid3d/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/renderer/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/responsive/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/sankey-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/scatter-boost/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/scatter/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/sonification/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/sparkline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/spline-inverted/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/spline-irregular-time/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/spline-plot-bands/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/spline-symbols/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/streamgraph/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/styled-mode-column/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/styled-mode-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/sunburst/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/synchronized-charts/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/timeline/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/treemap-coloraxis/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/treemap-large-dataset/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/treemap-with-levels/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/variable-radius-pie/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/variwide/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/vector-plot/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/venn-diagram/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/waterfall/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/windbarb-series/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/wordcloud/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/examples/x-range/index.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/annotations-hidden.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/annotations-visible.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-bottom.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-ray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow-segment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/close.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/crooked-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/crooked-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/current-price-hide.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/current-price-show.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/destroy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/elliott-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/elliott-5.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/fibonacci.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/flag-basic.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/flag-diamond.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/flag-elipse.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/flag-trapeze.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/horizontal-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/indicators.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/label.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/measure-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/measure-xy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/measure-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/parallel-channel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/pitchfork.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/ray.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/remove-annotations.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/save-chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/segment.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/separator.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/series-candlestick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/series-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/series-ohlc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/text.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/vertical-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/vertical-counter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/vertical-double-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/vertical-label.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/vertical-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/zoom-x.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/zoom-xy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/stock-icons/zoom-y.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/gfx/vml-radial-gradient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/color-picker.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/cursor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/earth.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/feature.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-circlepin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-diamondpin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-rectangle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag-squarepin.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/rect.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/reset.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/save-chart-cloud.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/save.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/skies.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/graphics/sun.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/highchart/index.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/CecSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/HighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorAndHighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/JuniorHighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/NurserySchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimaryJuniorHighSchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School/PrimarySchoolController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/base.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/base.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_22_121344_create_students_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_22_121344_create_students_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/school.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/school.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/student.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/teacher.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/teacher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/education/student/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +929,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../filnal_travel_cit/routes/web.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/highchart" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -153,19 +939,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/vendor" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/1_2" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/2_3" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/cen" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/resources/views/admin/education/school/primary" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Education/School" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin/Area" />
       <recent name="$PROJECT_DIR$/resources/views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/highchart" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/vendor" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/1_2" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/education/school/2_3" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,7 +1026,11 @@
       <workItem from="1576056305209" duration="2079000" />
       <workItem from="1576115277348" duration="1451000" />
       <workItem from="1576120263885" duration="16203000" />
-      <workItem from="1576202120871" duration="4450000" />
+      <workItem from="1576202120871" duration="8823000" />
+      <workItem from="1576223596850" duration="40000" />
+      <workItem from="1576459657707" duration="1354000" />
+      <workItem from="1576496718776" duration="2233000" />
+      <workItem from="1576499390222" duration="3684000" />
     </task>
     <servers />
   </component>
@@ -261,22 +1051,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576203120682">
+    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576502386796">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576203120682" />
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576147127914">
+    <state x="693" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576502386796" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576463221129">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576147127914" />
+    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576463221129" />
     <state x="449" y="188" key="SettingsEditor" timestamp="1575025041675">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="449" y="188" key="SettingsEditor/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1575025041675" />
-    <state x="335" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1576202126922">
+    <state x="335" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1576499401834">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="335" y="356" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576202126922" />
+    <state x="335" y="356" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1366.768@0.27.1920.1053" timestamp="1576499401834" />
     <state x="605" y="288" width="709" height="528" key="find.popup" timestamp="1575110864376">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -296,7 +1086,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php</url>
-          <line>13</line>
+          <line>18</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

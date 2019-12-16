@@ -21,6 +21,7 @@ class CreateStudentsTable extends Migration
             $table->integer('commune_id')->comment('id phường/xã')->nullable();
             $table->integer('school_id')->comment('id phường/xã')->nullable();
             $table->string('address', 255)->comment('địa chỉ');
+            $table->integer('gender')->comment('giới tính')->nullable();
             $table->string('birthday', 255)->comment('ngày sinh');
             $table->string('name_of_dad', 255)->comment('tên bố');
             $table->string('name_of_mom', 255)->comment('tên mẹ');

@@ -47,6 +47,18 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputPassword1">Giới tính</label>
+                        <select class="form-control select2" name="gender" style="width: 100%;">
+                            <option value="">Lựa chọn</option>
+                            @foreach(config('base.gender') as $k => $item)
+                                <option value="{{$k}}">{{$item}}</option>
+                            @endforeach
+                        </select>
+                        @error('gender')
+                        <p class="danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Ngày sinh</label>
                         <input type="text" name="birthday" class="form-control" placeholder="Nhập ngày sinh" value="{{old('birthday')}}">
                         @error('birthday')

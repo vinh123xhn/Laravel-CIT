@@ -37,95 +37,16 @@ Route::get('/ajax-get-commune', function () {
 
     return Response::json($commune);
 });
+Route::group(['namespace' => 'Chart', 'prefix' => '/'], function () {
+    Route::get('/ajax-get-school', 'SchoolChart@chartSchool1')->name('chart.school.1');
+    Route::get('/ajax-get-school-2', 'SchoolChart@chartSchool2')->name('chart.school.2');
 
-Route::get('/ajax-get-school', function () {
-    $data = [];
-    $districts = \App\Models\District::orderBy('id')->withCount('school_nursery', 'school_primary', 'school_junior_high', 'school_high', 'school_primary_junior_high', 'school_junior_and_high', 'school_cec')->get();
-    foreach ($districts as $k => $item) {
-        $data['district'][$k] = $item->name;
-        $data['nursery'][$k] = $item['school_nursery_count'];
-        $data['primary'][$k] = $item['school_primary_count'];
-        $data['junior_high'][$k] = $item['school_junior_high_count'];
-        $data['high'][$k] = $item['school_high_count'];
-        $data['primary_junior_high'][$k] = $item['school_primary_junior_high_count'];
-        $data['junior_and_high'][$k] = $item['school_junior_and_high_count'];
-        $data['cec'][$k] = $item['school_cec_count'];
-    }
-    return Response::json($data);
-});
+    Route::get('/ajax-get-teacher', 'TeacherChart@chartTeacher1')->name('chart.teacher.1');
+    Route::get('/ajax-get-teacher-2', 'TeacherChart@chartTeacher2')->name('chart.teacher.2');
+    Route::get('/ajax-get-teacher-3', 'TeacherChart@chartTeacher3')->name('chart.teacher.3');
 
-Route::get('/ajax-get-school-2', function () {
-    $data = [];
-    $data['year'] = [];
-    $data['nursery'] = [];
-    $data['primary'] = [];
-    $data['junior_high'] = [];
-    $data['high'] = [];
-    $data['primary_junior_high'] = [];
-    $data['junior_and_high'] = [];
-    $data['cec'] = [];
-    $now = Carbon::now();
-    $year = $now->year;
-    $ago = $year - 10;
-    for ($i = $ago; $i <= $year; $i++) {
-        array_push($data['year'], $i);
-        array_push($data['nursery'], \App\Models\School::where('type_school', '=', 1)->where('year', '=', $i)->count());
-        array_push($data['primary'], \App\Models\School::where('type_school', '=', 2)->where('year', '=', $i)->count());
-        array_push($data['junior_high'], \App\Models\School::where('type_school', '=', 3)->where('year', '=', $i)->count());
-        array_push($data['high'], \App\Models\School::where('type_school', '=', 4)->where('year', '=', $i)->count());
-        array_push($data['primary_junior_high'], \App\Models\School::where('type_school', '=', 5)->where('year', '=', $i)->count());
-        array_push($data['junior_and_high'], \App\Models\School::where('type_school', '=', 6)->where('year', '=', $i)->count());
-        array_push($data['cec'], \App\Models\School::where('type_school', '=', 7)->where('year', '=', $i)->count());
-    }
-
-    return Response::json($data);
-});
-
-Route::get('/ajax-get-teacher', function () {
-    $data = [];
-    $districts = \App\Models\District::orderBy('id')->withCount('teacher', 'manager', 'employee')->get();
-    foreach ($districts as $k => $item) {
-        $data['district'][$k] = $item->name;
-        $data['teacher'][$k] = $item['teacher_count'];
-        $data['manager'][$k] = $item['manager_count'];
-        $data['employee'][$k] = $item['employee_count'];
-    }
-    return Response::json($data);
-});
-
-Route::get('/ajax-get-teacher-2', function () {
-    $data = [];
-    $data['year'] = [];
-    $data['teacher'] = [];
-    $data['manager'] = [];
-    $data['employee'] = [];
-    $now = Carbon::now();
-    $year = $now->year;
-    $ago = $year - 10;
-    for ($i = $ago; $i <= $year; $i++) {
-        array_push($data['year'], $i);
-        array_push($data['teacher'], \App\Models\Teacher::whereIn('type_teacher', [1,2,3,4,5])->where('year', '=', $i)->count());
-        array_push($data['manager'], \App\Models\Teacher::where('type_teacher', '=', 6)->where('year', '=', $i)->count());
-        array_push($data['employee'], \App\Models\Teacher::where('type_teacher', '=', 7)->where('year', '=', $i)->count());
-    }
-
-    return Response::json($data);
-});
-
-Route::get('/ajax-get-student', function () {
-    $data = [];
-    $districts = \App\Models\District::orderBy('id')->withCount('student_nursery', 'student_primary', 'student_junior_high', 'student_high', 'student_primary_junior_high', 'student_junior_and_high', 'student_cec')->get();
-    foreach ($districts as $k => $item) {
-        $data['district'][$k] = $item->name;
-        $data['nursery'][$k] = $item['student_nursery_count'];
-        $data['primary'][$k] = $item['student_primary_count'];
-        $data['junior_high'][$k] = $item['student_junior_high_count'];
-        $data['high'][$k] = $item['student_high_count'];
-        $data['primary_junior_high'][$k] = $item['student_primary_junior_high_count'];
-        $data['junior_and_high'][$k] = $item['student_junior_and_high_count'];
-        $data['cec'][$k] = $item['student_cec_count'];
-    }
-    return Response::json($data);
+    Route::get('/ajax-get-student', 'StudentChart@chartStudent1')->name('chart.student.1');
+    Route::get('/ajax-get-student-2', 'StudentChart@chartStudent2')->name('chart.student.2');
 });
 
 Route::get('/ajax-get-type-student', function () {

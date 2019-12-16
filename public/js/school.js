@@ -61,7 +61,12 @@ $.get('/ajax-get-school', function (data) {
             name: 'Giáo dục thường xuyên',
             data: data['cec']
 
-        }]
+        }],
+        buttons: {
+            contextButton: {
+                menuItems: ['downloadCSV', 'downloadJPEG', 'downloadPDF', 'downloadPNG','downloadSVG', 'downloadXLS', 'viewData', 'viewFullscreen', 'printChart']
+            }
+        }
     });
 });
 
@@ -128,6 +133,11 @@ $.get('/ajax-get-school-2', function (data) {
             name: 'Giáo dục thường xuyên',
             data: data['cec']
 
-        }]
+        }],
+        buttons: {
+            contextButton: {
+                menuItems: ['downloadCSV', 'downloadJPEG', 'downloadPDF', 'downloadPNG','downloadSVG', 'downloadXLS', 'viewData', 'viewFullscreen', 'printChart']
+            }
+        }
     });
 });
