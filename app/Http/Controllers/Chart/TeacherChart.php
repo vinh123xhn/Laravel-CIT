@@ -51,8 +51,8 @@ class TeacherChart extends Controller
         for ($i = 1; $i <= 2; $i++){
             $student = Teacher::where('gender', '=', $i);
             array_push($data['teacher'], $student->whereIn('type_teacher', [1,2,3,4,5])->count());
-            array_push($data['manager'], $student->where('type_school', 2)->count());
-            array_push($data['employee'], $student->where('type_school', 3)->count());
+            array_push($data['manager'], $student->where('type_teacher', 6)->count());
+            array_push($data['employee'], $student->where('type_teacher', 7)->count());
         }
         return Response()->json($data);
     }
