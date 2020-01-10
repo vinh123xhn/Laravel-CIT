@@ -1,38 +1,38 @@
 @extends('layout.master')
 @section('title')
-    teacher
+    employee
 @endsection
-@section('education', 'active')
-@section('teacher', 'active')
-@section('education', 'menu-open')
+@section('personnel', 'active')
+@section('employee', 'active')
+@section('personnel-open', 'menu-open')
 @section('content_header_name')
-    Sửa thông tin nhân viên giáo dục
+    Sửa thông tin nhân viên 
 @endsection
 @section('content_header_active')
-    Sửa thông tin nhân viên giáo dục
+    Sửa thông tin nhân viên 
 @endsection
 @section('content')
     <div class="col-md-8">
         <!-- general form elements -->
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">   Sửa thông tin nhân viên giáo dục</h3>
+                <h3 class="card-title">Sửa thông tin nhân viên </h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form role="form" method="post" action="{{route('admin.teacher.form.post')}}" enctype="multipart/form-data">
+            <form role="form" method="post" action="{{route('admin.personnel.employee.form.post')}}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Mã giáo viên</label>
-                        <input type="text" name="code" class="form-control" placeholder="Nhập mã giáo viên" value="{{old('code')}}">
+                        <label for="exampleInputEmail1">Mã nhân viên</label>
+                        <input type="text" name="code" class="form-control" placeholder="Nhập mã nhân viên" value="{{old('code')}}">
                         @error('code')
                         <p class="danger">{{ $message }}</p>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Họ và tên</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nhập tên giáo viên" value="{{old('name')}}">
+                        <input type="text" name="name" class="form-control" placeholder="Nhập tên nhân viên" value="{{old('name')}}">
                         @error('name')
                         <p class="danger">{{ $message }}</p>
                         @enderror
@@ -136,22 +136,10 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Phân loại nhân sự</label>
-                        <select class="form-control select2" name="type_teacher" style="width: 100%;">
-                            <option value="">Lựa chọn</option>
-                            @foreach(config('base.type_of_teacher') as $k => $item)
-                                <option value="{{$k}}">{{$item}}</option>
-                            @endforeach
-                        </select>
-                        @error('type_of_student')
-                        <p class="danger">{{ $message }}</p>
-                        @enderror
-                    </div>
-                    <div class="form-group">
                         <label for="exampleInputPassword1">Trình độ</label>
                         <select class="form-control select2" name="level" style="width: 100%;">
                             <option value="">Lựa chọn</option>
-                            @foreach(config('base.level_of_teacher') as $k => $item)
+                            @foreach(config('base.level_of_employee') as $k => $item)
                                 <option value="{{$k}}">{{$item}}</option>
                             @endforeach
                         </select>
@@ -163,7 +151,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <a class="btn btn-primary" href="{{route('admin.teacher.list')}}">quay lại</a>
+                    <a class="btn btn-primary" href="{{route('admin.personnel.employee.list')}}">quay lại</a>
                     <button type="submit" class="btn btn-primary">Lưu</button>
                 </div>
             </form>

@@ -41,13 +41,13 @@ class District extends Model
 
 //    teacher
     public function teacher(){
-        return $this->hasMany('App\Models\Teacher')->whereIn('teachers.type_teacher', [1,2,3,4,5]);
+        return $this->hasMany('App\Models\Personnel')->whereIn('personnel.type_teacher', [1,2,3,4,5]);
     }
     public function manager(){
-        return $this->hasMany('App\Models\Teacher')->where('teachers.type_teacher', '=', '6');
+        return $this->hasMany('App\Models\Personnel')->where('personnel.type_teacher', '=', '6');
     }
     public function employee(){
-        return $this->hasMany('App\Models\Teacher')->where('teachers.type_teacher', '=', '7');
+        return $this->hasMany('App\Models\Personnel')->where('personnel.type_teacher', '=', '7');
     }
 
 

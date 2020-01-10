@@ -1,22 +1,22 @@
 @extends('layout.master')
-@section('education', 'active')
-@section('teacher', 'active')
-@section('education', 'menu-open')
+@section('personnel', 'active')
+@section('employee', 'active')
+@section('personnel-open', 'menu-open')
 @section('css')
     <link rel="stylesheet" href="{{asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
 @endsection
 @section('title')
-    teacher
+    employee
 @endsection
 @section('content_header_name')
-    Danh sách nhân sự giáo dục
+    Danh sách nhân sự 
 @endsection
 @section('content_header_active')
-    Danh sách nhân sự giáo dục
+    Danh sách nhân sự 
 @endsection
 @section('content')
     <div class="col-md-12">
-        <form method="get" action="{{route('admin.teacher.filter')}}">
+        <form method="get" action="{{route('admin.personnel.employee.filter')}}">
             <div class="col-md-2 float-left">
                 <div class="form-group">
                     <select class="form-control select2" name="district_id" id="district" style="width: 100%;">
@@ -44,18 +44,18 @@
                 <button type="submit" class="btn btn-primary">Bộ lọc</button>
             </div>
         </form>
-        <a class="btn btn-primary float-right" href="{{route('admin.teacher.form.get')}}">
-            Tạo mới nhân sự giáo dục
+        <a class="btn btn-primary float-right" href="{{route('admin.personnel.employee.form.get')}}">
+            Tạo mới nhân sự 
         </a>
-        <a class="btn btn-primary float-right" href="{{route('admin.teacher.export-excel')}}" style="margin-right: 5px">
+        <a class="btn btn-primary float-right" href="{{route('admin.personnel.employee.export-excel')}}" style="margin-right: 5px">
             Tải xuống Excel
         </a>
     </div>
     <div class="card-body" style="width: 100%; overflow: scroll">
-        <table id="teacher" class="table table-bordered table-striped" style="margin-top: 0;width: 2000px">
+        <table id="employee" class="table table-bordered table-striped" style="margin-top: 0;width: 2000px">
             <thead>
             <tr>
-                <th>Mã giáo viên</th>
+                <th>Mã nhân viên</th>
                 <th>Họ và tên</th>
                 <th>Ảnh đại diện</th>
                 <th>Ngày sinh</th>
@@ -67,13 +67,12 @@
                 <th>Địa chỉ</th>
                 <th>Trường</th>
                 <th>Ngày vào làm việc</th>
-                <th>Phân loại giáo viên</th>
                 <th>Trình độ học vấn</th>
                 <th>Hành động</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($teachers as $item)
+            @foreach($employees as $item)
                 <tr>
                     <td>{{$item->code}}</td>
                     <td>{{$item->name}}</td>
@@ -93,11 +92,10 @@
                     <td>{{$item->address}}</td>
                     <td>{{$item['school']['name']}}</td>
                     <td>{{$item->year}}</td>
-                    <td>{{config('base.type_of_teacher')[$item->type_teacher]}}</td>
-                    <td>{{config('base.level_of_teacher')[$item->level]}}</td>
+                    <td>{{config('base.level_of_employee')[$item->level]}}</td>
                     <td class="text-center">
-                        <a href="{{route('admin.teacher.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
-                        <a href="{{route('admin.teacher.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('admin.personnel.employee.form.edit', $item->id)}}"><i class="fa fa-edit"></i></a>
+                        <a href="{{route('admin.personnel.employee.delete', $item->id)}}"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             @endforeach
@@ -111,7 +109,7 @@
 
     <script>
         $(function () {
-            $('#teacher').DataTable();
+            $('#employee').DataTable();
         });
 
         $('#district').on('change', function (e) {

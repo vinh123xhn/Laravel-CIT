@@ -37,7 +37,7 @@ class School extends Model
 
 //    Count teacher
     public function teacher(){
-        return $this->hasMany('App\Models\Teacher');
+        return $this->hasMany('App\Models\Personnel');
     }
 
 

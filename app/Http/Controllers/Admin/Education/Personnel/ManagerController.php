@@ -1,27 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Education;
+namespace App\Http\Controllers\Admin\Education\Personnel;
 
 use App\Models\Commune;
-use App\Models\ContinuingEducationCenter;
 use App\Models\District;
-use App\Models\Doctor;
-use App\Models\HighSchool;
-use App\Models\Hospital;
-use App\Models\JuniorAndHighSchool;
-use App\Models\JuniorHighSchool;
-use App\Models\NurserySchool;
-use App\Models\PrimaryJuniorHighSchool;
-use App\Models\PrimarySchool;
 use App\Models\School;
-use App\Models\Teacher;
+use App\Models\Personnel;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-class TeacherController extends Controller
+class ManagerController extends Controller
 {
     public function __construct()
     {
@@ -29,14 +20,14 @@ class TeacherController extends Controller
     }
 
     public function index() {
-        $teachers = Teacher::with('school', 'commune', 'district')->get();
+        $managers = Personnel::where('type_teacher', '=', 6)->with('school', 'commune', 'district')->get();
         $districts = District::pluck('name', 'id');
-        return view('admin.education.teacher.list')->with(compact('teachers', 'districts'));
+        return view('admin.education.personnel.manager.list')->with(compact('managers', 'districts'));
     }
 
     public function filter(Request $request) {
         $districts = District::pluck('name', 'id');
-        $teachers = Teacher::with('commune','district', 'school');
+        $managers = Personnel::where('type_teacher', '=', 6)->with('commune','district', 'school');
         $filter = [];
         if ($request->district_id) {
             $filter['district_id'] = $request->district_id;
@@ -44,14 +35,14 @@ class TeacherController extends Controller
         if ($request->commune_id) {
             $filter['commune_id'] = $request->commune_id;
         }
-        $teachers = $teachers->where($filter)->get();
-        return view('admin.education.teacher.list')->with(compact('teachers', 'districts'));
+        $managers = $managers->where($filter)->get();
+        return view('admin.education.personnel.manager.list')->with(compact('managers', 'districts'));
     }
 
     public function getForm() {
         $schools = School::pluck('name', 'id');
         $districts = District::pluck('name', 'id');
-        return view('admin.education.teacher.form')->with(compact('schools','districts'));
+        return view('admin.education.personnel.manager.form')->with(compact('schools','districts'));
     }
 
     public function saveForm(Request $request) {
@@ -64,7 +55,6 @@ class TeacherController extends Controller
             'address' => 'required|max:100',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
-            'type_teacher' => 'required',
             'type_school' => 'required',
             'level' => 'required',
         ];
@@ -84,7 +74,6 @@ class TeacherController extends Controller
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
             'email.email' => 'email phải là dạng email',
             'email.max' => 'email nhập tối đa 100 ký tự',
-            'type_teacher.required' => 'Phân loại nhân viên giáo dục không được trống',
             'type_school.required' => 'Phân loại trường học không được trống',
             'level.required' => 'Trình độ không được để trống',
         ];
@@ -100,17 +89,18 @@ class TeacherController extends Controller
                 $image_path = $request->file('avatar')->store('teachers', 'public');
                 $data['avatar'] = $image_path;
             }
-            Teacher::create($data);
-            return redirect()->route('admin.teacher.list');
+            $data['type_teacher'] = 6;
+            Personnel::create($data);
+            return redirect()->route('admin.personnel.manager.list');
         }
     }
 
     public function editForm($id) {
-        $teacher = Teacher::FindOrFail($id);
+        $manager = Personnel::FindOrFail($id);
         $districts = District::pluck('name', 'id');
-        $communes = Commune::where('district_id', '=', $teacher->district_id)->pluck('name', 'id');
-        $schools = School::where('type_school', '=', $teacher->type_school)->pluck('name', 'id');
-        return view('admin.education.teacher.edit', compact('teacher', 'schools', 'districts', 'communes'));
+        $communes = Commune::where('district_id', '=', $manager->district_id)->pluck('name', 'id');
+        $schools = School::where('type_school', '=', $manager->type_school)->pluck('name', 'id');
+        return view('admin.education.personnel.manager.edit', compact('manager', 'schools', 'districts', 'communes'));
     }
 
     public function updateForm(Request $request, $id) {
@@ -123,7 +113,6 @@ class TeacherController extends Controller
             'address' => 'required|max:100',
             'phone' => 'numeric|min:10|min:20',
             'email' => 'email|max:100',
-            'type_teacher' => 'required',
             'level' => 'required',
         ];
 
@@ -142,7 +131,6 @@ class TeacherController extends Controller
             'phone.min' => 'Số điện thoại nhập tối thiểu 10 ký tự',
             'email.email' => 'email phải là dạng email',
             'email.max' => 'email nhập tối đa 100 ký tự',
-            'type_teacher.required' => 'Phân loại nhân viên giáo dục không được trống',
             'level.required' => 'Trình độ không được để trống',
         ];
         $validator = Validator::make($request->all(), $rules, $messages);
@@ -150,7 +138,7 @@ class TeacherController extends Controller
             // tra ve true neu validate bi loi
             return redirect()->back()->withErrors($validator)->withInput($request->input());
         } else {
-            $teacher = Teacher::FindOrFail($id);
+            $teacher = Personnel::FindOrFail($id);
             $updateRequest = $request->all();
             unset($updateRequest['_token']);
             unset($updateRequest['avatar']);
@@ -167,8 +155,8 @@ class TeacherController extends Controller
             }
             $year = !empty($request->day_and_year) ? new Carbon($request->day_and_year) : '';
             $updateRequest['year'] = !empty($year) ? $year->year : '';
-            Teacher::where('id', '=', $id)->update($updateRequest);
-            return redirect()->route('admin.teacher.list');
+            Personnel::where('id', '=', $id)->update($updateRequest);
+            return redirect()->route('admin.personnel.manager.list');
         }
     }
 
@@ -188,7 +176,7 @@ class TeacherController extends Controller
             'type_teacher' => __('Chức vụ'),
             'level' => __('Trình độ học vấn'),
         ];
-        $teachers = Teacher::with('district', 'commune', 'school')->orderBy('created_at', 'desc')->get();
+        $teachers = Personnel::where('type_teacher', '=', 6)->with('district', 'commune', 'school')->orderBy('created_at', 'desc')->get();
         $gender = config('base.gender');
         $type_school = config('base.type_of_school');
         $level = config('base.level_of_teacher');
@@ -207,11 +195,11 @@ class TeacherController extends Controller
             $item = $item->toArray();
             $data[] = $item;
         }
-        $this->downloadExcel('Nhân sự data'.date('Y-m-d'), $exportFields, $data, 'Nhân sự-'.date('Y-m-d').'.xlsx');
+        $this->downloadExcel('Cán bộ quản lý data'.date('Y-m-d'), $exportFields, $data, 'Cán bộ quản lý-'.date('Y-m-d').'.xlsx');
     }
 
     public function delete($id) {
-        Teacher::FindOrFail($id)->delete();
+        Personnel::FindOrFail($id)->delete();
         return redirect()->back();
     }
 }

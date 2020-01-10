@@ -30,8 +30,6 @@ return [
         3 => 'Giáo viên mẫu giáo',
         4 => 'Giáo viên tiểu học',
         5 => 'Giáo viên thcs',
-        6 => 'Cán bộ quản lý',
-        7 => 'Nhân viên',
     ],
 
     'level_of_teacher' => [

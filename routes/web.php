@@ -41,9 +41,9 @@ Route::group(['namespace' => 'Chart', 'prefix' => '/'], function () {
     Route::get('/ajax-get-school', 'SchoolChart@chartSchool1')->name('chart.school.1');
     Route::get('/ajax-get-school-2', 'SchoolChart@chartSchool2')->name('chart.school.2');
 
-    Route::get('/ajax-get-teacher', 'TeacherChart@chartTeacher1')->name('chart.teacher.1');
-    Route::get('/ajax-get-teacher-2', 'TeacherChart@chartTeacher2')->name('chart.teacher.2');
-    Route::get('/ajax-get-teacher-3', 'TeacherChart@chartTeacher3')->name('chart.teacher.3');
+    Route::get('/ajax-get-personnel', 'PersonnelChart@chartPersonnel1')->name('chart.personnel.1');
+    Route::get('/ajax-get-personnel-2', 'PersonnelChart@chartPersonnel2')->name('chart.personnel.2');
+    Route::get('/ajax-get-personnel-3', 'PersonnelChart@chartPersonnel3')->name('chart.personnel.3');
 
     Route::get('/ajax-get-student', 'StudentChart@chartStudent1')->name('chart.student.1');
     Route::get('/ajax-get-student-2', 'StudentChart@chartStudent2')->name('chart.student.2');
@@ -192,15 +192,39 @@ Route::group(['namespace' => 'Admin', 'middleware' => ['check-admin'], 'prefix' 
             });
         });
 
-        Route::group(['prefix' => 'teacher'], function () {
-            Route::get('/', 'TeacherController@index')->name('admin.teacher.list');
-            Route::get('/filter', 'TeacherController@filter')->name('admin.teacher.filter');
-            Route::get('/form', 'TeacherController@getForm')->name('admin.teacher.form.get');
-            Route::post('/form', 'TeacherController@saveForm')->name('admin.teacher.form.post');
-            Route::get('/edit/{id}', 'TeacherController@editForm')->name('admin.teacher.form.edit');
-            Route::post('/update/{id}', 'TeacherController@updateForm')->name('admin.teacher.form.update');
-            Route::get('/delete/{id}', 'TeacherController@delete')->name('admin.teacher.delete');
-            Route::get('/export-excel', 'TeacherController@exportData')->name('admin.teacher.export-excel');
+        Route::group(['prefix' => 'personnel', 'namespace' => 'Personnel'], function () {
+            Route::group(['prefix' => 'manager'], function () {
+                Route::get('/', 'ManagerController@index')->name('admin.personnel.manager.list');
+                Route::get('/filter', 'ManagerController@filter')->name('admin.personnel.manager.filter');
+                Route::get('/form', 'ManagerController@getForm')->name('admin.personnel.manager.form.get');
+                Route::post('/form', 'ManagerController@saveForm')->name('admin.personnel.manager.form.post');
+                Route::get('/edit/{id}', 'ManagerController@editForm')->name('admin.personnel.manager.form.edit');
+                Route::post('/update/{id}', 'ManagerController@updateForm')->name('admin.personnel.manager.form.update');
+                Route::get('/delete/{id}', 'ManagerController@delete')->name('admin.personnel.manager.delete');
+                Route::get('/export-excel', 'ManagerController@exportData')->name('admin.personnel.manager.export-excel');
+            });
+
+            Route::group(['prefix' => 'teacher'], function () {
+                Route::get('/', 'TeacherController@index')->name('admin.personnel.teacher.list');
+                Route::get('/filter', 'TeacherController@filter')->name('admin.personnel.teacher.filter');
+                Route::get('/form', 'TeacherController@getForm')->name('admin.personnel.teacher.form.get');
+                Route::post('/form', 'TeacherController@saveForm')->name('admin.personnel.teacher.form.post');
+                Route::get('/edit/{id}', 'TeacherController@editForm')->name('admin.personnel.teacher.form.edit');
+                Route::post('/update/{id}', 'TeacherController@updateForm')->name('admin.personnel.teacher.form.update');
+                Route::get('/delete/{id}', 'TeacherController@delete')->name('admin.personnel.teacher.delete');
+                Route::get('/export-excel', 'TeacherController@exportData')->name('admin.personnel.teacher.export-excel');
+            });
+
+            Route::group(['prefix' => 'employee'], function () {
+                Route::get('/', 'EmployeeController@index')->name('admin.personnel.employee.list');
+                Route::get('/filter', 'EmployeeController@filter')->name('admin.personnel.employee.filter');
+                Route::get('/form', 'EmployeeController@getForm')->name('admin.personnel.employee.form.get');
+                Route::post('/form', 'EmployeeController@saveForm')->name('admin.personnel.employee.form.post');
+                Route::get('/edit/{id}', 'EmployeeController@editForm')->name('admin.personnel.employee.form.edit');
+                Route::post('/update/{id}', 'EmployeeController@updateForm')->name('admin.personnel.employee.form.update');
+                Route::get('/delete/{id}', 'EmployeeController@delete')->name('admin.personnel.employee.delete');
+                Route::get('/export-excel', 'EmployeeController@exportData')->name('admin.personnel.employee.export-excel');
+            });
         });
 
         Route::group(['prefix' => 'student'], function () {

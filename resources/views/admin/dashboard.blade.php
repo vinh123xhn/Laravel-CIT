@@ -30,17 +30,17 @@
 
         <div class="col-md-12">
             <div class="card">
-                <div id="teacher" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
+                <div id="personnel" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="card">
-                <div id="teacher2" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
+                <div id="personnel2" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
         <div class="col-md-12">
             <div class="card">
-                <div id="teacher3" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
+                <div id="personnel3" style="min-width: 1000px; height: 400px; margin: 0 auto"></div>
             </div>
         </div>
 
@@ -75,6 +75,6 @@
         });
     </script>
     <script src="{{asset('js/school.js')}}"></script>
-    <script src="{{asset('js/teacher.js')}}"></script>
+    <script src="{{asset('js/personnel.js')}}"></script>
     <script src="{{asset('js/student.js')}}"></script>
 @endsection

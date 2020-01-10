@@ -105,13 +105,35 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item set-menu-width">
-                        <a href="{{route('admin.teacher.list')}}" class="nav-link @yield('teacher')">
-                            <i class="nav-icon far fa-user"></i>
+                    <li class="nav-item has-treeview @yield('personnel-open')">
+                        <a href="#" class="nav-link @yield('personnel')">
+                            <i class="nav-icon fas fa-home"></i>
                             <p>
                                 Nhân sự giáo dục
+                                <i class="fas fa-angle-left right"></i>
+                                <span class="badge badge-info right">3</span>
                             </p>
                         </a>
+                        <ul class="nav nav-treeview set-menu-width">
+                            <li class="nav-item">
+                                <a href="{{route('admin.personnel.manager.list')}}" class="nav-link @yield('manager')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Cán bộ quản lý</p>
+                                </a>
+                            </li>
+                            <li class="nav-item set-menu-width">
+                                <a href="{{route('admin.personnel.teacher.list')}}" class="nav-link @yield('teacher')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Giáo viên</p>
+                                </a>
+                            </li>
+                            <li class="nav-item set-menu-width">
+                                <a href="{{route('admin.personnel.employee.list')}}" class="nav-link @yield('employee')">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Nhân viên</p>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item set-menu-width">
                         <a href="{{route('admin.student.list')}}" class="nav-link @yield('student')">

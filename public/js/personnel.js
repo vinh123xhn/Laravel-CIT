@@ -1,5 +1,5 @@
-$.get('/ajax-get-teacher', function (data) {
-    Highcharts.chart('teacher', {
+$.get('/ajax-get-personnel', function (data) {
+    Highcharts.chart('personnel', {
         chart: {
             type: 'column'
         },
@@ -49,8 +49,8 @@ $.get('/ajax-get-teacher', function (data) {
     });
 });
 
-$.get('/ajax-get-teacher-2', function (data) {
-    Highcharts.chart('teacher2', {
+$.get('/ajax-get-personnel-2', function (data) {
+    Highcharts.chart('personnel2', {
         chart: {
             type: 'column'
         },
@@ -105,8 +105,8 @@ $.get('/ajax-get-teacher-2', function (data) {
     });
 });
 
-$.get('/ajax-get-teacher-3', function (data) {
-    Highcharts.chart('teacher3', {
+$.get('/ajax-get-personnel-3', function (data) {
+    Highcharts.chart('personnel3', {
         chart: {
             type: 'column'
         },
